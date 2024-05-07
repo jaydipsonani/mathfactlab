@@ -1,0 +1,275 @@
+.group-of-seventeen {
+  height: 100%;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+
+  // position: relative;
+
+  .line-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 26px;
+    .marker-line-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .marker-line {
+      width: 68vw;
+      border: 1px solid;
+      max-width: 1294px;
+
+      @media only screen and (max-width: 1680px) {
+        width: 72vw;
+      }
+      @media only screen and (max-width: 1440px) {
+        border: 1px solid;
+        background-color: black;
+        width: 72vw;
+      }
+
+      @media only screen and (max-width: 1366px) {
+        border: 1px solid;
+        background-color: black;
+        width: 77vw;
+      }
+      @media only screen and (max-width: 1024px) {
+        border: 1px solid;
+        width: 84vw;
+        background-color: black;
+      }
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: -10px;
+        left: -5px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid black;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+
+        bottom: -10px;
+        right: -5px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid black;
+      }
+    }
+
+    .marker-wrapper-bar {
+      top: -110px;
+      transition: all 0.5s;
+      height: 0;
+      overflow: hidden;
+      height: 50px;
+      // position: absolute;
+      display: -webkit-flex;
+      width: 62vw;
+      max-width: 1180px;
+      @media only screen and (max-width: 1680px) {
+        width: 66vw;
+      }
+      @media only screen and (max-width: 1440px) {
+        width: 66vw;
+      }
+      @media only screen and (max-width: 1366px) {
+        width: 72vw;
+      }
+      @media only screen and (max-width: 1024px) {
+        width: 78vw;
+      }
+      .bottom-bar {
+        width: 50%; // dynamic from factor calculation
+
+        margin: 0px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+
+        &.left-bar {
+          border: 2px solid;
+          border-right: 1px solid;
+        }
+        &.right-bar {
+          border: 2px solid;
+          border-left: 1px solid;
+        }
+        //left bar
+        &.yellow-width {
+          background: #fff836;
+        }
+
+        //right bar
+        &.purple-width {
+          background: #7086e9;
+        }
+      }
+    }
+    .marker-wrapper-bar-answer {
+      top: -70px;
+      transition: all 0.5s;
+      height: 0;
+      overflow: hidden;
+      height: 50px;
+      // position: absolute;
+      display: -webkit-flex;
+      margin-bottom: 36px;
+      width: 62vw;
+      max-width: 1180px;
+
+      @media only screen and (max-width: 1680px) {
+        width: 66vw;
+      }
+      @media only screen and (max-width: 1440px) {
+        width: 66vw;
+      }
+      @media only screen and (max-width: 1366px) {
+        width: 72vw;
+      }
+      @media only screen and (max-width: 1024px) {
+        width: 78vw;
+      }
+      //bottom bar
+      .bottom-bar {
+        width: 50%; // dynamic from factor calculation
+        background: #6fda5b;
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+
+        border: 2px solid;
+        border-top: 0;
+      }
+    }
+
+    .marker-wrapper {
+      // position: absolute;
+      width: 62vw;
+      display: flex;
+      justify-content: space-between;
+      max-width: 1180px;
+      position: absolute;
+      @media only screen and (max-width: 1680px) {
+        width: 66vw;
+      }
+      @media only screen and (max-width: 1440px) {
+        width: 66vw;
+      }
+      @media only screen and (max-width: 1366px) {
+        width: 72vw;
+      }
+      @media only screen and (max-width: 1024px) {
+        width: 78vw;
+      }
+      .down-label {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        top: 70px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        font-weight: 800;
+        font-size: 18pt;
+      }
+
+      .line-10th {
+        height: 28px;
+        width: 4px;
+        background: black;
+        align-self: center;
+        position: relative;
+        transition: all 1s;
+        @media only screen and (max-width: 1440px) {
+          height: 26px;
+        }
+        @media only screen and (max-width: 1366px) {
+          height: 24px;
+        }
+        @media only screen and (max-width: 1024px) {
+          height: 22px;
+        }
+      }
+      .line-10th-hidden {
+        background: none;
+      }
+      .line-5th {
+        height: 22px;
+        width: 2px;
+        background: black;
+        align-self: center;
+        position: relative;
+        transition: all 1s;
+        @media only screen and (max-width: 1440px) {
+          height: 20px;
+        }
+        @media only screen and (max-width: 1366px) {
+          height: 18px;
+        }
+        @media only screen and (max-width: 1024px) {
+          height: 16px;
+        }
+      }
+      .line-5th-hidden {
+        background: none;
+      }
+
+      .dot {
+        height: 10px;
+        width: 10px;
+        background: black;
+        border-radius: 10px;
+        align-self: center;
+        position: relative;
+
+        opacity: 1;
+        transition: all 1s;
+        @media only screen and (max-width: 1440px) {
+          height: 9px;
+          width: 9px;
+        }
+        @media only screen and (max-width: 1440px) {
+          height: 8px;
+          width: 8px;
+        }
+        @media only screen and (max-width: 1024px) {
+          height: 6px;
+          width: 6px;
+        }
+
+        .dot-hidden {
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+.visiblity-hidden {
+  visibility: hidden;
+  opacity: 0 !important;
+  transition: all 1s;
+}

@@ -1,0 +1,130 @@
+@import "../utils/variable-teacher";
+.dashboard-header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 8px 30px;
+  color: #56606d;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  background: #f5f6fa;
+  z-index: 15;
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  @media (max-width: 768px) {
+    padding: 15px;
+  }
+
+  &.headerHidden {
+    transform: translateY(-100%);
+  }
+ 
+  .class-code-dropdon {
+    padding: 14px 20px;
+  }
+  .form-control {
+    height: 40px;
+    width: 260px;
+    background: #ffffff;
+
+    &:focus {
+      border-color: $primaryColor;
+      box-shadow: unset;
+    }
+  }
+  .header-searchbar {
+    border: 1px solid #ccc;
+    &:focus {
+      border-color: $primaryColor;
+      box-shadow: unset;
+    }
+  }
+  .user-profile-menu {
+    display: flex;
+    align-items: center;
+    .user-profile-short {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      line-height: 1.2;
+      // @include breakpoint-max($screen-md-max) {
+      //   display: none;
+      // }
+      .title-text {
+        color: $primaryColor;
+      }
+      .font-small {
+        font-size: 12px;
+        white-space: wrap;
+      }
+    }
+  }
+  .with-button {
+    margin-right: 0px;
+  }
+}
+
+.tutorial {
+  margin-left: 20px;
+}
+.district-title {
+  line-height: 30px;
+
+  .title {
+    white-space: wrap;
+    font-weight: 600;
+  }
+}
+.drawerToggle {
+  font-size: 20px;
+  padding: 15px 0px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+
+  // @media (min-width: 769px) {
+  //   display: none;
+  // }
+}
+
+.search {
+  max-width: 400px;
+  padding: 14px 20px;
+  border-radius: 28px;
+  border: none;
+
+  svg {
+    color: #99a6b9;
+  }
+
+  input {
+    font-size: 14px;
+
+    &::placeholder {
+      color: #99a6b9;
+    }
+  }
+}
+
+.user-menu-wrapper {
+  display: flex;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.avatar {
+  cursor: pointer;
+
+  :global(.ant-badge-dot) {
+    box-shadow: 0 0 0 1px #f5f6fa;
+    background: $primaryColor;
+    top: 15%;
+    right: 15%;
+  }
+}

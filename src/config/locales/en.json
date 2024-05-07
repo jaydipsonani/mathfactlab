@@ -1,0 +1,161 @@
+{
+  "common": {
+    "header": {
+      "welcome": "Welcome"
+    },
+    "public": {
+      "backLoginLink": "Back to login",
+      "subText": "Help your students master the basic math facts with this strategy-based approach."
+    },
+    "google": {
+      "title": {
+        "signUpText": "Sign up with Google",
+        "signInText": "Sign in with Google"
+      }
+    },
+    "classLink": {
+      "title": " Sign in with ClassLink"
+    }
+  },
+
+  "login": {
+    "title": "Login",
+    "formInputUsernameLabel": "Email/Username",
+    "formInputUsernamePlaceholder": "Enter your email/username",
+    "formInputPasswordLabel": "Password",
+    "formInputPasswordPlaceholder": "Enter your password",
+    "formLoginButton": "login",
+    "textSeparator": {
+      "text": "or"
+    },
+    "LinkName": "Don't have an account?",
+    "LinkForgotPassword": "Forgot password?"
+  },
+
+  "signUp": {
+    "title": {
+      "teacher": "Create Teacher Account",
+      "parent": "Create Parent Account"
+    },
+    "formInputLastNameLabel": "Last name",
+    "formInputLastNamePlaceholder": "Enter your last name.",
+    "formInputFirstNameLabel": "First name",
+    "formInputFirstNamePlaceholder": "Enter your first name",
+    "formInputEmailNameLabel": "Email",
+    "formInputEmailNamePlaceholder": "Enter your email address",
+    "formInputConformPasswordLabel": "Confirm",
+    "formInputConformPasswordPlaceholder": "Confirm password",
+    "agreementText": "By signing up I agree to the",
+    "termsOfServiceText": "Terms of Service",
+    "privacyPolicyText": "Privacy Policy",
+    "confirmationTextParent1": "I confirm that I am the lawful parent or legal guardian, and I grant my consent for my child's participation in activities and use of MathFactLab.",
+    "confirmationTextParent2": "I understand that by providing this consent, I am permitting my child to access and use the features and services offered by MathFactLab, and I acknowledge and agree to the terms and conditions outlined by the website's",
+    "SignUpButton": "Signup",
+    "alreadyHaveAccountText": "Already have an account?"
+  },
+  "forgot-password": {
+    "title": "Forgot Password?",
+    "subtext": "No worries. Just enter the email you used to signup, and we’ll send you a link to reset it.",
+    "formInputConformPasswordPlaceholder": "Enter your email ID",
+    "buttonName": "Send Reset Password Link",
+    "linkLoginInstead": "Login instead"
+  },
+  "reset-password": {
+    "title": "Reset Password",
+    "formNewPasswordLabel": "New password",
+    "formNewPasswordPlaceHolder": "Enter new password",
+    "formConformPasswordLabel": "Confirm password",
+    "formConformPasswordPlaceholder": "Re-enter new password",
+    "resetButton": "Reset",
+    "linkTeacherLogin": "Return to Teacher Login"
+  },
+
+  "thankyou": {
+    "vectorText": "Effective and straight-forward strategies for math fact mastery.",
+    "loginLink": "  Click Here to Login",
+    "loginText": "Please log in again using your new password.",
+    "successText": "Your password has been reset successfully"
+  },
+  "resend-email": {
+    "title": "Resend Verification Email",
+    "subText": " No worries. Just enter the email you used to signup, and we’ll send you a verification link to verify it.",
+    "resetPasswordButton": "Send Reset Password Link"
+  },
+  "confirmation": {
+    "title": "We’ve sent you a reset link.",
+    "subText": " If the email address you entered was registered with us, you will receive a password reset link shortly.",
+    "linkSubText": "If you don’t receive the email, please contact",
+
+    "mathFactLabLink": " support@mathfactlab.com"
+  },
+  "verify-email": {
+    "emailVerified": "Your email has been verified successfully.",
+    "thankyouSubText": "Thank you!"
+  },
+  "join-user": {
+    "title": "Update Password",
+    "formSetPasswordLabel": "Set password",
+    "formSetPasswordPlaceHolder": "Enter password",
+    "formConformPasswordLabel": "Confirm password",
+    "formConformPasswordPlaceholder": "Re-enter password",
+    "setPasswordButton": "Set Password",
+    "returnToLoginLink": "Return to Login"
+  },
+  "placement-test": {
+    "title": "Welcome",
+    "subTitle": "Welcome to",
+    "mathFactLabTitle": "MathFactLab!",
+    "beginText": " You’ll begin with a warm-up to help us find your ‘just right’ level.",
+    "secondText": "At each level, you’ll practice using several different strategies.",
+    "thirdText": " Complete each strategy at least once and you can take the Level Lifter.",
+    "fourthText": " Score well on the Level Lifter, and you’ll level up!",
+    "startedButton": "  Let’s get started!",
+    "warmUpText": "Let’s start by warming up our fingers.",
+    "instructionText1": "Type each number you see.",
+    "instructionText2": "Hit ‘enter’ or the ‘space bar’ after each entry.",
+    "alternativeText": "Begin",
+    "subText": " Now get ready for some ",
+    "problemText": "problems.",
+    "pressText": "  Press",
+    "BeginText": "‘Begin’",
+    "readyText": "when you are ready.",
+    "changeMathOperationMessage": "Try your best",
+    "goodText": "Good work.",
+    "programText": "program",
+    "CompletedTestText": "Please let your teacher know that you have completed MathFactLab’s",
+    "FactsText": "facts",
+    "CongratulationsText": " Congratulations! You are a master of all the basic and advanced",
+    "CongratulationText": " Congratulations! You have mastered the basic",
+    "CongratulationMasteredText": "Congratulations! You have mastered all of the",
+    "problemsPressText": "problems. Press ‘Begin’ when you are ready.",
+    "subTractionText": "subtraction",
+    "divisionText": "division",
+    "nowLetsReadyText": "Now let's get started!"
+  },
+  "practice-select-activity": {
+    "selectNextActivityText": "SELECT YOUR NEXT ACTIVITY",
+    "SelectPracticeWord": "SELECT PRACTICE MODE AND STRATEGY",
+    "LevelText": "  See Your Level",
+    "UnLockLevelText": "To unlock the",
+    "AginText": "again",
+    "UnlockLevelLifterText": "To unlock the level lifter",
+    "UnlockStrategies": "To unlock the other strategies:",
+    "AdvanceLevelText": "To advance to the next level:",
+    "LevelLifterActivityText": "Complete each activity at least once to unlock the Level Lifter.",
+    "LevelLifterButton": "Level Lifter",
+    "LevelHintText": " Level Lifter questions do not have models or hints.",
+    "showQns": " Show Qns",
+    "unlockScoreText": "Score",
+    "unlockPointText": "or more points on",
+    "unlockNumberText": "900",
+    "unlockActivityText": "activity",
+    "allReviewsText": "all three reviews ",
+    "scoreText": " Score 950 points on the",
+    "TrainerText": "Trainer",
+    "OtherStrategiesText": "to unlock the other strategies",
+    "UnlockReviewText": "review",
+    "UnlockOrMorePointText": "or more points on the",
+    "unlockThreeStageText": "  or more points on all 3 stages of",
+    "UnlockPointsOn": " points on "
+  }
+}

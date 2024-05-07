@@ -1,0 +1,14 @@
+@import "../utils/variable-teacher";
+
+.dashboard-page {
+  padding-bottom: 24px;
+  .ant-tabs-nav {
+    font-family: $secondary-fonts;
+  }
+  .ant-tabs-tab {
+    font-weight: 500;
+  }
+  .ant-tabs-tab-active {
+    font-weight: 600;
+  }
+}

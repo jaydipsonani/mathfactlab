@@ -1,0 +1,158 @@
+{
+  "common": {
+    "header": {
+      "welcome": "Bienvenido"
+    },
+    "public": {
+      "backLoginLink": "Volver al inicio de sesión",
+      "subText": "Ayude a sus estudiantes a dominar los hechos básicos de matemáticas con este enfoque basado en estrategias."
+    },
+    "google": {
+      "title": {
+        "signUpText": "Registrarse con Google",
+        "signInText": "Iniciar sesión con Google"
+      }
+    },
+    "classLink": {
+      "title": "Iniciar sesión con ClassLink"
+    }
+  },
+  "login": {
+    "title": "Inicio de sesión",
+    "formInputUsernameLabel": "Correo electrónico/Nombre de usuario",
+    "formInputUsernamePlaceholder": "Ingrese su correo electrónico/nombre de usuario",
+    "formInputPasswordLabel": "Contraseña",
+    "formInputPasswordPlaceholder": "Ingrese su contraseña",
+    "formLoginButton": "Iniciar sesión",
+    "textSeparator": {
+      "text": "o"
+    },
+    "LinkName": "¿No tienes una cuenta?",
+    "LinkForgotPassword": "¿Olvidó su contraseña?"
+  },
+  "signUp": {
+    "title": {
+      "teacher": "Crear cuenta de profesor",
+      "parent": "Crear cuenta de padre"
+    },
+    "formInputLastNameLabel": "Apellido",
+    "formInputLastNamePlaceholder": "Ingrese su apellido.",
+    "formInputFirstNameLabel": "Nombre",
+    "formInputFirstNamePlaceholder": "Ingrese su nombre",
+    "formInputEmailNameLabel": "Correo electrónico",
+    "formInputEmailNamePlaceholder": "Ingrese su dirección de correo electrónico",
+    "formInputConformPasswordLabel": "Confirmar",
+    "formInputConformPasswordPlaceholder": "Confirmar contraseña",
+    "agreementText": "Al registrarme, acepto los",
+    "termsOfServiceText": "Términos de servicio",
+    "privacyPolicyText": "Política de privacidad",
+    "confirmationTextParent1": "Confirmo que soy el padre o tutor legal, y otorgo mi consentimiento para la participación de mi hijo en actividades y uso de MathFactLab.",
+    "confirmationTextParent2": "Entiendo que al proporcionar este consentimiento, estoy permitiendo que mi hijo acceda y utilice las características y servicios ofrecidos por MathFactLab, y reconozco y acepto los términos y condiciones establecidos por el sitio web.",
+    "SignUpButton": "Registrarse",
+    "alreadyHaveAccountText": "¿Ya tienes una cuenta?"
+  },
+  "forgot-password": {
+    "title": "¿Olvidó su contraseña?",
+    "subtext": "No se preocupe. Simplemente ingrese el correo electrónico que utilizó para registrarse, y le enviaremos un enlace para restablecerlo.",
+    "formInputConformPasswordPlaceholder": "Ingrese su correo electrónico",
+    "buttonName": "Enviar enlace para restablecer la contraseña",
+    "linkLoginInstead": "Iniciar sesión en su lugar"
+  },
+  "reset-password": {
+    "title": "Restablecer contraseña",
+    "formNewPasswordLabel": "Nueva contraseña",
+    "formNewPasswordPlaceHolder": "Ingrese nueva contraseña",
+    "formConformPasswordLabel": "Confirmar contraseña",
+    "formConformPasswordPlaceholder": "Vuelva a ingresar nueva contraseña",
+    "resetButton": "Restablecer",
+    "linkTeacherLogin": "Volver al inicio de sesión del profesor"
+  },
+  "thankyou": {
+    "vectorText": "Estrategias efectivas y directas para dominar los hechos matemáticos.",
+    "loginLink": "Haga clic aquí para iniciar sesión",
+    "loginText": "Por favor, inicie sesión nuevamente con su nueva contraseña.",
+    "successText": "Su contraseña ha sido restablecida con éxito"
+  },
+  "resend-email": {
+    "title": "Reenviar correo electrónico de verificación",
+    "subText": "No se preocupe. Simplemente ingrese el correo electrónico que utilizó para registrarse, y le enviaremos un enlace de verificación para verificarlo.",
+    "resetPasswordButton": "Enviar enlace para restablecer la contraseña"
+  },
+  "confirmation": {
+    "title": "Te hemos enviado un enlace de restablecimiento.",
+    "subText": "Si la dirección de correo electrónico que ingresó estaba registrada con nosotros, recibirá un enlace de restablecimiento de contraseña en breve.",
+    "linkSubText": "Si no recibe el correo electrónico, por favor contacte a",
+
+    "mathFactLabLink": " soporte@mathfactlab.com"
+  },
+  "verify-email": {
+    "emailVerified": "Su correo electrónico ha sido verificado correctamente.",
+    "thankyouSubText": "¡Gracias!"
+  },
+  "join-user": {
+    "title": "Actualizar contraseña",
+    "formSetPasswordLabel": "Establecer contraseña",
+    "formSetPasswordPlaceHolder": "Ingrese contraseña",
+    "formConformPasswordLabel": "Confirmar contraseña",
+    "formConformPasswordPlaceholder": "Vuelva a ingresar contraseña",
+    "setPasswordButton": "Establecer contraseña",
+    "returnToLoginLink": "Volver a iniciar sesión"
+  },
+  "placement-test": {
+    "title": "Bienvenido",
+    "subTitle": "Bienvenido a",
+    "mathFactLabTitle": "¡MathFactLab!",
+    "beginText": "Comenzarás con un calentamiento para ayudarnos a encontrar tu nivel adecuado.",
+    "secondText": "En cada nivel, practicarás usando varias estrategias diferentes.",
+    "thirdText": "Completa cada estrategia al menos una vez y podrás realizar el Elevador de Nivel.",
+    "fourthText": "¡Obtén una buena puntuación en el Elevador de Nivel y subirás de nivel!",
+    "startedButton": "¡Comencemos!",
+    "warmUpText": "Empecemos calentando nuestros dedos.",
+    "instructionText1": "Escribe cada número que veas.",
+    "instructionText2": "Presiona 'enter' o la 'barra espaciadora' después de cada entrada.",
+    "alternativeText": "Comenzar",
+    "subText": "Ahora prepárate para algunos",
+    "problemText": "problemas.",
+    "pressText": "Presiona",
+    "BeginText": "‘Comenzar’",
+    "readyText": "cuando estés listo.",
+    "changeMathOperationMessage": "Haz lo mejor que puedas",
+    "goodText": "Buen trabajo.",
+    "programText": "programa",
+    "CompletedTestText": "Por favor, informa a tu profesor que has completado los",
+    "FactsText": "hechos",
+    "CongratulationsText": "¡Felicidades! Eres un maestro de todos los",
+    "CongratulationText": "¡Felicidades! Has dominado los básicos",
+    "CongratulationMasteredText": "¡Felicidades! Has dominado todos los",
+    "problemsPressText": "problemas. Presiona ‘Comenzar’ cuando estés listo.",
+    "subTractionText": "resta",
+    "divisionText": "división",
+    "nowLetsReadyText": "¡Ahora empecemos!"
+  },
+  "practice-select-activity": {
+    "selectNextActivityText": "SELECCIONA TU PRÓXIMA ACTIVIDAD",
+    "SelectPracticeWord": "SELECCIONA MODO DE PRÁCTICA Y ESTRATEGIA",
+    "LevelText": "Ver tu nivel",
+    "UnLockLevelText": "Para desbloquear el",
+    "AginText": "de nuevo",
+    "UnlockLevelLifterText": "Para desbloquear el elevador de nivel",
+    "UnlockStrategies": "Para desbloquear las otras estrategias:",
+    "AdvanceLevelText": "Para avanzar al siguiente nivel:",
+    "LevelLifterActivityText": "Completa cada actividad al menos una vez para desbloquear el Elevador de Nivel.",
+    "LevelLifterButton": "Elevador de Nivel",
+    "LevelHintText": "Las preguntas del Elevador de Nivel no tienen modelos ni pistas.",
+    "showQns": " Mostrar preguntas",
+    "unlockScoreText": "Puntuación",
+    "unlockPointText": "o más puntos en",
+    "unlockNumberText": "900",
+    "unlockActivityText": "actividad",
+    "allReviewsText": "todas las tres revisiones ",
+    "scoreText": "Puntuar 950 puntos en el",
+    "TrainerText": "Entrenador",
+    "OtherStrategiesText": "para desbloquear las otras estrategias",
+    "UnlockReviewText": "revisión",
+    "UnlockOrMorePointText": "o más puntos en el",
+    "unlockThreeStageText": "  o más puntos en las 3 etapas de",
+    "UnlockPointsOn": " puntos en "
+  }
+}

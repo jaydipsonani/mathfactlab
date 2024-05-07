@@ -1,0 +1,130 @@
+.alt-header {
+  width: 100%;
+  float: left;
+  background-color: $boxed-background;
+  height: 75px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  // fixed header
+  position: fixed;
+  @include breakpoint-max($screen-xll-max) {
+    height: 68px;
+  }
+  @include breakpoint-max($screen-lg-max) {
+    height: 54px;
+  }
+  @include breakpoint-max-height($height-750p) {
+    height: 64px;
+  }
+  @include breakpoint-max-height($height-700p) {
+    height: 54px;
+  }
+  .header-flex {
+    @include flex();
+    @include align-items-center();
+    @include justify-content-space-between();
+    // padding: 10px 0;
+    .user-menu {
+      display: flex;
+    }
+
+    .user-level-wrapper {
+      width: 230px;
+      position: relative;
+      overflow: hidden;
+      // margin-right: 16px;
+      height: 40px;
+      .user-level {
+        position: absolute;
+        background-color: #2b95f9;
+        color: white;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        //margin-right: 16px;
+        border-radius: 10px;
+        padding: 9px 17px;
+        font-size: 14px;
+        min-width: 180px;
+        height: 36px;
+        margin-top: 2px;
+        transition: 1s ease-in-out;
+        cursor: pointer;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
+
+      .bg-green {
+        background-color: $green;
+      }
+      &.show {
+        margin-left: -140px;
+      }
+
+      .bg-blue {
+        background-color: #2b95f9;
+        &:hover {
+          background-color: #003a7f;
+        }
+      }
+    }
+
+    .user-show-level {
+      background-color: #2b95f9;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+      border-radius: 8px;
+      padding: 9px 17px;
+      font-size: 14px;
+      min-width: 142px;
+      max-width: 142px;
+      height: 36px;
+      margin-top: 2px;
+
+      .show-level {
+        opacity: 1;
+        visibility: visible;
+        transition: visibility 0s linear 300ms, opacity 1.5s;
+
+        &.visible {
+          visibility: visible;
+          opacity: 1;
+          transition: visibility 0s linear 0s, opacity 1.5s;
+        }
+      }
+    }
+
+    .user-wrap {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .user-profile-link {
+        font-size: 1.4rem;
+      }
+      .user-profile-short-info {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.8;
+        @include breakpoint-max($screen-md-max) {
+          display: none;
+        }
+      }
+    }
+
+    .fm-activity-title {
+      @include font-size("24");
+      color: $frame-blue;
+      font-weight: bold;
+    }
+  }
+}

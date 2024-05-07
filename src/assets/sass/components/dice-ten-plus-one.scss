@@ -1,0 +1,49 @@
+.dice-ten-plus-one-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: -webkit-fill-available;
+
+  .left-column {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include dice-with-three-row-with-five-dice();
+  }
+
+  .dice-one-group {
+    @include dice-with-three-row();
+  }
+
+  //math-opration-img
+  @include math-op-img();
+}
+// .dice-five-one {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-direction: column;
+//   flex-wrap: wrap;
+
+//   .dice-img {
+//     width: 95px;
+//     height: 95px;
+//     margin: 10px;
+//     @media only screen and (min-width: 1680px) {
+//       width: 82px;
+//       height: 82x;
+//       margin: 8px;
+//     }
+//     @media only screen and (max-width: 1440px) {
+//       width: 72px;
+//       height: 72px;
+//       margin: 7px;
+//     }
+//     @media only screen and (max-width: 1024px) {
+//       width: 52px;
+//       height: 52px;
+//       margin: 4px;
+//     }
+//   }
+// }

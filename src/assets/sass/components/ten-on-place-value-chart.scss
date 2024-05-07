@@ -1,0 +1,93 @@
+.ten-on-place-value-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  .table-box {
+    display: table;
+    margin: 0 auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  .table-box-header {
+    @include font-size("30");
+  }
+  .table-box-body {
+    @include font-size("72");
+    font-weight: $bold;
+  }
+  .table-box-header,
+  .table-box-body {
+    display: table-row;
+  }
+  .table-box-row {
+    text-align: center;
+    display: table-cell;
+    min-width: 125px;
+    padding: 15px;
+
+    // padding: 10px 15px;
+    border: 2px solid;
+    vertical-align: middle;
+    position: relative;
+    @include breakpoint-max($screen-1920p-max) {
+      min-width: 120px;
+    }
+    @include breakpoint-max($screen-1600p-max) {
+      min-width: 110px;
+    }
+    @include breakpoint-max($screen-xll-max) {
+      min-width: 100px;
+    }
+    @include breakpoint-max($screen-x-max) {
+      min-width: 95px;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      min-width: 95px;
+    }
+    @include breakpoint-max($screen-md-max) {
+      min-width: 90px;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      min-width: 90px;
+    }
+    @include breakpoint-max($screen-xs-max) {
+      min-width: 90px;
+    }
+    .boxed-arrow {
+      // visibility: hidden;
+      position: absolute;
+      width: 0px;
+      right: 69%;
+      top: 74%;
+
+      &.visible {
+        width: 65%;
+        -webkit-transition: width 0.5s ease-in-out;
+        -moz-transition: width 0.5s ease-in-out;
+        -o-transition: width 0.5s ease-in-out;
+        transition: width 0.5s ease-in-out;
+      }
+    }
+
+    .hint-show-hidden {
+      visibility: hidden;
+    }
+    .hint-show-visible {
+      visibility: visible;
+      animation: fadeIn 0.5s linear;
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

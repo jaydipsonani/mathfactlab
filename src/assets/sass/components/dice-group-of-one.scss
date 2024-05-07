@@ -1,0 +1,91 @@
+.dice-groups-of-one-main-outer {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // height: -webkit-fill-available;
+  height: 100%;
+}
+
+.dice-visibility-hidden {
+  visibility: hidden;
+}
+.dice-groups-of-one-main-inner {
+  // height: 70%;
+  // width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice-one-group {
+  @include dice-with-one-row();
+}
+
+.dice-two-group {
+  @include dice-with-one-row();
+}
+
+.dice-three-group {
+  @include dice-with-one-row();
+}
+
+.dice-four-group {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include dice-with-two-row();
+}
+
+.dice-five-group {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include dice-with-three-row-with-five-dice();
+}
+
+.dice-six-group {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include dice-with-two-row();
+}
+
+.dice-seven-group {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include dice-with-three-row();
+}
+
+.dice-eight-group {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include dice-with-two-row();
+}
+
+.dice-nine-group {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include dice-with-three-row();
+}
+
+.dice-ten-group {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include dice-with-two-row();
+}

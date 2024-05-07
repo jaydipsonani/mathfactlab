@@ -1,0 +1,616 @@
+// @import '../utils/variable';
+// @import '../utils/mixin';
+
+/* Text Group */
+.regular-text {
+  font-size: 1.3rem !important;
+  line-height: 18px !important;
+  @include breakpoint-min(600px) {
+    font-size: 1.4rem !important;
+    line-height: 22px !important;
+  }
+  @include breakpoint-min(992px) {
+    font-size: 1.6rem !important;
+    line-height: 26px !important;
+  }
+}
+
+/*Line height*/
+.lh-24 {
+  line-height: 24px;
+}
+.lh-26 {
+  line-height: 26px;
+}
+.lh-28 {
+  line-height: 28px;
+}
+.lh-30 {
+  line-height: 30px;
+}
+
+.font-light {
+  font-weight: $light !important;
+}
+.font-normal {
+  font-weight: $regular !important;
+}
+.font-medium {
+  font-weight: $medium !important;
+}
+.font-semibold {
+  font-weight: $semibold !important;
+}
+.font-bold {
+  font-weight: $bold !important;
+}
+
+.font-36 {
+  font-size: 3.6rem;
+  font-weight: $regular;
+  // @include breakpoint-max($screen-1600p-max) {
+  //   font-size: 3.4rem;
+  // }
+  @include breakpoint-max($screen-x-max) {
+    font-size: 3.3rem;
+  }
+  @include breakpoint-max($screen-lg-max) {
+    font-size: 3.1rem;
+  }
+  @include breakpoint-max($screen-md-max) {
+    font-size: 2.9rem;
+  }
+  @include breakpoint-max($screen-sm-max) {
+    font-size: 2.7rem;
+  }
+  @include breakpoint-max($screen-xs-max) {
+    font-size: 2.5rem;
+  }
+}
+
+.font-40 {
+  font-size: 4rem;
+  font-weight: $regular;
+  // @include breakpoint-max($screen-1920p-max) {
+  //   font-size: 3.8rem;
+  // }
+  // @include breakpoint-max($screen-1600p-max) {
+  //   font-size: 3.6rem;
+  // }
+  @include breakpoint-max($screen-x-max) {
+    font-size: 3.4rem;
+  }
+  @include breakpoint-max($screen-lg-max) {
+    font-size: 3.2rem;
+  }
+  @include breakpoint-max($screen-md-max) {
+    font-size: 3rem;
+  }
+  @include breakpoint-max($screen-sm-max) {
+    font-size: 2.8rem;
+  }
+  @include breakpoint-max($screen-xs-max) {
+    font-size: 2.6rem;
+  }
+}
+
+.font-30 {
+  font-size: 3rem;
+  font-weight: $regular;
+  // @include breakpoint-max($screen-1600p-max) {
+  //   font-size: 2.8rem;
+  // }
+  @include breakpoint-max($screen-x-max) {
+    font-size: 2.7rem;
+  }
+  @include breakpoint-max($screen-lg-max) {
+    font-size: 2.5rem;
+  }
+  @include breakpoint-max($screen-md-max) {
+    font-size: 2.3rem;
+  }
+  @include breakpoint-max($screen-sm-max) {
+    font-size: 2.1rem;
+  }
+  @include breakpoint-max($screen-xs-max) {
+    font-size: 1.9rem;
+  }
+}
+.font-24 {
+  font-size: 2.4rem;
+  font-weight: $regular;
+  // @include breakpoint-max($screen-1600p-max) {
+  //   font-size: 2.2rem;
+  // }
+  @include breakpoint-max($screen-x-max) {
+    font-size: 2rem;
+  }
+  @include breakpoint-max($screen-xl-max) {
+    font-size: 2.4rem;
+  }
+  @include breakpoint-max($screen-lg-max) {
+    font-size: 1.8rem;
+  }
+  @include breakpoint-max($screen-md-max) {
+    font-size: 1.7rem;
+  }
+  @include breakpoint-max($screen-sm-max) {
+    font-size: 1.6rem;
+  }
+  @include breakpoint-max($screen-xs-max) {
+    font-size: 1.4rem;
+  }
+}
+.font-22 {
+  font-size: 2.2rem;
+  font-weight: $regular;
+  // @include breakpoint-max($screen-1600p-max) {
+  //   font-size: 2rem;
+  // }
+  @include breakpoint-max($screen-x-max) {
+    font-size: 1.9rem;
+  }
+  @include breakpoint-max($screen-lg-max) {
+    font-size: 1.7rem;
+  }
+  @include breakpoint-max($screen-md-max) {
+    font-size: 1.6rem;
+  }
+  @include breakpoint-max($screen-sm-max) {
+    font-size: 1.5rem;
+  }
+}
+
+.font-20 {
+  font-size: 2rem;
+  font-weight: $regular;
+  // @include breakpoint-max($screen-1600p-max) {
+  //   font-size: 1.8rem;
+  // }
+  @include breakpoint-max($screen-x-max) {
+    font-size: 1.7rem;
+  }
+  @include breakpoint-max($screen-lg-max) {
+    font-size: 1.65rem;
+  }
+  @include breakpoint-max($screen-md-max) {
+    font-size: 1.55rem;
+  }
+  @include breakpoint-max($screen-sm-max) {
+    font-size: 1.45rem;
+  }
+}
+
+.font-18 {
+  font-size: 1.8rem;
+  font-weight: $regular;
+  @include breakpoint-max(1400px) {
+    font-size: 1.7rem;
+  }
+  @include breakpoint-max($screen-x-max) {
+    font-size: 1.6rem;
+  }
+  @include breakpoint-max($screen-lg-max) {
+    font-size: 1.5rem;
+  }
+  @include breakpoint-max($screen-md-max) {
+    font-size: 1.4rem;
+  }
+  @include breakpoint-max($screen-sm-max) {
+    font-size: 1.3rem;
+  }
+}
+
+.font-14 {
+  font-size: 1.4rem;
+  font-weight: $regular;
+  @include breakpoint-max($screen-x-max) {
+    font-size: 1.4rem;
+  }
+  @include breakpoint-max($screen-lg-max) {
+    font-size: 1.2rem;
+  }
+  @include breakpoint-max($screen-md-max) {
+    font-size: 1.2rem;
+  }
+  @include breakpoint-max($screen-sm-max) {
+    font-size: 1.2rem;
+  }
+}
+
+.font-150 {
+  font-size: 15rem;
+  font-weight: $regular;
+  // @include breakpoint-max($screen-1920p-max) {
+  //   font-size: 13.5rem;
+  // }
+  // @include breakpoint-max($screen-1600p-max) {
+  //   font-size: 12rem;
+  // }
+  @include breakpoint-max($screen-xll-max) {
+    font-size: 11.5rem;
+  }
+  @include breakpoint-max($screen-x-max) {
+    font-size: 10rem;
+  }
+  @include breakpoint-max($screen-lg-max) {
+    font-size: 9rem;
+  }
+  @include breakpoint-max($screen-md-max) {
+    font-size: 12vw;
+  }
+  @include breakpoint-max($screen-sm-max) {
+    font-size: 65px;
+  }
+}
+
+@mixin font-size($font-size) {
+  @if $font-size == "14" {
+    font-size: 1.4rem;
+    font-weight: $regular;
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 1.2rem;
+    }
+  }
+  @if $font-size == "16" {
+    font-size: 1.6rem;
+    font-weight: $regular;
+    @include breakpoint-max(1400px) {
+      font-size: 1.5rem;
+    }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 1.4rem;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 1.3rem;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 1.2rem;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 1.2rem;
+    }
+  }
+  @if $font-size == "18" {
+    font-size: 1.8rem;
+    font-weight: $regular;
+    @include breakpoint-max(1400px) {
+      font-size: 1.7rem;
+    }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 1.6rem;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 1.5rem;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 1.4rem;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 1.3rem;
+    }
+  }
+  @if $font-size == "20" {
+    font-size: 2rem;
+    font-weight: $regular;
+    @include breakpoint-max($screen-xll-max) {
+      font-size: 1.7rem;
+    }
+    @include breakpoint-max($screen-xl-max) {
+      font-size: 1.6rem;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 1.5rem;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 1.4rem;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 1.4rem;
+    }
+    @include breakpoint-max($screen-xs-max) {
+      font-size: 1.3rem;
+    }
+  }
+  @if $font-size == "22" {
+    font-size: 2.2rem;
+    font-weight: $regular;
+    @include breakpoint-max($screen-xll-max) {
+      font-size: 1.7rem;
+    }
+    @include breakpoint-max($screen-xl-max) {
+      font-size: 1.6rem;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 1.5rem;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 1.4rem;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 1.3rem;
+    }
+    @include breakpoint-max($screen-xs-max) {
+      font-size: 1.25rem;
+    }
+  }
+  @if $font-size == "24" {
+    font-size: 2.4rem;
+    font-weight: $regular;
+    @include breakpoint-max($screen-xll-max) {
+      font-size: 1.8rem;
+    }
+    @include breakpoint-max($screen-xl-max) {
+      font-size: 1.65rem;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 1.55rem;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 1.45rem;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 1.35rem;
+    }
+    @include breakpoint-max($screen-xs-max) {
+      font-size: 1.25rem;
+    }
+  }
+  @if $font-size == "26" {
+    font-size: 2.6rem;
+    font-weight: $regular;
+    @include breakpoint-max($screen-xll-max) {
+      font-size: 2rem;
+    }
+    @include breakpoint-max($screen-xl-max) {
+      font-size: 1.85rem;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 1.65rem;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 1.45rem;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 1.45rem;
+    }
+    @include breakpoint-max($screen-xs-max) {
+      font-size: 1.35rem;
+    }
+  }
+  @if $font-size == "30" {
+    font-size: 3rem;
+    font-weight: $regular;
+    // @include breakpoint-max($screen-1920p-max) {
+    //   font-size: 2.8rem;
+    // }
+    // @include breakpoint-max($screen-1600p-max) {
+    //   font-size: 2.6rem;
+    // }
+    @include breakpoint-max($screen-xll-max) {
+      font-size: 2.4rem;
+    }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 2.2rem;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 2rem;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 1.9rem;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 1.8rem;
+    }
+    @include breakpoint-max($screen-xs-max) {
+      font-size: 1.7rem;
+    }
+  }
+  @if $font-size == "36" {
+    font-size: 3.6rem;
+    font-weight: $regular;
+    // @include breakpoint-max($screen-1600p-max) {
+    //   font-size: 3.4rem;
+    // }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 3.3rem;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 3.1rem;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 2.9rem;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 2.7rem;
+    }
+    @include breakpoint-max($screen-xs-max) {
+      font-size: 2.5rem;
+    }
+  }
+
+  @if $font-size == "40" {
+    font-size: 4rem;
+    font-weight: $regular;
+    // @include breakpoint-max($screen-1920p-max) {
+    //   font-size: 3.8rem;
+    // }
+    // @include breakpoint-max($screen-1600p-max) {
+    //   font-size: 3.5rem;
+    // }
+    @include breakpoint-max($screen-xll-max) {
+      font-size: 3.3rem;
+    }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 3.1rem;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 3rem;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 2.8rem;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 2.6rem;
+    }
+    @include breakpoint-max($screen-xs-max) {
+      font-size: 2.4rem;
+    }
+  }
+
+  @if $font-size == "46" {
+    font-size: 4.6rem;
+    line-height: normal;
+    font-weight: $regular;
+    @include breakpoint-max($screen-xll-max) {
+      font-size: 3.5rem;
+    }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 3rem;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 3rem;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 3rem;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 2.7rem;
+    }
+    @include breakpoint-max($screen-xs-max) {
+      font-size: 2.4rem;
+    }
+  }
+
+  @if $font-size == "60" {
+    font-size: 6rem;
+    font-weight: $regular;
+    @include breakpoint-max($screen-1920p-max) {
+      font-size: 5.5rem;
+    }
+    @include breakpoint-max($screen-1600p-max) {
+      font-size: 5rem;
+    }
+    @include breakpoint-max($screen-xll-max) {
+      font-size: 4.5rem;
+    }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 4rem;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 3.6rem;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 3.3rem;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 3rem;
+    }
+    @include breakpoint-max($screen-xs-max) {
+      font-size: 2.7rem;
+    }
+  }
+  @if $font-size == "36" {
+    font-size: 3.6rem;
+    font-weight: $regular;
+    // @include breakpoint-max($screen-1920p-max) {
+    //   font-size: 3.4rem;
+    // }
+    // @include breakpoint-max($screen-1600p-max) {
+    //   font-size: 3.2rem;
+    // }
+    @include breakpoint-max($screen-xll-max) {
+      font-size: 3rem;
+    }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 2.8rem;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 2.7rem;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 2.6rem;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 2.5rem;
+    }
+    @include breakpoint-max($screen-xs-max) {
+      font-size: 2.35rem;
+    }
+  }
+  @if $font-size == "150" {
+    font-size: 15rem;
+    font-weight: $regular;
+    line-height: 15rem;
+    // @include breakpoint-max($screen-1920p-max) {
+    //   font-size: 3.4rem;
+    // }
+    // @include breakpoint-max($screen-1600p-max) {
+    //   font-size: 3.2rem;
+    // }
+    @include breakpoint-max($screen-xll-max) {
+      font-size: 15rem;
+      line-height: 15rem;
+    }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 12rem;
+      line-height: 12rem;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 10rem;
+      line-height: 10rem;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 12rem;
+      line-height: 12rem;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 6rem;
+      line-height: 6rem;
+    }
+    @include breakpoint-max($screen-xs-max) {
+      font-size: 6rem;
+      line-height: 6rem;
+    }
+  }
+  @if $font-size == "72" {
+    font-size: 7.2rem;
+    font-weight: $regular;
+    line-height: normal;
+    @include breakpoint-max($screen-1920p-max) {
+      font-size: 6.8rem;
+    }
+    @include breakpoint-max($screen-1600p-max) {
+      font-size: 6.3rem;
+    }
+    @include breakpoint-max($screen-xll-max) {
+      font-size: 6rem;
+    }
+    @include breakpoint-max($screen-xl-max) {
+      font-size: 5.6rem;
+    }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 5.6rem;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 5.2rem;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 4.8rem;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 4.4rem;
+    }
+    @include breakpoint-max($screen-xs-max) {
+      font-size: 4rem;
+    }
+  }
+}
+
+.MuiTableCell-root {
+  font-size: 1.4rem !important;
+}
+
+.MuiTableCell-head {
+  font-weight: 600 !important;
+}

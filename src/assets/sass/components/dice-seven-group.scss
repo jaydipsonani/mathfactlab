@@ -1,0 +1,22 @@
+.dice-seven-group-main-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: -webkit-fill-available;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+
+    .dice-one-group {
+      @include dice-with-two-row();
+    }
+
+    .dice-two-group {
+      @include dice-with-two-row();
+    }
+  }
+
+  //math-opration-img
+  @include math-op-img();
+}

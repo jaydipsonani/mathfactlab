@@ -1,0 +1,56 @@
+@import "../utils/mixin";
+@import "../utils/variable";
+
+.teaching-tool-info-icon {
+  display: inline-flex;
+  line-height: 18px;
+  background-color: #ccc;
+  color: #fff;
+  margin-top: -3px;
+  border-radius: 0%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin-left: 8px;
+}
+.teaching-tool-sub-title {
+  font-size: 16px;
+}
+.math-operation-wrapper {
+  .learning-mode-level {
+    padding: 20px;
+    background: #f5f6fa;
+    border-radius: 10px;
+    margin-bottom: 30px;
+
+    .level-card {
+      margin: 0px 8px 8px 0px;
+    }
+    .ant-card {
+      min-width: 130px;
+      .ant-card-head-title {
+        padding: 12px 0;
+
+        .subtitle-text {
+          font-size: 12px;
+          font-weight: 500;
+          margin-left: 4px;
+        }
+      }
+      .ant-card-body {
+        padding: 12px 024px;
+      }
+    }
+  }
+  div:last-child {
+    margin-bottom: 0;
+  }
+}
+@include breakpoint-max($screen-xll-max) {
+  .math-operation-wrapper .learning-mode-level {
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,416 @@
+.student-report-popup.custom-popup {
+  .popup {
+    width: calc(100% - 30px);
+    max-width: 1400px;
+    border-radius: 10px;
+    overflow: auto;
+    max-height: calc(100vh - 30px);
+    .popup-header {
+      background-color: $popup-header;
+      @include flex();
+      padding: 40px 75px 110px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      .close {
+        font-size: 7rem;
+        font-weight: $regular;
+        color: $secondary-color;
+        position: absolute;
+        right: 15px;
+        margin-right: 0;
+        top: 0px;
+      }
+      .popup-header-subtitle {
+        @include flex();
+        width: 100%;
+        .popup-header-subtitle-inner {
+          @include inline-flex();
+          @include font-size("16");
+          margin-right: 52px;
+          .popup-header-subtitle-bold {
+            font-weight: $bold;
+            margin-left: 5px;
+          }
+        }
+      }
+      .popup-header-top {
+        width: 100%;
+        border-bottom: 1px solid #c4c4c4;
+        @include flex-with-nowrap();
+        @include align-items-center();
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        .popup-header-left {
+          flex: 1;
+          .popup-title {
+            padding-left: 0;
+            margin-bottom: 15px;
+          }
+        }
+        .popup-header-right {
+          @include font-size("16");
+          font-weight: $bold;
+          .popup-time {
+            margin-bottom: 15px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+          [class^="icon-"],
+          [class*=" icon-"] {
+            margin-right: 10px;
+          }
+        }
+      }
+      .bd-none {
+        border-bottom: 0;
+      }
+      .popup-header-bottom {
+        @include inline-flex();
+        .legend-wrap {
+          @include flex();
+          @include align-items-center();
+          @include font-size("14");
+          margin-right: 38px;
+          &:last-child {
+            margin-right: 0;
+          }
+          .legend {
+            width: 27px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+    .popup-content {
+      overflow: unset;
+      .popup-content-inner {
+        padding: 0 75px 40px;
+        .popup-box-wrapper {
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          background-color: #fff;
+          margin-bottom: 30px;
+          &.mfl-top-less {
+            margin-top: -110px;
+          }
+          .popup-content-cols-inner {
+            padding-top: 20px;
+          }
+          .student-popcont-header {
+            padding: 15px 50px;
+            @include flex();
+            @include justify-content-space-between();
+            color: $white;
+            background-color: $bg-aside;
+            .student-popcont-header-left {
+              @include font-size("16");
+            }
+            .student-popcont-header-right {
+              @include flex();
+              @include align-items-center();
+            }
+            .report-timer {
+              @include font-size("18");
+              margin-right: 5px;
+            }
+          }
+          .student-popcont-content {
+            padding: 30px 50px 0;
+            .student-popcont-content-inner {
+              @include flex();
+              margin-left: -15px;
+              margin-right: -15px;
+              .student-popcont-content-cols {
+                padding-left: 15px;
+                padding-right: 15px;
+                width: 16.6667%;
+                min-width: 130px;
+                margin-bottom: 30px;
+              }
+            }
+          }
+          .student-additional-wrapper {
+            width: 100%;
+            @include flex-column();
+            margin-bottom: 25px;
+            border-bottom: 1px solid #d4d4d4;
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+        .incomplete-report-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 6vh;
+          width: 100%;
+          border-radius: 6px;
+          background-color: #efcabd;
+        }
+      }
+      .close {
+        font-size: 7rem;
+        font-weight: $regular;
+        color: $secondary-color;
+        position: relative;
+        right: 10px;
+        margin-right: 0;
+        opacity: 1.2;
+      }
+    }
+  }
+}
+
+.student-additional-title {
+  @include flex();
+  @include align-items-center();
+  margin-bottom: 20px;
+  .mfl-report-title-left {
+    @include font-size("18");
+    font-weight: $bold;
+  }
+  .mfl-report-title-right {
+    margin-left: auto;
+    .report-timer {
+      @include font-size("18");
+      margin-right: 5px;
+    }
+  }
+}
+.student-calc-card {
+  border-radius: 10px;
+  border: 1px solid;
+  text-align: center;
+  position: relative;
+  padding: 0px 10px 20px;
+  overflow: hidden;
+  font-weight: $bold;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    left: 0;
+    bottom: 0;
+  }
+  &.mf-success {
+    border-color: $mfl-rp-green;
+    &::after {
+      background-color: $mfl-rp-green;
+    }
+    .student-calc-card-time {
+      color: $mfl-rp-green;
+    }
+  }
+  &.mf-warning {
+    border-color: $mfl-rp-yellow;
+    &::after {
+      background-color: $mfl-rp-yellow;
+    }
+    .student-calc-card-time {
+      color: $mfl-rp-yellow;
+    }
+  }
+  &.mf-danger {
+    border-color: $mfl-rp-red;
+    &::after {
+      background-color: $mfl-rp-red;
+    }
+    .student-calc-card-time {
+      color: $mfl-rp-red;
+    }
+  }
+  &.mf-danger-teacher {
+    border-color: $mfl-rp-yellow;
+    &::after {
+      background-color: $mfl-rp-yellow;
+    }
+    .student-calc-card-time {
+      color: $mfl-rp-yellow;
+    }
+  }
+  .student-calc-card-title {
+    font-size: 1.6rem;
+    margin-top: 10px;
+  }
+  .student-calc-card-time {
+    font-size: 1.6rem;
+  }
+  .student-calc-card-attempt-count {
+    position: absolute;
+    width: 12%;
+    height: 22px;
+    left: 138px;
+    top: 2px;
+    border: 1px solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fbf4b7;
+    &.mf-success {
+      color: $mfl-rp-green;
+    }
+    &.mf-warning {
+      color: $mfl-rp-yellow;
+    }
+    &.mf-danger {
+      color: $mfl-rp-red;
+    }
+  }
+}
+
+@include breakpoint-max($screen-1920p-max) {
+}
+@include breakpoint-max($screen-1600p-max) {
+}
+@include breakpoint-max($screen-xll-max) {
+  .student-report-popup.custom-popup .popup .popup-header {
+    padding: 30px 65px 110px 45px;
+  }
+  .student-report-popup.custom-popup
+    .popup
+    .popup-content
+    .popup-content-inner {
+    padding: 0 35px 40px;
+  }
+  .student-report-popup.custom-popup .popup .popup-header .close {
+    font-size: 5.5rem;
+  }
+  .student-report-popup.custom-popup
+    .popup
+    .popup-content
+    .popup-content-inner
+    .popup-box-wrapper
+    .student-popcont-content {
+    padding: 30px 35px 0;
+  }
+  .student-report-popup.custom-popup
+    .popup
+    .popup-content
+    .popup-content-inner
+    .popup-box-wrapper
+    .student-popcont-header {
+    padding: 15px 35px;
+  }
+  .student-report-popup.custom-popup
+    .popup
+    .popup-header
+    .popup-header-bottom
+    .legend-wrap {
+    margin-right: 25px;
+  }
+}
+@include breakpoint-max($screen-x-max) {
+  .student-calc-card .student-calc-card-title {
+    font-size: 1.4rem;
+  }
+  .student-calc-card .student-calc-card-time {
+    font-size: 1.35rem;
+  }
+  .student-report-popup.custom-popup
+    .popup
+    .popup-content
+    .popup-content-inner
+    .popup-box-wrapper
+    .student-popcont-content
+    .student-popcont-content-inner {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .student-report-popup.custom-popup
+    .popup
+    .popup-content
+    .popup-content-inner
+    .popup-box-wrapper
+    .student-popcont-content
+    .student-popcont-content-inner
+    .student-popcont-content-cols {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 15px;
+  }
+  .student-report-popup.custom-popup
+    .popup
+    .popup-content
+    .popup-content-inner
+    .popup-box-wrapper
+    .student-additional-wrapper {
+    margin-bottom: 15px;
+  }
+  .student-calc-card::after {
+    height: 8px;
+  }
+  .student-report-popup.custom-popup .popup .popup-header {
+    padding: 30px 50px 110px 30px;
+  }
+  .student-report-popup.custom-popup
+    .popup
+    .popup-content
+    .popup-content-inner {
+    padding: 0 20px 40px;
+  }
+  .student-report-popup.custom-popup
+    .popup
+    .popup-content
+    .popup-content-inner
+    .popup-box-wrapper
+    .student-popcont-content {
+    padding: 20px 25px 0;
+  }
+  .student-report-popup.custom-popup
+    .popup
+    .popup-header
+    .popup-header-bottom
+    .legend-wrap {
+    margin-right: 15px;
+  }
+  .student-report-popup.custom-popup
+    .popup
+    .popup-header
+    .popup-header-bottom
+    .legend-wrap
+    .legend {
+    width: 20px;
+    height: 14px;
+    margin-right: 8px;
+  }
+  .student-report-popup.custom-popup .popup .popup-header .close {
+    font-size: 4.5rem;
+  }
+  .student-report-popup.custom-popup
+    .popup
+    .popup-content
+    .popup-content-inner
+    .popup-box-wrapper
+    .student-popcont-header {
+    padding: 10px 25px;
+  }
+  .student-calc-card {
+    padding: 6px 10px 15px;
+  }
+}
+@include breakpoint-max($screen-lg-max) {
+  .student-report-popup.custom-popup
+    .popup
+    .popup-content
+    .popup-content-inner
+    .popup-box-wrapper
+    .student-popcont-content {
+    padding: 20px 20px 0;
+  }
+  .student-report-popup.custom-popup
+    .popup
+    .popup-header
+    .popup-header-bottom
+    .legend-wrap {
+    font-size: 1rem;
+  }
+}
+@include breakpoint-max($screen-md-max) {
+}

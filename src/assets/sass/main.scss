@@ -1,0 +1,128 @@
+@import './vendors/bootstrap.min';
+@import './utils/variable';
+@import './utils/mixin';
+@import './utils/dice-mixin';
+
+@import 'modules/typography';
+@import 'modules/buttons';
+@import 'modules/social-color';
+@import 'modules/animation';
+@import 'modules/backgrounds';
+@import 'modules/input';
+@import 'modules/icons';
+@import 'modules/global';
+
+@import 'pages/login.scss';
+@import 'pages/react-table.scss';
+
+@import 'pages/assessment-screen.scss';
+@import 'components/assessment-header.scss';
+
+@import 'components/assessment-aside.scss';
+@import 'components/popup.scss';
+@import 'components/report-popup.scss';
+@import 'pages/assessment-inner.scss';
+@import 'pages/table.scss';
+
+@import 'pages/activity.scss';
+@import 'pages/activityv1.scss';
+@import 'pages/test.scss';
+@import 'pages/faq.scss';
+@import 'pages/progression-tables.scss';
+
+//
+
+@import 'components/dice-group-of-one.scss';
+@import 'components/level-d-2-fives-is-ten-with-dice.scss';
+@import 'components/dice-four-group.scss';
+@import 'components/dice-three-group.scss';
+@import 'components/dice-six-group.scss';
+@import 'components/dice-seven-group.scss';
+@import 'components/level-e-dice-zero-groups.scss';
+@import 'components/level-e-dice-groups-of-zero.scss';
+@import 'components/level-a-doubles-with-dice.scss';
+@import 'components/level-k-double-fours-is-eight-with-dice.scss';
+@import 'components/level-h-dice-five-one.scss';
+@import 'components/level-h-dice-five-two-group.scss';
+@import 'components/group-of-seventeen.scss';
+@import 'components/level-h-dice-five-three-group.scss';
+
+@import 'components/dice-one-group.scss';
+@import 'components/level-j-dice-ten-minus-one.scss';
+@import 'components/dice-twenty-minus-one-stage-one.scss';
+@import 'components/ten-frames-with-double-dices';
+@import 'components/ten-frames-with-x3';
+@import 'components/ten-frames-with-x4';
+@import 'components/ten-frames-addition';
+@import 'components/ten-frames-subtraction';
+
+@import 'components/fill-in-the-blanks';
+@import 'components/number-lines';
+
+@import 'components/ten-on-place-value-chart.scss';
+@import 'components/beads-addition.scss';
+@import 'components/beads-subtraction.scss';
+@import 'components/double-bar-diagram.scss';
+@import 'components/area-models.scss';
+@import 'components/open-arrays.scss';
+@import 'components/nine-frames.scss';
+@import 'components/five-is-half-of-ten.scss';
+@import 'components/nine-patterns-stage-three.scss';
+@import 'components/nine-patterns-stage-four.scss';
+@import 'components/finger-trick.scss';
+@import 'components/clock-faces.scss';
+@import 'components/missing-addends.scss';
+@import 'components/five-is-half-of-tens-with-beads.scss';
+@import 'components/dice-four-one-group.scss';
+@import 'components/find-difference.scss';
+@import 'components/fifty-groups-stage-1';
+@import 'components/quarters-four-cross-twenty-five';
+
+@import 'components/animated-star.scss';
+
+@import 'components/twolayout-popup';
+@import 'modules/trianglesvg';
+
+@import 'components/number-lines-division.scss';
+@import 'components/progress-mfl-custom.scss';
+@import 'components/status-controller.scss';
+@import 'components/user-profile.scss';
+
+@import 'components/student-login-info.scss';
+@import 'components/cookies-consent.scss';
+
+// overirde popup with antd
+@import 'components/custom-modal.scss';
+@import 'components/custom-table.scss';
+@import 'components/student-report-popup.scss';
+@import 'components/primary-popup.scss';
+@import 'components/tablet-banner.scss';
+
+@import 'components/student-welcome.scss';
+@import 'components/session-dailog-drawer.scss';
+@import 'components/student-drawer.scss';
+@import 'components/student-detail-popup.scss';
+
+//new strategy
+@import 'components/dice-ten-plus-one.scss';
+@import 'components/dice-six-plus-six.scss';
+@import 'components/dice-ten-plus-two.scss';
+@import 'components/bar-diagram-division.scss';
+
+//teacher-welcome-steps-popup
+@import '../sass/components/teacher-welcome-steps-popup.scss';
+@import 'components/import-csv-popup.scss';
+@import 'components/number-pad.scss';
+@import 'components/number-pad-2.scss';
+@import 'components/students-report.scss';
+@import 'components/individual-report.scss';
+@import 'components/group-report.scss';
+@import 'components/growth-gauge.scss';
+@import 'components/growth-gauge-twolayout-popup.scss';
+@import 'components/growth-gauige-bar.scss';
+@import 'components/tutorial-video-popup.scss';
+@import 'components/class-welcome-steps-popup.scss';
+@import 'components/teacher-layout.scss';
+
+//teacher dashboard
+// @import "components/dashboard.scss";

@@ -1,0 +1,46 @@
+.section {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: #0e704a0f 0px 2px 20px;
+
+  & + .section {
+    margin-top: 30px;
+  }
+
+  :global {
+    .ant-card-head {
+      padding: 0 30px;
+    }
+
+    .ant-card-head-title {
+      color: #2d405a;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+      padding: 25px 0;
+    }
+
+    .ant-card-body {
+      padding: 30px;
+    }
+  }
+
+  .ant-card-body {
+    max-height: calc(100vh - 182px);
+    overflow-y: auto;
+  }
+
+  @media (max-width: 768px) {
+    :global {
+      .ant-card-head {
+        padding: 0 15px;
+      }
+    }
+  }
+}
+
+.footer {
+  border-top: 1px solid #dee8f1;
+  text-align: center;
+  padding: 12px 30px;
+}

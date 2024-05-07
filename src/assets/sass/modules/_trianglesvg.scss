@@ -1,0 +1,467 @@
+.inline-table-count {
+  @include inline-flex();
+  width: 100%;
+  padding: 5px 40px;
+  margin-bottom: 8px;
+  border-radius: 16px;
+  .inline-table-button {
+    margin-right: 45px;
+    min-width: 128px;
+    display: flex;
+    gap: 8px;
+    border-radius: 16px;
+    .level-label {
+      font-size: 20px;
+      &.mastered {
+        color: #409700;
+      }
+      &.focus {
+        color: #1ed4fd;
+      }
+      &.selected {
+        color: $white;
+      }
+      &.disable {
+        color: #efefef;
+      }
+      &.basic {
+        color: #1b4996;
+      }
+      &.advanced {
+        color: #409700;
+      }
+      &.super-advanced {
+        color: #0e9ea0;
+      }
+      &.super-duper-advanced {
+        color: #a35ad0;
+      }
+    }
+    .level-descriptors {
+      font-size: 14px;
+      font-weight: 700;
+      margin-left: 6px;
+      color: #808080 !important;
+    }
+  }
+  &.focus {
+    background-color: #e3faff;
+  }
+  &.mastered {
+    background-color: #e5ffe3;
+  }
+  &.disabled {
+    background-color: #dddbdb87;
+  }
+  &.basic {
+    background-color: #e0f9ff;
+  }
+  &.advanced {
+    background-color: #e5ffe3;
+  }
+  &.super-advanced {
+    background-color: #cef9f9;
+  }
+  &.super-duper-advanced {
+    background-color: #f9eafe;
+  }
+  &.selected {
+    // @include gradient("dark-blue");
+    background-color: #003c96;
+    box-shadow: 0px 0px 16px 2px rgba(31, 28, 69, 0.25);
+
+    .level-label {
+      &.basic {
+        color: $white;
+      }
+      &.advanced {
+        color: $white;
+      }
+      &.super-advanced {
+        color: $white;
+      }
+      &.super-duper-advanced {
+        color: $white;
+      }
+    }
+
+    .level-descriptors {
+      color: #bcbcbc !important;
+    }
+  }
+}
+
+.inline-table-raw-outer-wrap {
+  @include flex-with-nowrap();
+  flex: 1;
+  align-items: center;
+  width: 100%;
+  padding: 14px 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 15px;
+  border: 1px solid;
+  font-weight: 700;
+  flex-wrap: wrap;
+
+  &.bg-green {
+    // background: linear-gradient(-178deg, #8ac848 0%, #469c44 100%);
+    border-color: #444444;
+
+    background-color: #8ac848;
+    background-image: linear-gradient(
+      80deg,
+      // #8ac848 0%,
+        #42bb2a 0%,
+      #8ac848 100%
+    );
+  }
+  &.bg-blue {
+    background: linear-gradient(-178deg, #36d1dc 0%, #5b86e5 100%);
+    border-color: #444444;
+  }
+  &.bg-disable {
+    background: #d8d8d8;
+    border-color: #919191;
+    // background: linear-gradient(-178deg, white 0%, #f2f2f2 100%);
+  }
+
+  .math-operation-icon {
+    margin: 0px 3px;
+  }
+  .inline-table-count-item {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-right: 6px;
+    position: relative;
+
+    &.count-disable {
+      background-image: url(../../images/polygon-1.png);
+      * {
+        color: #606362;
+      }
+    }
+    &.count-light-blue {
+      background-image: url(../../images/polygon-1.png);
+    }
+    &.count-green {
+      background-image: url(../../images/polygon-1.png);
+    }
+
+    //
+
+    * {
+      font-size: 1.4rem;
+      font-weight: $bold;
+      position: absolute;
+      line-height: normal;
+    }
+    .tc-top {
+      top: 11px;
+      left: 0;
+      text-align: center;
+      right: 0;
+    }
+    .tc-left {
+      left: 10px;
+      bottom: 6px;
+    }
+    .tc-right {
+      right: 10px;
+      bottom: 6px;
+    }
+  }
+}
+.inline-table-count-wrap {
+  @include flex();
+  flex: 1;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-left: 6px;
+  .inline-table-count-item {
+    // color: $white;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    // margin-right: 6px;
+    margin: 3px 6px 3px 0px;
+    position: relative;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &.count-disable {
+      background-image: url(../../images/polygon-3.png);
+      * {
+        color: #606362;
+      }
+    }
+    &.count-light-blue {
+      background-image: url(../../images/polygon-2.png);
+    }
+    &.count-green {
+      background-image: url(../../images/polygon-1.png);
+    }
+    // &.count-blue {
+    //   background-image: url(../../images/triangle/count-blue.png);
+    // }
+    // &.count-parrot {
+    //   background-image: url(../../images/triangle/count-parrot.png);
+    // }
+    // &.count-green {
+    //   background-image: url(../../images/triangle/count-green.png);
+    // }
+
+    // &.count-purple {
+    //   background-image: url(../../images/triangle/count-purple.png);
+    // }
+    * {
+      font-size: 1.4rem;
+      font-weight: $bold;
+      position: absolute;
+      line-height: normal;
+    }
+    .tc-top {
+      top: 8px;
+      left: 0;
+      text-align: center;
+      right: 0;
+    }
+    .tc-left {
+      left: 10px;
+      bottom: 6px;
+    }
+    .tc-right {
+      right: 10px;
+      bottom: 6px;
+    }
+  }
+}
+@include breakpoint-min-height($height-850p) {
+  .inline-table-count-wrap .inline-table-count-item {
+    width: 68px;
+    min-width: 68px;
+    height: 57px;
+  }
+}
+@include breakpoint-min-height($height-1080p) {
+  .inline-table-count-wrap .inline-table-count-item {
+    width: 74px;
+    min-width: 74px;
+    height: 62px;
+  }
+}
+@include breakpoint-max-height($height-1000p) {
+  .inline-table-count-wrap .inline-table-count-item {
+    // width: 60px !important;
+    // min-width: 60px !important;
+    // height: 50px !important;
+    width: 66px !important;
+    min-width: 60px !important;
+    height: 60px !important;
+    .tc-left {
+      bottom: 7px;
+    }
+    .tc-right {
+      bottom: 7px;
+    }
+  }
+  .inline-table-count {
+    margin-bottom: 8px;
+  }
+}
+@include breakpoint-max-height($height-930p) {
+  .inline-table-count-wrap .inline-table-count-item {
+    width: 55px !important;
+    min-width: 55px !important;
+    height: 45px !important;
+  }
+
+  .inline-table-raw-outer-wrap {
+    * {
+      font-size: 1.2rem;
+    }
+  }
+  .inline-table-count-wrap .inline-table-count-item * {
+    font-size: 1.2rem;
+  }
+}
+@include breakpoint-max-height($height-850p) {
+  .inline-table-count-wrap .inline-table-count-item {
+    // width: 53px !important;
+    // min-width: 53px !important;
+    // height: 43px !important;
+    width: 56px !important;
+    min-width: 53px !important;
+    height: 52px !important;
+  }
+  .inline-table-count {
+    margin-bottom: 6px;
+  }
+}
+@include breakpoint-max-height($height-750p) {
+  .inline-table-count-wrap .inline-table-count-item {
+    width: 48px !important;
+    min-width: 48px !important;
+    height: 39px !important;
+  }
+  .inline-table-count-wrap .inline-table-count-item .tc-top {
+    // top: 3px;
+    top: 6px;
+  }
+  .inline-table-count-wrap .inline-table-count-item .tc-left {
+    left: 9px;
+    // left: 8px;
+    // bottom: 3px;
+    bottom: 4px;
+  }
+  .inline-table-count-wrap .inline-table-count-item .tc-right {
+    right: 9px;
+    // right: 8px;
+    // bottom: 3px;
+    bottom: 4px;
+  }
+}
+@include breakpoint-max-height($height-700p) {
+  .inline-table-raw-outer-wrap {
+    padding: 8px 12px;
+    * {
+      font-size: 1.1rem;
+    }
+  }
+  .inline-table-count-wrap .inline-table-count-item {
+    // width: 44px !important;
+    // min-width: 44px !important;
+    // height: 35px !important;
+
+    // #changes
+
+    width: 54px !important;
+    min-width: 44px !important;
+    height: 44px !important;
+  }
+
+  .inline-table-count-wrap .inline-table-count-item * {
+    font-size: 1.1rem;
+  }
+  .inline-table-count {
+    margin-bottom: 4px;
+  }
+}
+@include breakpoint-max($screen-1920p-max) {
+  .inline-table-count .inline-table-button {
+    margin-right: 40px;
+  }
+  .inline-table-count {
+    padding: 5px 35px;
+  }
+}
+
+@include breakpoint-max($screen-1600p-max) {
+  .inline-table-count .inline-table-button {
+    margin-right: 35px;
+  }
+  .inline-table-count {
+    padding: 5px 30px;
+  }
+}
+@include breakpoint-max($screen-xll-max) {
+  .inline-table-count {
+    padding: 5px 25px;
+  }
+  .inline-table-count .inline-table-button {
+    margin-right: 30px;
+  }
+}
+@include breakpoint-max($screen-xl-max) {
+  .inline-table-count {
+    padding: 5px 20px;
+  }
+  .inline-table-count-wrap .inline-table-count-item {
+    width: 65px;
+    min-width: 65px;
+    height: 55px;
+  }
+  .inline-table-count .inline-table-button {
+    margin-right: 25px;
+  }
+}
+@include breakpoint-max($screen-x-max) {
+  .inline-table-count {
+    padding: 5px 15px;
+  }
+  .inline-table-count .inline-table-button {
+    margin-right: 18px;
+  }
+}
+@include breakpoint-max($screen-lg-max) {
+  .inline-table-count .inline-table-button {
+    margin-right: 15px;
+  }
+  .inline-table-count {
+    padding: 5px 10px;
+    margin-bottom: 0px;
+  }
+  .inline-table-count-wrap .inline-table-count-item {
+    width: 44px !important;
+    min-width: 44px !important;
+    height: 35px !important;
+    margin-right: 4px;
+    * {
+      font-size: 1.1rem;
+    }
+  }
+  .inline-table-count .inline-table-button {
+    margin-right: 12px;
+  }
+}
+@include breakpoint-max(850px) {
+  .twoLayout-popup .twoLayout-popup-left {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+  }
+  .twoLayout-popup .twoLayout-popup-right {
+    border-bottom-left-radius: 15px;
+  }
+  .twoLayout-popup .twoLayout-popup-left .bottom-legend {
+    font-size: 1.35rem;
+    width: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .twoLayout-popup .twoLayout-popup-left .twoLayout-popup-title {
+    padding-bottom: 10px;
+  }
+}
+@include breakpoint-max($screen-md-max) {
+  .inline-table-count {
+    padding: 5px 18px;
+  }
+}
+@include breakpoint-max($screen-sm-max) {
+  .inline-table-count {
+    padding: 5px 15px;
+  }
+  .inline-table-count-wrap .inline-table-count-item {
+    width: 55px;
+    min-width: 55px;
+    height: 45px;
+  }
+
+  .inline-table-raw-outer-wrap {
+    * {
+      font-size: 1.2rem;
+    }
+  }
+  .inline-table-count-wrap .inline-table-count-item * {
+    font-size: 1.2rem;
+  }
+  .inline-table-count-wrap .inline-table-count-item .tc-left,
+  .inline-table-count-wrap .inline-table-count-item .tc-right {
+    bottom: 3px;
+  }
+}
+@include breakpoint-max($screen-xs-max) {
+}

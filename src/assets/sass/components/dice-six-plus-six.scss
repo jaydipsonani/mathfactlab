@@ -1,0 +1,31 @@
+.dice-six-plus-six-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: -webkit-fill-available;
+
+  @include math-op-img();
+
+  .left-column {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include dice-with-three-row-with-five-dice();
+  }
+
+  .right-column {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include dice-with-three-row-with-five-dice();
+  }
+  .hint-text {
+    min-height: 30px;
+    padding: 6px 0px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,82 @@
+.dice-groups-of-zero-main-outer {
+  height: 100%;
+}
+
+.dice-groups-of-zero-main-inner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice-groups-of-zero-one {
+  @include dice-with-one-row();
+}
+
+.dice-groups-of-zero-two {
+  @include dice-with-one-row();
+}
+
+.dice-groups-of-zero-three {
+  @include dice-with-one-row();
+}
+
+.dice-groups-of-zero-four {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include dice-with-two-row();
+}
+
+.dice-groups-of-zero-five {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include dice-with-three-row-with-five-dice();
+}
+
+.dice-groups-of-zero-six {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include dice-with-two-row();
+}
+
+.dice-groups-of-zero-seven {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include dice-with-three-row();
+}
+
+.dice-groups-of-zero-eight {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include dice-with-two-row();
+}
+
+.dice-groups-of-zero-nine {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include dice-with-three-row();
+}
+
+.dice-groups-of-zero-ten {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include dice-with-two-row();
+}

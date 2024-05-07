@@ -1,0 +1,606 @@
+.five-is-half-of-ten-wrapper-single {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  .box-flex-wrapper {
+    background-color: #fff;
+    border: 2px solid #000000;
+    position: relative;
+    .vertical-wrapper {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      .vertical-line {
+        height: 100%;
+        width: 100%;
+        border-right: 1px solid #000000;
+        background-color: #fff;
+        &.bg-green {
+          background-color: green;
+        }
+      }
+      div:last-child {
+        border-right: none;
+      }
+    }
+    .horizontal-wrapper {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      top: 0;
+      .horizontal-line {
+        &.bg-green {
+          height: 100%;
+          width: 100%;
+          background-color: green;
+        }
+        border-top: 1px solid #000000;
+      }
+    }
+    .first-factor {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      font-size: 24px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      padding-right: 15px;
+      @media only screen and (max-height: 850px) {
+        font-size: 16px;
+      }
+      @media only screen and (max-height: 700px) {
+        font-size: 14px;
+      }
+      @media only screen and (max-height: 600px) {
+        font-size: 14px;
+      }
+    }
+    .second-factor {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      font-size: 24px;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 36px;
+      @media only screen and (max-height: 850px) {
+        font-size: 16px;
+      }
+      @media only screen and (max-height: 700px) {
+        font-size: 14px;
+      }
+      @media only screen and (max-height: 600px) {
+        font-size: 14px;
+      }
+    }
+    .answer-text {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      font-size: 24px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 36px;
+      @media only screen and (max-height: 850px) {
+        font-size: 16px;
+      }
+      @media only screen and (max-height: 700px) {
+        font-size: 14px;
+      }
+      @media only screen and (max-height: 600px) {
+        font-size: 14px;
+      }
+    }
+    .hint-text-box-wrapper {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      font-size: 24px;
+      display: flex;
+      width: 100%;
+      position: absolute;
+      left: 125%;
+      opacity: 0;
+      visibility: hidden;
+      transition: visibility 0s linear 300ms, opacity 1.5s;
+      justify-content: center;
+      align-items: center;
+      @media only screen and (max-height: 1440px) {
+        width: 85%;
+        left: -100%;
+      }
+      &.visible {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear 0s, opacity 1.5s;
+        height: 100%;
+      }
+      .hint-text-box {
+        border: 1px solid;
+        border-radius: 8px;
+        background-color: white;
+        max-height: 300px;
+        padding: 24px;
+      }
+    }
+    .full-curly-brace {
+      width: 100%;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      // transform: rotate(-180deg);
+      .brace {
+        border-bottom: 3px solid;
+        margin: 0 10%;
+        width: 30%;
+        height: 20px;
+        float: left;
+      }
+      .brace:before,
+      .brace:after {
+        content: "";
+        width: 10%;
+        height: 50px;
+        position: absolute;
+        display: block;
+      }
+      #left:before {
+        border-bottom: 3px solid;
+        border-bottom-left-radius: 20px;
+        margin-left: -10%;
+        margin-top: -30px;
+      }
+      #left:after {
+        border-top: 3px solid;
+        border-top-right-radius: 20px;
+        margin-left: 30%;
+        margin-top: 17px;
+      }
+      #right:before {
+        border-top: 3px solid;
+        border-top-left-radius: 20px;
+        margin-left: -10%;
+        margin-top: 17px;
+      }
+      #right:after {
+        border-bottom: 3px solid;
+        border-bottom-right-radius: 20px;
+        margin-left: 30%;
+        margin-top: -30px;
+      }
+    }
+    .half-curly-brace {
+      width: 50%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      .e {
+        border-bottom: 3px solid;
+        margin: 0 10%;
+        width: 30%;
+        height: 20px;
+        float: left;
+      }
+      .brace:before,
+      .brace:after {
+        content: "";
+        width: 10%;
+        height: 50px;
+        position: absolute;
+        display: block;
+      }
+      #left:before {
+        border-bottom: 3px solid;
+        border-bottom-left-radius: 20px;
+        margin-left: -10%;
+        margin-top: -30px;
+      }
+      #left:after {
+        border-top: 3px solid;
+        border-top-right-radius: 20px;
+        margin-left: 30%;
+        margin-top: 17px;
+      }
+      #right:before {
+        border-top: 3px solid;
+        border-top-left-radius: 20px;
+        margin-left: -10%;
+        margin-top: 17px;
+      }
+      #right:after {
+        border-bottom: 3px solid;
+        border-bottom-right-radius: 20px;
+        margin-left: 30%;
+        margin-top: -30px;
+      }
+    }
+  }
+}
+.five-is-half-of-ten-wrapper-multi {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  .box-flex-wrapper {
+    background-color: #fff;
+    border: 2px solid #000000;
+    position: relative;
+    .vertical-wrapper {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      top: 0;
+      .vertical-line {
+        height: 100%;
+        width: 100%;
+        border-bottom: 1px solid #000000;
+        background-color: #fff;
+        &.bg-green {
+          background-color: green;
+        }
+      }
+      div:last-child {
+        border-bottom: none;
+      }
+    }
+    .horizontal-wrapper {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      .horizontal-line {
+        &.bg-green {
+          height: 100%;
+          width: 100%;
+          background-color: green;
+        }
+        border-right: 1px solid #000000;
+      }
+    }
+    .first-factor {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      font-size: 24px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      padding-right: 15px;
+      @media only screen and (max-height: 850px) {
+        font-size: 16px;
+      }
+      @media only screen and (max-height: 768px) {
+        font-size: 14px;
+      }
+      @media only screen and (max-height: 600px) {
+        font-size: 14px;
+      }
+    }
+    .second-factor {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      font-size: 24px;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 36px;
+      @media only screen and (max-height: 850px) {
+        font-size: 16px;
+      }
+      @media only screen and (max-height: 768px) {
+        font-size: 14px;
+      }
+      @media only screen and (max-height: 600px) {
+        font-size: 14px;
+      }
+    }
+  }
+  .half-of-ten-hint-text-box-wrapper {
+    position: absolute;
+    top: 64px;
+
+    font-size: 24px;
+
+    position: absolute;
+    right: -360px;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s linear 300ms, opacity 1.5s;
+    max-width: 300px;
+    @media only screen and (max-width: 1440px) {
+      font-size: 16px;
+      top: 112px;
+      right: -240px;
+    }
+    @media only screen and (max-height: 768px) {
+      font-size: 14px;
+    }
+    @media only screen and (max-height: 600px) {
+      font-size: 14px;
+    }
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s linear 0s, opacity 1.5s;
+      height: 100%;
+    }
+    .hint-text-box {
+      border: 1px solid;
+      border-radius: 8px;
+      background-color: white;
+      max-height: 300px;
+      padding: 24px;
+    }
+  }
+
+  .full-curly-brace {
+    width: 100%;
+    position: absolute;
+    top: -4px;
+    // transform: rotate(-180deg);
+    @media only screen and (max-height: 768px) {
+      top: 0px;
+    }
+    .curly-brace {
+      transform: rotate(-180deg);
+      position: relative;
+    }
+
+    .brace {
+      border-bottom: 5px solid;
+      margin: 0 10%;
+      width: 30%;
+      height: 20px;
+      float: left;
+    }
+
+    .brace:before,
+    .brace:after {
+      content: "";
+      width: 10%;
+      height: 50px;
+      position: absolute;
+      display: block;
+    }
+
+    #left:before {
+      border-bottom: 5px solid;
+      border-bottom-left-radius: 20px;
+      margin-left: -10%;
+      margin-top: -30px;
+    }
+
+    #left:after {
+      border-top: 5px solid;
+      border-top-right-radius: 20px;
+      margin-left: 30%;
+      margin-top: 15px;
+    }
+
+    #right:before {
+      border-top: 5px solid;
+      border-top-left-radius: 20px;
+      margin-left: -10%;
+      margin-top: 15px;
+    }
+
+    #right:after {
+      border-bottom: 5px solid;
+      border-bottom-right-radius: 20px;
+      margin-left: 30%;
+      margin-top: -30px;
+    }
+  }
+  .top-factor-text {
+    position: absolute;
+    bottom: 114%;
+    left: 0;
+    font-size: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-height: 850px) {
+      font-size: 16px;
+      bottom: 115%;
+    }
+    @media only screen and (max-height: 768px) {
+      font-size: 14px;
+      bottom: 114%;
+    }
+    @media only screen and (max-height: 600px) {
+      font-size: 14px;
+    }
+  }
+  .left-full-curly-brace {
+    width: 100%;
+    position: absolute;
+    left: -36px;
+    top: 138px;
+    left: -168px;
+    transform: rotate(90deg);
+    @media only screen and (max-height: 768px) {
+      left: -120px;
+      top: 98px;
+    }
+    @media only screen and (max-height: 650px) {
+      left: -116px;
+      top: 90px;
+    }
+    #curly-brace {
+      width: 300px;
+      position: absolute;
+      left: 50%;
+      margin-left: -150px;
+      top: 150px;
+    }
+
+    .brace {
+      border-bottom: 5px solid;
+      margin: 0 10%;
+      width: 30%;
+      height: 20px;
+      float: left;
+    }
+
+    .brace:before,
+    .brace:after {
+      content: "";
+      width: 10%;
+      height: 50px;
+      position: absolute;
+      display: block;
+    }
+
+    #left:before {
+      border-bottom: 5px solid;
+      border-bottom-left-radius: 20px;
+      margin-left: -10%;
+      margin-top: -30px;
+    }
+
+    #left:after {
+      border-top: 5px solid;
+      border-top-right-radius: 20px;
+      margin-left: 30%;
+      margin-top: 15px;
+    }
+
+    #right:before {
+      border-top: 5px solid;
+      border-top-left-radius: 20px;
+      margin-left: -10%;
+      margin-top: 15px;
+    }
+
+    #right:after {
+      border-bottom: 5px solid;
+      border-bottom-right-radius: 20px;
+      margin-left: 30%;
+      margin-top: -30px;
+    }
+  }
+  .left-factor-text {
+    position: absolute;
+    width: 100%;
+    position: absolute;
+    font-size: 24px;
+    top: 128px;
+    left: -206px;
+    // transform: rotate(90deg);
+    text-align: center;
+    @media only screen and (max-height: 850px) {
+      font-size: 16px;
+      top: 132px;
+    }
+    @media only screen and (max-height: 768px) {
+      font-size: 14px;
+
+      left: -154px;
+      top: 96px;
+    }
+    @media only screen and (max-height: 650px) {
+      left: -154px;
+      top: 86px;
+    }
+  }
+  .right-full-curly-brace {
+    position: absolute;
+
+    transform: rotate(-90deg);
+    top: 74px;
+    right: -76px;
+    @media only screen and (max-height: 768px) {
+      top: 54px;
+      right: -52px;
+    }
+    #curly-brace {
+      width: 100%;
+      position: absolute;
+    }
+
+    .brace {
+      border-bottom: 5px solid;
+      margin: 0 10%;
+      width: 30%;
+      height: 20px;
+      float: left;
+    }
+
+    .brace:before,
+    .brace:after {
+      content: "";
+      width: 10%;
+      height: 50px;
+      position: absolute;
+      display: block;
+    }
+
+    #left:before {
+      border-bottom: 5px solid;
+      border-bottom-left-radius: 20px;
+      margin-left: -10%;
+      margin-top: -30px;
+    }
+
+    #left:after {
+      border-top: 5px solid;
+      border-top-right-radius: 20px;
+      margin-left: 30%;
+      margin-top: 15px;
+    }
+
+    #right:before {
+      border-top: 5px solid;
+      border-top-left-radius: 20px;
+      margin-left: -10%;
+      margin-top: 15px;
+    }
+
+    #right:after {
+      border-bottom: 5px solid;
+      border-bottom-right-radius: 20px;
+      margin-left: 30%;
+      margin-top: -30px;
+    }
+  }
+  .right-factor-text {
+    position: absolute;
+    font-size: 24px;
+    right: -118px;
+    transform: rotate(0deg);
+    top: 56px;
+    text-align: center;
+    @media only screen and (max-height: 850px) {
+      font-size: 16px;
+    }
+    @media only screen and (max-height: 768px) {
+      font-size: 14px;
+      top: 44px;
+      right: -84px;
+    }
+    @media only screen and (max-height: 600px) {
+      font-size: 14px;
+    }
+  }
+}

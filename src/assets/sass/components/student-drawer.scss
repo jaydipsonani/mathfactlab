@@ -1,0 +1,91 @@
+.student-drawer-wrapper {
+  .setting-info-icon {
+    display: inline-flex;
+    line-height: 18px;
+    background-color: #ccc;
+    color: #fff;
+    margin-top: -3px;
+    border-radius: 0%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+  }
+
+  .ant-drawer-content-wrapper {
+    .ant-drawer-title {
+      font-weight: 600;
+    }
+    .form-group {
+      @include flex-with-nowrap();
+
+      .input-label {
+        font-weight: $medium;
+      }
+      .form-input {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .form-control {
+          height: 36px;
+          font-size: 12px;
+
+          &:focus {
+            border-color: $primaryColor;
+            box-shadow: unset;
+          }
+        }
+
+        .input-label {
+          margin: 4px;
+          font-weight: 600;
+          b {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            line-height: 18px;
+            background-color: #ccc;
+            color: #fff;
+            margin-top: 2px;
+            margin-left: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .popup-footer {
+    padding: 16px 0px 0px;
+    .button-wrap {
+      width: 100%;
+
+      @include flex();
+      @include align-items-center();
+      @include justify-content-end();
+      .button-cols {
+        // width: 50%;
+        float: left;
+        padding-left: 10px;
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.ant-tooltip-status-control {
+  top: 150px !important;
+  .ant-tooltip-inner {
+    min-width: 280px !important;
+  }
+  .ant-tooltip-span {
+    font-weight: bold;
+    border-bottom: 1px solid;
+  }
+}

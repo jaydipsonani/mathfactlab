@@ -1,0 +1,27 @@
+.dice-ten-minus-one-main-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: -webkit-fill-available;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .img-group {
+    position: relative;
+    @include dice-with-two-row();
+  }
+  .cross-img {
+    position: absolute;
+    right: 0px;
+    opacity: 0.8;
+  }
+  .cross-img2 {
+    position: absolute;
+    right: 149px;
+    opacity: 0.8;
+  }
+}

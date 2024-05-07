@@ -1,0 +1,107 @@
+.status-controller-wrapper {
+  min-width: 490px;
+
+  .ant-card-body {
+    padding: 0px !important;
+
+    > div:not(:last-child) {
+      border-bottom: 1px solid $white;
+    }
+  }
+  .ant-divider-horizontal {
+    margin: 6px 0px;
+  }
+  .card-grid-header {
+    font-family: $secondary-fonts;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    padding: 12px;
+    width: 75%;
+  }
+  .ant-card-grid {
+    min-height: 100%;
+  }
+  .card-grid-header-count {
+    width: 25%;
+    font-family: $secondary-fonts;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    padding: 12px;
+    &.text-header-center {
+      text-align: center;
+    }
+  }
+  .card-grid-cell-data-text {
+    font-size: 14px;
+    width: 75%;
+  }
+  .card-grid-cell-data {
+    font-family: $secondary-fonts;
+    width: 25%;
+  }
+  .card-grid-cell-data-secondary {
+    font-weight: 600;
+    color: $white;
+    background-color: $warningColor;
+    padding: 12px;
+    &.flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .card-grid-cell-data-danger {
+    font-weight: 600;
+    color: $white;
+    background-color: $errorColor;
+    padding: 12px;
+
+    &.flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .card-grid-cell-data-primary {
+    font-weight: 600;
+    color: $white;
+    background-color: $successColor;
+    padding: 12px;
+    &.flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .card-grid-cell-data-gray {
+    font-weight: 600;
+    color: $white;
+    background-color: #b1a7a7;
+    padding: 12px;
+    &.flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .card-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 600;
+    .title-text {
+      color: $primaryColor;
+    }
+  }
+
+  .border-bottom-left-radius {
+    border-bottom-left-radius: 8px;
+  }
+  .border-bottom-right-radius {
+    border-bottom-right-radius: 8px;
+  }
+}

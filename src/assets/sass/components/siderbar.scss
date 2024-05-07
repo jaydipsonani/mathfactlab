@@ -1,0 +1,377 @@
+@import "../utils/variable-teacher";
+
+.ant-layout-sider {
+  background: #ffffff !important;
+}
+
+.sider {
+  flex: 0 0 260px;
+  min-width: 72px !important;
+  max-width: 260px !important;
+  width: 72px !important;
+  border: 1px solid #c4efdda8;
+  background: #2aa73800;
+  height: 100%;
+  background: #ffffff !important;
+  font-family: $secondary-fonts;
+  min-height: 100vh;
+
+  &:hover {
+    width: 260px !important;
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .ant-layout-sider-children {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+  }
+  .menu {
+    border-right: none;
+    margin-top: 40px;
+
+    .link-disabled {
+      pointer-events: all;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .ant-menu-item {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 16px;
+      background-color: transparent !important;
+      padding: 0 !important;
+      margin-top: 0;
+      margin-bottom: 12px !important;
+      height: 48px !important;
+      color: #56606d;
+      min-width: 72px;
+      margin: 0;
+      width: 100%;
+      .long-lable-sidebar {
+        line-height: 18px;
+      }
+      // &:first-child {
+      //   .ant-menu-item-icon {
+      //     margin-left: 0;
+      //   }
+      // }
+      a {
+        min-width: 100%;
+        color: #56606d;
+      }
+      .ant-menu-item-icon {
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        color: "2dca89";
+        height: 100%;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+        margin: 10px;
+        padding: 12px;
+        width: 48px;
+
+        i {
+          font-size: 25px !important;
+          min-width: 25px;
+          display: flex;
+          justify-content: center;
+          -webkit-text-stroke-width: 0.3px;
+        }
+      }
+
+      // &:after {
+      //   display: none;
+      // }
+
+      &:hover {
+        .ant-menu-item-icon {
+          color: #2dcc89;
+        }
+        a {
+          color: #2dcc89;
+        }
+      }
+
+      &.ant-menu-item-selected {
+        color: #2dcc89;
+        .ant-menu-item-icon {
+          background: #e0f7ed;
+          color: #2dcc89;
+        }
+        a {
+          color: #2dcc89;
+        }
+      }
+      &::after {
+        border-right: 3px solid #2dcc89;
+      }
+    }
+    .ant-menu-sub-title {
+      display: inline;
+      align-items: center;
+      font-weight: 500;
+      font-size: 16px;
+      background-color: transparent !important;
+      padding: 0 !important;
+      margin-top: 0;
+      margin-bottom: 12px !important;
+      height: 48px !important;
+      color: #56606d;
+      min-width: 72px;
+
+      .long-lable-sidebar {
+        line-height: 18px;
+      }
+      // &:first-child {
+      //   .ant-menu-item-icon {
+      //     margin-left: 0;
+      //   }
+      // }
+      a {
+        min-width: 100%;
+        color: #56606d;
+      }
+      .ant-menu-item-icon {
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        color: "2dca89";
+        height: 100%;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+        width: 48px;
+
+        i {
+          font-size: 25px !important;
+          min-width: 25px;
+          display: flex;
+          justify-content: center;
+          -webkit-text-stroke-width: 0.3px;
+        }
+      }
+
+      // &:after {
+      //   display: none;
+      // }
+
+      &:hover {
+        .ant-menu-item-icon {
+          color: #2dcc89;
+        }
+        a {
+          color: #2dcc89;
+        }
+      }
+
+      &.ant-menu-item-selected {
+        color: #2dcc89;
+        .ant-menu-item-icon {
+          background: #e0f7ed;
+          color: #2dcc89;
+        }
+        a {
+          color: #2dcc89;
+        }
+      }
+      &::after {
+        border-right: 3px solid #2dcc89;
+      }
+      .ant-menu-submenu-arrow {
+        display: none;
+      }
+    }
+  }
+}
+
+.sider-open {
+  flex: 0 0 260px;
+  min-width: 72px !important;
+  max-width: 260px !important;
+  width: 72px !important;
+  border: 1px solid #c4efdda8;
+  background: #2aa73800;
+  height: 100%;
+  background: #ffffffff;
+  font-family: $secondary-fonts;
+  min-height: 100vh;
+
+  .ant-layout-sider-children {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+  }
+  .menu {
+    border-right: none;
+    margin-top: 40px;
+
+    .link-disabled {
+      pointer-events: all;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .ant-menu-item {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 16px;
+      background-color: transparent !important;
+      padding: 0 !important;
+      margin-top: 0;
+      margin-bottom: 12px !important;
+      height: 48px !important;
+      color: #56606d;
+      min-width: 72px;
+      width: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
+      .long-lable-sidebar {
+        line-height: 18px;
+      }
+      // &:first-child {
+      //   .ant-menu-item-icon {
+      //     margin-left: 0;
+      //   }
+      // }
+      a {
+        min-width: 100%;
+        color: #56606d;
+      }
+      .ant-menu-item-icon {
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        color: "2dca89";
+        height: 100%;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+        margin: 10px;
+        padding: 12px;
+        width: 48px;
+
+        i {
+          font-size: 25px !important;
+          min-width: 25px;
+          display: flex;
+          justify-content: center;
+          -webkit-text-stroke-width: 0.3px;
+        }
+      }
+
+      // &:after {
+      //   display: none;
+      // }
+
+      &:hover {
+        .ant-menu-item-icon {
+          color: #2dcc89;
+        }
+        a {
+          color: #2dcc89;
+        }
+      }
+
+      &.ant-menu-item-selected {
+        color: #2dcc89;
+        .ant-menu-item-icon {
+          background: #e0f7ed;
+          color: #2dcc89;
+        }
+        a {
+          color: #2dcc89;
+        }
+      }
+      &::after {
+        border-right: 3px solid #2dcc89;
+      }
+    }
+    .ant-menu-sub-title {
+      display: inline;
+      align-items: center;
+      font-weight: 500;
+      font-size: 16px;
+      background-color: transparent !important;
+      padding: 0 !important;
+      margin-top: 0;
+      margin-bottom: 12px !important;
+      height: 48px !important;
+      color: #56606d;
+      min-width: 72px;
+
+      .long-lable-sidebar {
+        line-height: 18px;
+      }
+      a {
+        min-width: 100%;
+        color: #56606d;
+      }
+      .ant-menu-item-icon {
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        color: "2dca89";
+        height: 100%;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+        width: 48px;
+
+        i {
+          font-size: 25px !important;
+          min-width: 25px;
+          display: flex;
+          justify-content: center;
+          -webkit-text-stroke-width: 0.3px;
+        }
+      }
+
+      &.ant-menu-item-selected {
+        color: #2dcc89;
+        .ant-menu-item-icon {
+          background: #e0f7ed;
+          color: #2dcc89;
+        }
+        a {
+          color: #2dcc89;
+        }
+      }
+      &::after {
+        border-right: 3px solid #2dcc89;
+      }
+      .ant-menu-submenu-arrow {
+        display: none;
+      }
+    }
+    .ant-menu-submenu-title {
+      margin-bottom: 12px !important;
+      // padding-left: 22px !important;
+    }
+  }
+}
+.sider-show {
+  width: 260px !important;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  color: $primaryColor;
+  // padding: 42px 0;
+  height: 72px;
+
+  a {
+    display: flex;
+  }
+}

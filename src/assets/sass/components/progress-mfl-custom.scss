@@ -1,0 +1,100 @@
+@mixin dice-box-shadow($value) {
+  box-shadow: 9px 0 $value, 18px 0 $value, 27px 0 $value, 36px 0 $value,
+    45px 0 $value, 54px 0 $value, 63px 0 $value, 72px 0 $value, 81px 0 $value,
+    90px 0 $value;
+}
+.dice-mfl-progress-group {
+  width: 100%;
+  // margin-top: 20px;
+  display: block;
+
+  // position: absolute;
+  // bottom: 28px;
+  .icon-right-check {
+    font-size: 1.4rem;
+    margin-left: 3px;
+  }
+  .dice-mfl-progress-text {
+    width: 100%;
+    display: block;
+    &.mt-4 {
+      margin-top: 4px;
+    }
+    &.mb-4 {
+      margin-bottom: 4px;
+    }
+  }
+
+  &.progress-hidden {
+    opacity: 0;
+  }
+}
+.dice-mfl-progress {
+  height: 20px;
+  width: 85px;
+  display: block;
+  border: 1px solid #eee;
+  position: relative;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  background-color: #eeeeee;
+  box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  &.dice-procolor-success {
+    .dice-mfl-progress-inner::after {
+      background-color: $dice-procolor-success;
+      @include dice-box-shadow($dice-procolor-success);
+    }
+  }
+  &.dice-procolor-warning {
+    .dice-mfl-progress-inner::after {
+      background-color: $dice-procolor-warning;
+      @include dice-box-shadow($dice-procolor-warning);
+    }
+  }
+  &.dice-procolor-info {
+    .dice-mfl-progress-inner::after {
+      background-color: $dice-procolor-info;
+      @include dice-box-shadow($dice-procolor-info);
+    }
+  }
+  &.dice-procolor-danger {
+    .dice-mfl-progress-inner::after {
+      background-color: $dice-procolor-danger;
+      @include dice-box-shadow($dice-procolor-danger);
+    }
+  }
+  .dice-mfl-progress-inner {
+    &:after {
+      content: "";
+      position: absolute;
+      height: 13px;
+      width: 8px;
+      background-color: $dice-procolor;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 2px;
+      border-radius: 5px;
+      @include dice-box-shadow($dice-procolor);
+      //animation: charge 4s infinite;
+    }
+    height: 100%;
+    width: 100%;
+    width: 0%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    //@includetransition(0.5sease):;
+    transition: width 2s;
+    -webkit-transition: width 2s;
+    -moz-transition: width 2s;
+    -ms-transition: width 2s;
+    -o-transition: width 2s;
+  }
+}

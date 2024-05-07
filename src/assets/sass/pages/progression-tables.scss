@@ -1,0 +1,194 @@
+.progress-table-card {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: "tnum", "tnum";
+  position: relative;
+  background: #fff;
+  border-radius: 2px;
+  padding: 12px 12px 0px;
+  .progress-level-wrapper {
+    display: flex;
+    align-items: center;
+    //width: 74%;
+    width: 100%;
+    border-radius: 16px;
+    // background-color: #e5faff;
+    padding: 20px 25px 65px;
+    max-height: 100%;
+    flex: 1;
+    height: calc(100vh - 200px);
+
+    overflow: scroll;
+
+    .twoLayout-popup-content {
+      // height: calc(100vh - 250px);
+      height: 100%;
+
+      :last-child {
+        margin-bottom: 0px;
+      }
+    }
+    .btn {
+      color: $white;
+      @include font-size("24");
+      color: $white;
+      min-width: 200px;
+      border: 1px solid;
+      max-width: 135px; //#change
+      white-space: pre-wrap; //#change
+
+      pointer-events: none;
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+    .btn-disabled {
+      @include gradient("disabled");
+      color: #acacac;
+      border-color: #acacac;
+    }
+    .btn-blue {
+      @include gradient("blue");
+      // border-color: transparent;
+      border: none;
+      margin: 1px;
+    }
+    .btn-green {
+      @include gradient("green");
+      border-color: #22a608;
+    }
+    .close {
+      font-size: 7rem;
+      font-weight: 400;
+
+      position: absolute;
+      right: 15px;
+      margin-right: 0;
+      top: 0;
+    }
+  }
+}
+.progress-table-background {
+  background-color: $popup-header;
+  border-radius: 8px;
+}
+
+@include breakpoint-max($screen-1920p-max) {
+  .progress-level-wrapper .btn {
+    min-width: 200px;
+  }
+}
+@include breakpoint-max($screen-1600p-max) {
+  .progress-level-wrapper .btn {
+    min-width: 170px;
+  }
+}
+
+@include breakpoint-max($screen-xl-max) {
+  .progress-level-wrapper .btn {
+    min-width: 130px;
+  }
+}
+
+@include breakpoint-max-height($height-980p) {
+  .progress-level-wrapper .btn {
+    font-size: 1.8rem;
+  }
+  .progress-level-wrapper {
+    // padding: 18px 0px !important;
+  }
+}
+@include breakpoint-max-height($height-850p) {
+  .progress-level-wrapper .btn {
+    font-size: 1.6rem;
+  }
+}
+@include breakpoint-max-height($height-750p) {
+  .progress-level-wrapper .btn {
+    font-size: 1.5rem;
+    min-height: 36px;
+    padding: 8px 10px;
+  }
+}
+@include breakpoint-max-height($height-650p) {
+  .progress-level-wrapper .btn {
+    font-size: 1.3rem;
+    min-height: 33px;
+    padding: 6px 10px;
+    min-width: 75px !important;
+    max-width: 75px !important;
+  }
+}
+@include breakpoint-max($screen-1920p-max) {
+  .progress-level-wrapper {
+    padding: 20px 25px 58px;
+  }
+}
+@include breakpoint-max($screen-1600p-max) {
+  .progress-level-wrapper {
+    // padding: 20px 25px 52px;
+  }
+}
+
+@include breakpoint-max($screen-xll-max) {
+  .progress-level-wrapper .btn {
+    min-width: 160px;
+  }
+  .progress-level-wrapper {
+    // padding: 25px 18px 45px;
+    // padding-left: 15px !important;
+    // padding-right: 15px !important;
+  }
+}
+@include breakpoint-max($screen-xl-max) {
+  .progress-level-wrapper .btn {
+    min-width: 135px;
+    // min-width: 88px;
+  }
+}
+@include breakpoint-max($screen-x-max) {
+  .progress-level-wrapper .btn {
+    min-width: 135px;
+    font-size: 14px;
+    // min-width: 75px;
+  }
+}
+@include breakpoint-max($screen-lg-max) {
+  .progress-level-wrapper {
+    width: calc(100% - 220px);
+    // padding-left: 10px !important;
+    // padding-right: 10px !important;
+  }
+
+  .progress-level-wrapper .btn {
+    min-width: 70px;
+  }
+}
+
+@include breakpoint-max($screen-md-max) {
+  .progress-level-wrapper {
+    // padding: 18px 18px 45px;
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+  }
+  .progress-level-wrapper .twoLayout-popup-content {
+    overflow: auto;
+  }
+}
+@include breakpoint-max($screen-sm-max) {
+  .progress-level-wrapper .btn {
+    min-width: 80px;
+  }
+}
+@include breakpoint-max($screen-xs-max) {
+  .progress-level-wrapper .btn {
+    min-width: 70px;
+  }
+}

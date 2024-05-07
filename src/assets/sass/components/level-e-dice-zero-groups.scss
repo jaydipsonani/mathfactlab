@@ -1,0 +1,39 @@
+.dice-zero-groups-main-outer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: -webkit-fill-available;
+
+  //position relative for disabled img
+  position: relative;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+
+    @include dice-with-one-row();
+
+    .disabled-img {
+      position: absolute;
+      opacity: 0.8;
+      margin: -9px;
+      width: 177px;
+      max-width: none;
+      @include breakpoint-max($screen-xll-max) {
+        width: 158px;
+        height: 158px;
+        margin: -7px;
+      }
+      @include breakpoint-max($screen-xl-max) {
+        width: 137px;
+        height: 137px;
+        margin: -6px;
+      }
+      @include breakpoint-max($screen-x-max) {
+        width: 116px;
+        height: 116px;
+        margin: -5px;
+      }
+    }
+  }
+}

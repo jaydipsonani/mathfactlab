@@ -1,0 +1,26 @@
+.dice-six-group-main-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: -webkit-fill-available;
+  @include dice-with-two-row();
+  @include transition(0.3s ease-out);
+  // @include transition(0.3s ease-out);
+  .column {
+    display: flex;
+    flex-direction: column;
+    @include transition(0.3s ease);
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    div:nth-child(2) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  //math-opration-img
+  @include math-op-img();
+}

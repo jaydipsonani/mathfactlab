@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 250 283.5" style="enable-background:new 0 0 250 283.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+	.st2{fill:url(#SVGID_3_);}
+	.st3{enable-background:new    ;}
+</style>
+<g>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="49.7" y1="565.2355" x2="200.2812" y2="414.6541" gradientTransform="matrix(1 0 0 1 0 -368.5354)">
+		<stop  offset="2.663895e-08" style="stop-color:#0098C7"/>
+		<stop  offset="1" style="stop-color:#21D5FB"/>
+	</linearGradient>
+	<path class="st0" d="M222.7,109c0,47.7-34.6,81.2-62.6,103.9C147.3,223.3,125,272,125,272s-22.4-48.8-35.2-59.3
+		c-28-22.6-62.5-56-62.5-103.7c0-54,43.7-97.7,97.7-97.7C179,11.3,222.7,55.1,222.7,109z"/>
+	
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="68.2188" y1="534.3167" x2="181.7437" y2="420.7916" gradientTransform="matrix(1 0 0 1 0 -368.5354)">
+		<stop  offset="6.393348e-08" style="stop-color:#21D5FB"/>
+		<stop  offset="1" style="stop-color:#0098C7"/>
+	</linearGradient>
+	<path class="st1" d="M205.3,109c0,44.3-35.9,80.3-80.3,80.3c-44.3,0-80.3-35.9-80.3-80.3c0-44.3,35.9-80.3,80.3-80.3
+		C169.3,28.8,205.3,64.7,205.3,109z"/>
+	
+		<radialGradient id="SVGID_3_" cx="125" cy="477.5354" r="74.8" gradientTransform="matrix(1 0 0 1 0 -368.5354)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.7092" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.8395" style="stop-color:#FDFDFD"/>
+		<stop  offset="0.8864" style="stop-color:#F6F6F6"/>
+		<stop  offset="0.9198" style="stop-color:#EBEBEB"/>
+		<stop  offset="0.9469" style="stop-color:#DADADA"/>
+		<stop  offset="0.97" style="stop-color:#C4C4C4"/>
+		<stop  offset="0.9902" style="stop-color:#AAA9A9"/>
+		<stop  offset="1" style="stop-color:#9A9999"/>
+	</radialGradient>
+	<path class="st2" d="M199.8,109c0,41.3-33.5,74.8-74.8,74.8S50.2,150.3,50.2,109S83.7,34.2,125,34.2S199.8,67.7,199.8,109z"/>
+</g>
+
+</svg>

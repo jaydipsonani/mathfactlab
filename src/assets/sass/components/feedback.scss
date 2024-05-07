@@ -1,0 +1,32 @@
+@import "../../../assets/sass/utils/variable-teacher";
+
+.feedback-profile-wrapper {
+  .form-input {
+    .form-control:focus {
+      border-color: $primaryColor;
+    }
+  }
+}
+
+.page-title {
+  margin-bottom: 12px;
+  font-size: 17px;
+}
+
+.page-sub-title {
+  margin-bottom: 12px;
+}
+.send-btn {
+  margin-top: 12px;
+}
+
+.mfl-emailer {
+  margin: 20px;
+  font-size: 18px;
+  text-align: center;
+
+  .link {
+    display: flex;
+    align-items: center;
+  }
+}

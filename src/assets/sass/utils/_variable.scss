@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
+// @font-face {
+//   font-family: "Lato";
+//   src: url("../../fonts/Lato-Medium.eot");
+//   src: url("../../fonts/Lato-Medium.eot?#iefix") format("embedded-opentype"),
+//     url("../../fonts/Lato-Medium.woff") format("woff"),
+//     url("../../fonts/Lato-Medium.ttf") format("truetype"),
+//     url("../../fonts/Lato-Medium.svg#Lato-Medium") format("svg");
+//   font-weight: 500;
+//   font-style: normal;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "Lato";
+//   src: url("../../fonts/Lato-Semibold.eot");
+//   src: url("../../fonts/Lato-Semibold.eot?#iefix") format("embedded-opentype"),
+//     url("../../fonts/Lato-Semibold.woff") format("woff"),
+//     url("../../fonts/Lato-Semibold.ttf") format("truetype"),
+//     url("../../fonts/Lato-Semibold.svg#Lato-Medium") format("svg");
+//   font-weight: 600;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+$primary-fonts: "Lato", "sans-serif";
+$red: #ff0000;
+$error: #ff0000;
+$green: #42bb2a;
+$disabled: #d2d2d2;
+$light-blue: #35d8fe;
+//Old Color green light of all strategy icon and list
+$green-light: #21ac9b;
+//new color
+// $green-light: #27a737;
+$light-green: #bdefb4;
+
+$google: #db3236;
+$class_link: #0a4d7f;
+$facebook: #4267b2;
+$twitter: #1da1f2;
+/* Text Color */
+$primary-color: #444444;
+$secondary-color: #2b95f9;
+
+$primary-button-hover-color: #003a7f;
+$blue: #003a7f;
+$primary-button-shadow: rgba(0, 84, 164, 0.2);
+
+$bg-gray: #b2b2b2;
+
+$dicesection: #70d5ff;
+
+$secondary-button-hover-color: #003a7f;
+$secondary-button-shadow: rgba(0, 84, 164, 0.2);
+
+$login-title: #003a7f;
+
+$bg-aside: #1457a7;
+$bg-aside-link: #f1f1f1;
+$white: #ffffff;
+$black: #000000;
+$login-input-bg: #f8f8f8;
+$login-input-border: #f0f0f0;
+$hr: #e5e5e5;
+$border: #d7d7d7;
+
+$test-blue-shadow: 0px 4px 10px 0px rgba(0, 58, 127, 0.2);
+
+$color-info: #2b95f9;
+$color-danger: #f92b2b;
+
+$instagram: #fb3958;
+$facebook: #3b5998;
+$twitter: #4099ff;
+
+$user-profile: #ff9364;
+$spotlight-color: #81fffc;
+$aqua: #abf6ff;
+$light-aqua: #c7f4ff;
+
+$large-input-border: #92caff;
+$popup-header: #e5faff;
+
+$mfl-rp-green: #50be81;
+$mfl-rp-yellow: #ebb23c;
+$mfl-rp-red: #ee7547;
+
+$dice-procolor: #000;
+$dice-procolor-success: #00a800;
+$dice-procolor-warning: #00a3bd;
+$dice-procolor-info: #ffb900;
+$dice-procolor-danger: #ff8416;
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$fwblack: 900;
+
+// Small tablets and large smartphones (landscape view)
+$screen-xs-min: 480px;
+$screen-xs-max: 479px;
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+$screen-sm-max: 575px;
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+$screen-md-max: 767px;
+// Tablets and small desktops
+$screen-lg-min: 992px;
+$screen-lg-max: 991px;
+// Large tablets and desktops - ## 1024
+$screen-x-min: 1200px;
+$screen-x-max: 1199px;
+// Large tablets and desktops - ## 1366
+$screen-xl-min: 1380px;
+$screen-xl-max: 1379px;
+// Large desktops more than 13inch ## 1440
+$screen-xll-min: 1480px;
+$screen-xll-max: 1479px;
+// Large desktops more than 1440px ## 1680
+$screen-1600p-min: 1600px;
+$screen-1600p-max: 1599px;
+// Large desktops ## 1920
+$screen-1920p-min: 1920px;
+$screen-1920p-max: 1919px;
+
+/*Heights*/
+$height-1080p: 1080px;
+$height-1000p: 1000px;
+$height-980p: 980px;
+$height-930p: 930px;
+$height-850p: 850px;
+$height-750p: 750px;
+$height-700p: 700px;
+$height-650p: 650px;
+$height-6390p: 639px;
+$height-580p: 580px;

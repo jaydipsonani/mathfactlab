@@ -1,0 +1,106 @@
+.aside-page-layout {
+  // padding-top: 64px;
+  height: 100vh;
+  position: relative;
+  //for tow layout popup scroll down issue
+  &.twoLayout-popup-layout {
+    position: absolute;
+    z-index: 998;
+  }
+  @include breakpoint-max($screen-lg-max) {
+    padding-top: 54px;
+  }
+  .right-main-layout {
+    float: left;
+    width: 100%;
+    padding-left: 270px;
+    height: 100%;
+    background-color: $bg-aside-link;
+    @include transition(0.8s ease-in-out);
+    @include flex();
+    .right-main-inner {
+      height: 100%;
+      width: 100%;
+      float: left;
+      padding: 36px;
+      .right-main-content {
+        height: 100%;
+        width: 100%;
+        float: left;
+
+        // #changes remove auto overflow
+        // overflow: auto;
+      }
+    }
+  }
+}
+.table-title {
+  @include font-size("40");
+}
+/**************** Media Query ***************/
+// @include breakpoint-max($screen-1920p-max) {
+//   .aside-page-layout .right-main-layout {
+//     padding-left: 300px;
+//     .right-main-inner {
+//       padding: 40px;
+//     }
+//   }
+// }
+// @include breakpoint-max($screen-1600p-max) {
+//   .aside-page-layout .right-main-layout {
+//     padding-left: 290px;
+//     .right-main-inner {
+//       padding: 32px;
+//     }
+//   }
+// }
+@include breakpoint-max($screen-xll-max) {
+  .aside-page-layout .right-main-layout {
+    padding-left: 230px;
+    .right-main-inner {
+      padding: 26px;
+    }
+  }
+}
+@include breakpoint-max($screen-x-max) {
+  .aside-page-layout .right-main-layout {
+    padding-left: 230px;
+    .right-main-inner {
+      padding: 20px;
+    }
+  }
+}
+@include breakpoint-max($screen-lg-max) {
+  .aside-page-layout .right-main-layout {
+    padding-left: 70px;
+    .right-main-inner {
+      padding: 18px;
+    }
+  }
+  .aside-page-layout.mobile-menu-open .right-main-layout {
+    padding-left: 230px;
+  }
+}
+@include breakpoint-max($screen-md-max) {
+  .aside-page-layout .right-main-layout {
+    .right-main-inner {
+      padding: 16px;
+    }
+  }
+  .aside-page-layout .right-main-layout {
+    padding-left: 58px !important;
+  }
+  // .aside-page-layout.mobile-menu-open .right-main-layout{
+  //     padding-left: 240px;
+  // }
+}
+@include breakpoint-max($screen-sm-max) {
+  .aside-page-layout .right-main-layout {
+    .right-main-inner {
+      padding: 15px;
+    }
+  }
+  // .aside-page-layout.mobile-menu-open .right-main-layout{
+  //     padding-left: 230px;
+  // }
+}

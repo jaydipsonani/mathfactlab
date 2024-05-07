@@ -1,0 +1,129 @@
+/**
+ReactTable Overrides
+ */
+.ReactTable .rt-tbody .rt-td {
+  display: flex;
+  align-items: center;
+}
+
+.ReactTable .rt-tr {
+  min-height: 48px;
+}
+
+.ReactTable .rt-thead.-header {
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.ReactTable .-pagination {
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.ReactTable .rt-thead .rt-th.-cursor-pointer {
+  border: 0;
+  padding: 5px 8px;
+}
+.ReactTable .rt-thead .rt-resizable-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  font-size: 14px;
+  color: #54cbce;
+  font-weight: 700;
+}
+
+.ReactTable .rt-thead.-filters .rt-th {
+  padding: 16px 8px;
+}
+
+.ReactTable .rt-thead.-filters input,
+.ReactTable .rt-thead.-filters select {
+  // border: none;
+  // background: initial;
+  // padding: 6px 0 7px 0;
+
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #66615b;
+  line-height: normal;
+  font-size: 14px;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  box-shadow: none;
+
+  &:focus {
+    border: 1px solid #9a9a9a;
+    box-shadow: none;
+    outline: 0 !important;
+    color: #66615b;
+    background-color: #fff;
+  }
+}
+// .ReactTable .-pagination .-center {
+//   order: 0;
+//   justify-content: flex-start;
+// }
+
+// .ReactTable .-pagination .-previous,
+// .ReactTable .-pagination .-next {
+//   max-width: 64px;
+// }
+
+// .ReactTable .-pagination .-previous {
+//   order: 1;
+// }
+
+// .ReactTable .-pagination .-next {
+//   order: 2;
+// }
+//sorting shadow remove
+
+.ReactTable .rt-thead .rt-th.-sort-desc,
+.ReactTable .rt-thead .rt-th.-sort-asc {
+  box-shadow: none;
+}
+
+//sorting
+
+.ReactTable
+  .rt-thead
+  .rt-th.-cursor-pointer.-sort-asc
+  > div:first-of-type:after {
+  content: "\F0DE";
+  top: 3px;
+  position: relative;
+  display: inline-block;
+  bottom: 0;
+  right: -7px;
+  font-family: "FontAwesome";
+  opacity: 1;
+}
+.ReactTable .rt-thead .rt-th.-cursor-pointer > div:first-of-type:after {
+  opacity: 0.6;
+  content: "\F0DC";
+  position: relative;
+  display: inline-block;
+  bottom: 0;
+  right: -7px;
+  font-family: "FontAwesome";
+}
+.ReactTable
+  .rt-thead
+  .rt-th.-cursor-pointer.-sort-desc
+  > div:first-of-type:after {
+  content: "\F0DD";
+  top: -3px;
+  position: relative;
+  display: inline-block;
+  bottom: 0;
+  right: -7px;
+  font-family: "FontAwesome";
+  opacity: 1;
+}
+
+.btn-edit {
+  color: #fbc658;
+}
+.btn-delete {
+  color: #ef8157;
+}

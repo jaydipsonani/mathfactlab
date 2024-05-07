@@ -1,0 +1,280 @@
+//For one row of dice
+@mixin dice-with-one-row() {
+  .dice-img {
+    width: 140px;
+    height: 140px;
+    margin: 14px;
+    // @include breakpoint-max(1680px) {
+    //   width: 125px;
+    //   height: 125px;
+    //   margin: 13px;
+    // }
+    @include breakpoint-max($screen-xll-max) {
+      width: 124px;
+      height: 124px;
+      margin: 14px;
+    }
+    @include breakpoint-max($screen-xl-max) {
+      width: 108px;
+      height: 108px;
+      margin: 12px;
+    }
+    @include breakpoint-max($screen-x-max) {
+      width: 92px;
+      height: 92px;
+      margin: 10px;
+    }
+  }
+}
+
+//For two row of dice
+@mixin dice-with-two-row() {
+  .dice-img {
+    width: 120px;
+    height: 120px;
+    margin: 12px;
+    // @include breakpoint-max(1680px) {
+    //   width: 105px;
+    //   height: 105px;
+    //   margin: 12px;
+    // }
+    @include breakpoint-max($screen-xll-max) {
+      width: 104px;
+      height: 104px;
+      margin: 10px;
+    }
+    @include breakpoint-max($screen-xl-max) {
+      width: 92px;
+      height: 92px;
+      margin: 6px;
+    }
+    @include breakpoint-max($screen-x-max) {
+      width: 82px;
+      height: 82px;
+      margin: 6px;
+    }
+  }
+}
+//For three row of dice
+@mixin dice-with-three-row() {
+  .dice-img {
+    width: 96px;
+    height: 96px;
+    margin: 10px;
+    // @include breakpoint-max(1680px) {
+    //   width: 82px;
+    //   height: 82px;
+    //   margin: 8px;
+    // }
+    @include breakpoint-max($screen-xll-max) {
+      width: 78px;
+      height: 78px;
+      margin: 8px;
+    }
+    @include breakpoint-max($screen-xl-max) {
+      width: 70px;
+      height: 70px;
+      margin: 5px;
+    }
+    @include breakpoint-max($screen-x-max) {
+      width: 70px;
+      height: 70px;
+      margin: 5px;
+    }
+  }
+}
+
+//For three row of dice
+@mixin dice-with-three-row-with-five-dice() {
+  .dice-img {
+    width: 96px;
+    height: 96px;
+    margin: 4px;
+    // @include breakpoint-max(1680px) {
+    //   width: 82px;
+    //   height: 82px;
+    //   margin: 8px;
+    // }
+    @include breakpoint-max($screen-xll-max) {
+      width: 78px;
+      height: 78px;
+      margin: 2px;
+    }
+    @include breakpoint-max($screen-xl-max) {
+      width: 70px;
+      height: 70px;
+      margin: 2px;
+    }
+    @include breakpoint-max($screen-x-max) {
+      width: 70px;
+      height: 70px;
+      margin: 2px;
+    }
+  }
+}
+
+//Math Opration Img CSS
+@mixin math-op-img() {
+  // .opration-img {
+  //   width: 46px;
+  //   height: 46px;
+  //   margin: 0px 77px;
+  //   // @include breakpoint-max(1680px) {
+  //   //   margin: 0px 48px;
+  //   // }
+  //   @include breakpoint-max($screen-xll-max) {
+  //     margin: 0px 77px;
+  //   }
+  //   @include breakpoint-max($screen-xl-max) {
+  //     margin: 0px 66px;
+  //   }
+  //   @include breakpoint-max($screen-x-max) {
+  //     margin: 0px 55px;
+  //   }
+  // }
+  .opration-img {
+    width: 80px;
+    height: 75px;
+    margin: 0px 77px;
+    // @include breakpoint-max(1680px) {
+    //   margin: 0px 48px;
+    // }
+    @include breakpoint-max($screen-xll-max) {
+      width: 70px;
+      height: 65px;
+      margin: 0px 77px;
+    }
+    @include breakpoint-max($screen-xl-max) {
+      width: 62px;
+      height: 58px;
+      margin: 0px 66px;
+    }
+    @include breakpoint-max($screen-x-max) {
+      width: 52px;
+      height: 48px;
+      margin: 0px 55px;
+    }
+  }
+}
+
+@mixin disabled-img() {
+  width: 140px;
+  height: 140px;
+  margin: 14px;
+  // @include breakpoint-max(1680px) {
+  //   width: 125px;
+  //   height: 125px;
+  //   margin: 13px;
+  // }
+  @include breakpoint-max($screen-xll-max) {
+    width: 124px;
+    height: 124px;
+    margin: 14px;
+  }
+  @include breakpoint-max($screen-xl-max) {
+    width: 108px;
+    height: 108px;
+    margin: 12px;
+  }
+  @include breakpoint-max($screen-x-max) {
+    width: 92px;
+    height: 92px;
+    margin: 10px;
+  }
+}
+
+@mixin circle-wrapper() {
+  .circle-wrapper {
+    background-color: #f0f0f0;
+    text-align: center;
+
+    font-size: 30px;
+    height: 60px;
+    width: 60px;
+    border: 2px solid;
+    position: relative;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16),
+      0 4px 6px rgba(0, 0, 0, 0.45);
+    @media only screen and (max-width: 1366px) {
+      width: 52px;
+      height: 53px;
+    }
+    .circle {
+      // width: 80%;
+      // height: 80%;
+      width: 86%;
+      height: 86%;
+      // border-radius: 50%;
+      // border: 2px solid;
+      /* margin: 2.5%; */
+      position: absolute;
+      left: 0;
+      right: 0;
+
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      opacity: 0;
+      visibility: hidden;
+      transition: visibility 0s linear 300ms, opacity 1.5s;
+
+      &.visible {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear 0s, opacity 1.5s;
+      }
+      &.visible-slow {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear 0s, opacity 1.5s linear 1s;
+        -webkit-transition: visibility 0s linear 0s, opacity 1.5s linear 1s;
+        -moz-transition: visibility 0s linear 0s, opacity 1.5s linear 1s;
+        -ms-transition: visibility 0s linear 0s, opacity 1.5s linear 1s;
+        -o-transition: visibility 0s linear 0s, opacity 1.5s linear 1s;
+      }
+      &.blue {
+        background-color: blue;
+      }
+      &.red {
+        background-color: red;
+      }
+      &.green {
+        background-color: green;
+      }
+      &.yellow {
+        background-color: yellow;
+      }
+      &.purple {
+        background-color: purple;
+      }
+      // red
+      &.first-col {
+        // background-color: #ed0000;
+        // background: radial-gradient(circle at 0px 0px, #ed0000, #000);
+      }
+      //yellow
+      &.second-col {
+        // background-color: #fff836;
+        // background: radial-gradient(circle at 0px 0px, #fff836, #000);
+      }
+      //green
+      &.third-col {
+        // background-color: #6fda5b;
+        // background: radial-gradient(circle at 0px 0px, #6fda5b, #000);
+      }
+      //blue
+      &.fourth-col {
+        // background-color: #7086e9;
+        // background: radial-gradient(circle at 0px 0px, #7086e9, #000);
+      }
+      &.fifth-col {
+        // background-color: purple;
+        // background: radial-gradient(circle at 0px 0px, purple, #000);
+      }
+
+      img {
+        vertical-align: revert;
+      }
+    }
+  }
+}

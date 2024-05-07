@@ -1,0 +1,487 @@
+@import "variable.scss";
+
+/*====mixin for media query=====*/
+@mixin breakpoint-min($point) {
+  @media only screen and (min-width: $point) {
+    @content;
+  }
+  /*@media only screen (min-width:$point){@content;}*/
+}
+@mixin breakpoint-max($point) {
+  @media only screen and (max-width: $point) {
+    @content;
+  }
+}
+
+@mixin breakpoint-range($point1, $point2) {
+  @media only screen and (min-width: $point1) and (max-width: $point2) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min-height($point) {
+  @media only screen and (min-height: $point) {
+    @content;
+  }
+  /*@media only screen (min-width:$point){@content;}*/
+}
+@mixin breakpoint-max-height($point) {
+  @media only screen and (max-height: $point) {
+    @content;
+  }
+}
+
+@mixin placeholder($point) {
+  ::-webkit-input-placeholder {
+    color: $point;
+  }
+
+  :-moz-placeholder {
+    /* Firefox 18- */
+    color: $point;
+  }
+
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $point;
+  }
+
+  :-ms-input-placeholder {
+    color: $point;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin box-shadow($value) {
+  box-shadow: $value;
+}
+%tbl {
+  display: table;
+  width: 100%;
+}
+
+%tbl-cell {
+  display: table-cell;
+  vertical-align: middle;
+  //@extend %tbl-cell;
+}
+%middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  //@extend %middle;
+}
+
+@mixin transition($trans03...) {
+  -webkit-transition: $trans03;
+  transition: $trans03;
+  //@include transition03(0.3s ease-in-out);
+}
+@mixin transform($any...) {
+  -webkit-transform: $any;
+  transform: $any;
+  //@include transform(scale(1));
+}
+@mixin animation($anim...) {
+  -webkit-animation: $anim;
+  animation: $anim;
+  //@include animation(smoothScroll 1s forwards);
+}
+
+.fl-fw {
+  float: left;
+  width: 100%;
+}
+.flex-grow-1 {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.flex-with-nowrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.justify-content-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.justify-content-end {
+  -webkit-box-pack: flex-end;
+  -ms-flex-pack: flex-end;
+  justify-content: flex-end;
+}
+.align-items-start {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.align-items-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+}
+.align-items-end {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+.img-object-cover {
+  object-fit: cover;
+  -o-object-fit: cover;
+  object-position: center center;
+  -o-object-position: center center;
+}
+.img-object-contain {
+  object-fit: contain;
+  -o-object-fit: contain;
+  object-position: center center;
+  -o-object-position: center center;
+}
+
+@mixin heading($size) {
+  @if $size == "h1" {
+    font-size: 4.2rem;
+    line-height: 50px;
+    font-weight: $bold;
+    // @include breakpoint-max($screen-1600p-max) {
+    //   font-size: 4rem;
+    //   line-height: 48px;
+    // }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 3.9rem;
+      line-height: 46px;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 3.8rem;
+      line-height: 45px;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 3.7rem;
+      line-height: 44px;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 3.6rem;
+      line-height: 43px;
+    }
+    @include breakpoint-max($screen-xs-max) {
+      font-size: 3.4rem;
+      line-height: 41px;
+    }
+  }
+  @if $size == "h2" {
+    font-size: 3.6rem;
+    line-height: 42px;
+    font-weight: $bold;
+    // @include breakpoint-max($screen-1600p-max) {
+    //   font-size: 3.5rem;
+    //   line-height: 41px;
+    // }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 3.4rem;
+      line-height: 40px;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 3.2rem;
+      line-height: 38px;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 3rem;
+      line-height: 36px;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 2.9rem;
+      line-height: 35px;
+    }
+  }
+  @if $size == "h3" {
+    font-size: 3rem;
+    line-height: 38px;
+    font-weight: $bold;
+    // @include breakpoint-max($screen-1600p-max) {
+    //   font-size: 2.9rem;
+    //   line-height: 37px;
+    // }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 2.8rem;
+      line-height: 36px;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 2.5rem;
+      line-height: 34px;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 2.35rem;
+      line-height: 32px;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 2.15rem;
+      line-height: 30px;
+    }
+  }
+  @if $size == "h4" {
+    font-size: 2.4rem;
+    line-height: 30px;
+    font-weight: $bold;
+    // @include breakpoint-max($screen-1600p-max) {
+    //   font-size: 2.3rem;
+    //   line-height: 29px;
+    // }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 2.2rem;
+      line-height: 28px;
+    }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 2rem;
+      line-height: 26px;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 1.8rem;
+      line-height: 24px;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 1.6rem;
+      line-height: 22px;
+    }
+  }
+  @if $size == "h5" {
+    font-size: 2.2rem;
+    line-height: 28px;
+    font-weight: $regular;
+    margin-bottom: 10px;
+    // @include breakpoint-max($screen-1600p-max) {
+    //   font-size: 2.1rem;
+    //   line-height: 27px;
+    // }
+    @include breakpoint-max($screen-x-max) {
+      font-size: 2rem;
+      line-height: 26px;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 1.9rem;
+      line-height: 26px;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 1.8rem;
+      line-height: 22px;
+    }
+  }
+  @if $size == "h6" {
+    font-size: 2rem;
+    line-height: 26px;
+    font-weight: $bold;
+    // @include breakpoint-max($screen-1600p-max) {
+    //   font-size: 1.6rem;
+    //   line-height: 24px;
+    // }
+    @include breakpoint-max($screen-lg-max) {
+      font-size: 1.5rem;
+      line-height: 22px;
+    }
+    @include breakpoint-max($screen-md-max) {
+      font-size: 1.4rem;
+      line-height: 20px;
+    }
+    @include breakpoint-max($screen-sm-max) {
+      font-size: 1.3rem;
+      line-height: 18px;
+    }
+  }
+}
+
+@mixin middle($pos) {
+  position: absolute;
+  @if $pos == "verticle" {
+    top: 50%;
+    left: 0;
+    @include transform(translateY(-50%));
+  }
+  @if $pos == "horizontal" {
+    left: 50%;
+    top: 0;
+    @include transform(translateX(-50%));
+  }
+  @if $pos == "both" {
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+}
+
+@mixin disable-button($background, $border, $color, $font, $min-width) {
+  background-color: $background;
+  border: $border;
+  color: $color;
+  font-size: $font;
+  min-width: $min-width;
+}
+
+@mixin flex-grow-1() {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+@mixin flex-with-nowrap() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+@mixin flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+@mixin inline-flex() {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@mixin flex-column() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@mixin flex-column-nowrap() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@mixin justify-content-center() {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@mixin justify-content-end() {
+  -webkit-box-pack: flex-end;
+  -ms-flex-pack: flex-end;
+  justify-content: flex-end;
+}
+@mixin justify-content-start() {
+  -webkit-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+}
+@mixin justify-content-between() {
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+}
+@mixin justify-content-space-between() {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+@mixin justify-content-space-around() {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-around;
+}
+@mixin align-items-center() {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+}
+@mixin align-content-center() {
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+@mixin align-items-end() {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+@mixin align-items-start() {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+@mixin img-object-cover() {
+  object-fit: cover;
+  -o-object-fit: cover;
+  object-position: center center;
+  -o-object-position: center center;
+}
+@mixin img-object-contain() {
+  object-fit: contain;
+  -o-object-fit: contain;
+  object-position: center center;
+  -o-object-position: center center;
+}
+@mixin img-object($size, $position) {
+  object-fit: $size;
+  -o-object-fit: $size;
+  object-position: $position;
+  -o-object-position: $position;
+}

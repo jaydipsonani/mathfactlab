@@ -1,0 +1,105 @@
+.accordions-wrapper {
+  .site-collapse-custom-collapse {
+    .faq-section-title {
+      font-size: 16px;
+      margin: 40px 0px 18px;
+    }
+
+    .bullet-item {
+      padding-left: 30px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 7px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: white;
+        border: 1px solid #2dcc89;
+        top: 8px;
+      }
+    }
+    .bullet-item-without-bullet {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+
+      &:hover {
+        color: #2dcc89;
+      }
+    }
+    .accordion-icon-sub {
+      position: absolute;
+      left: 7px;
+      top: 4px;
+      cursor: pointer;
+
+      color: #2dcc89;
+      svg {
+        width: 0.7em;
+      }
+      &.active {
+        transform: rotate(90deg);
+      }
+    }
+    .bullet-list {
+      .bullet-list-item {
+        margin-bottom: 9px;
+        padding-left: 70px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 7px;
+          height: 7px;
+          background-color: #2dcc89;
+          left: 48px;
+          top: 9px;
+        }
+      }
+    }
+    .list-show {
+      .list-wrapper {
+        overflow: hidden;
+        opacity: 0;
+        // transition: all 0.25s ease;
+      }
+      &:not(.activeList) {
+        .list-wrapper {
+          max-height: 0;
+        }
+      }
+      &.activeList {
+        .list-wrapper {
+          opacity: 1;
+          overflow: auto;
+          margin-bottom: 6px;
+        }
+      }
+    }
+
+    .bullet {
+      padding-left: 85px;
+      .bullet-item-inner {
+        margin-bottom: 9px;
+        padding-left: 35px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 7px;
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background-color: #2dcc89;
+          border: 2px solid #2dcc89;
+          top: 9px;
+        }
+        .note-text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

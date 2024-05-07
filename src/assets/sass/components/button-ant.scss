@@ -1,0 +1,137 @@
+@import "../../../assets/sass/utils/variable-teacher";
+
+.button {
+  line-height: 1.5715;
+  min-width: 100px;
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  user-select: none;
+  touch-action: manipulation;
+  height: 40px;
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  color: #56606d;
+  border-color: #dde1e5;
+  background: #fff;
+  box-shadow: 0 2px 0 #00000005;
+
+  &:hover {
+    color: $primaryColor;
+    border-color: $primaryColor;
+  }
+  &:focus {
+    color: $primaryColor;
+    border-color: $primaryColor;
+  }
+  &:disabled {
+    opacity: 0.7;
+  }
+}
+
+// .button-secondary-light {
+//   background: $primaryLightColor;
+//   color: #fff;
+//   button {
+//     &:hover {
+//       background-color: #fff;
+//       color: $primaryColor;
+//     }
+//   }
+// }
+.button-secondary {
+  min-width: 100px;
+  height: 40px;
+  padding: 8px 20px;
+  font-size: 14px;
+  line-height: 1.5715;
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  color: #fff;
+  border-color: transparent;
+  background: $primaryColor;
+  text-shadow: 0 -1px 0 #0000001f;
+  box-shadow: 0 2px 0 #0000000d;
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  user-select: none;
+  touch-action: manipulation;
+  &:hover {
+    color: #fff;
+    background: #51d69a;
+  }
+  &:disabled {
+    opacity: 0.7;
+  }
+  &:focus {
+    color: #fff;
+    background: #51d69a;
+  }
+}
+
+.google-classroom-section {
+  display: flex;
+  align-items: center;
+  .btn-google-classroom {
+    font-weight: 600;
+    padding: 0px 12px;
+    min-height: 40px !important;
+    border-radius: 1.25rem;
+    user-select: none;
+    white-space: nowrap;
+    border-style: solid;
+    box-sizing: border-box;
+    cursor: pointer;
+    --tw-bg-opacity: 1;
+    background-color: rgba(33, 164, 101, var(--tw-bg-opacity));
+    --tw-border-opacity: 1;
+    border-color: rgba(20, 142, 83, var(--tw-border-opacity));
+    --tw-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08), 0px 1px 0px #21a465;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent),
+      var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+    border-width: 1px;
+    display: inline-flex;
+    align-items: center;
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.2s;
+
+    .google-classrooms-img {
+      width: 32px;
+      height: 32px;
+      padding: 0.25rem;
+      border-width: 1px;
+      border-radius: 0.125rem;
+      --tw-border-opacity: 1;
+      border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+      --tw-bg-opacity: 1;
+      background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+    }
+
+    .classroom-text {
+      line-height: 1;
+      margin-left: 1rem;
+      font-size: 1.5rem;
+      line-height: 1.25rem;
+    }
+    &:hover {
+      background-color: #1a9259;
+      border-color: #1a9259;
+    }
+  }
+}

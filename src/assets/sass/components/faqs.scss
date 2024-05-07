@@ -1,0 +1,121 @@
+@import "../../../assets/sass/utils/variable-teacher";
+
+.actions {
+  text-align: center;
+
+  button {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .actions {
+    background-color: white;
+    padding: 10px 30px;
+    position: sticky;
+    bottom: 0;
+
+    button {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+
+  .totalWeight {
+    flex-direction: column;
+
+    button {
+      width: 100%;
+    }
+
+    > span {
+      width: 100%;
+      margin-top: 25px;
+    }
+  }
+}
+.ant-card-head-title {
+  color: #2d405a;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 25px 0;
+  font-family: "Biennale";
+}
+.ant-card-extra {
+  padding: 25px 0;
+}
+.ant-collapse {
+  background-color: #fff !important;
+  > .ant-collapse-item {
+    .ant-collapse-content-box {
+      padding-left: 40px;
+      font-size: 15px;
+    }
+    > .ant-collapse-header {
+      font-family: $secondary-fonts;
+      font-weight: 500;
+      font-size: 16px;
+      &:hover {
+        border-color: $primaryColor;
+        color: $primaryColor;
+
+        .ant-collapse-arrow svg {
+          color: $primaryColor;
+        }
+      }
+
+      .ant-collapse-arrow svg {
+        color: $primaryColor;
+      }
+    }
+  }
+  .ant-collapse-item-active {
+    .ant-collapse-header {
+      border-color: $primaryColor;
+      color: $primaryColor;
+      font-weight: 500;
+      font-size: 16px;
+      .ant-collapse-arrow svg {
+        color: $primaryColor;
+      }
+    }
+  }
+}
+.ant-collapse-borderless {
+  background-color: #fff !important;
+  border: 0;
+  // box-shadow: #0e704a0f 0px 2px 20px;
+}
+
+.site-collapse-custom-collapse .site-collapse-custom-panel {
+  margin-bottom: 24px;
+  overflow: hidden;
+  background: #f7f7f7;
+  border: 0px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+
+  &:last-child {
+    margin-bottom: 0;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+  }
+}
+.site-collapse-custom-collapse .inner-collapse .site-collapse-custom-panel {
+  margin-bottom: 15px;
+}

@@ -1,0 +1,13 @@
+.doubles-with-dice-main-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: -webkit-fill-available;
+
+  .dice-one-group {
+    @include dice-with-one-row();
+  }
+
+  //math-opration-img
+  @include math-op-img();
+}

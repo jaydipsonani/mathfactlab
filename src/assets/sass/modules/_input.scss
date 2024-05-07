@@ -1,0 +1,386 @@
+.input-wrap {
+  position: relative;
+
+  //changes for show icon at password show text
+  // display: flex;
+  // align-items: center;
+  .input-label {
+    min-width: 165px;
+    font-weight: $regular;
+    margin-bottom: 0;
+    padding-right: 15px;
+    margin-right: 7px;
+    border-right: 1px solid #c7c7c7;
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+  }
+  .input-field {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    background-color: $login-input-bg;
+    border: 1px solid $login-input-border;
+    padding: 8px 8px 8px 190px;
+  }
+  &.input-error {
+    // -webkit-animation: shake 0.2s ease-in-out 0s 2;
+    // animation: shake 0.2s ease-in-out 0s 2;
+    .input-field {
+      border-color: $error;
+    }
+    .error {
+      top: 100%;
+      z-index: 0;
+    }
+  }
+  &.input-error-without-shake {
+    .input-field {
+      border-color: $error;
+    }
+    .error {
+      top: 100%;
+      z-index: 0;
+    }
+  }
+  .error {
+    color: $error;
+    font-size: 12px;
+    left: 15px;
+    z-index: -1;
+    position: absolute;
+    top: calc(100% - 15px);
+  }
+  &.extra-text {
+    .input-label {
+      min-width: 175px;
+    }
+    .input-field {
+      padding: 8px 8px 8px 200px;
+    }
+  }
+
+  //Show text icon in password field
+
+  .show-password-icon {
+    font-weight: 400;
+    margin-bottom: 0;
+
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.input-design {
+  display: inline;
+  vertical-align: middle;
+  position: relative;
+  & > .input-field {
+    width: 100%;
+    max-width: 425px;
+    height: 236px;
+    border: 2px solid $large-input-border;
+    border-radius: 20px;
+    background-color: transparent;
+    box-shadow: -18px 18px 0px rgba(50, 103, 193, 0.4);
+    text-align: center;
+    @include transition(0.5s ease);
+    &:focus {
+      box-shadow: -18px 18px 20px rgba(50, 103, 193, 0.4);
+    }
+    &::-webkit-input-placeholder {
+      /* Edge */
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.2);
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
+}
+.input-empty {
+  animation: shake 0.3s ease-in-out 0s 3;
+  -webkit-animation: shake 0.3s ease-in-out 0s 3;
+}
+.error {
+  color: $error;
+  font-size: 12px;
+}
+.form-input {
+  &.input-error {
+    .form-control {
+      // -webkit-animation: shake 0.2s ease-in-out 0s 2;
+      // animation: shake 0.2s ease-in-out 0s 2;
+      border-color: $error;
+      position: relative;
+      &:focus {
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+          0 0 8px rgba(255, 0, 0, 0.4);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+          0 0 8px rgba(255, 0, 0, 0.4);
+      }
+    }
+    & > .error {
+      position: relative;
+    }
+  }
+  &.input-error-without-shake {
+    .form-control {
+      border-color: $error;
+      position: relative;
+      &:focus {
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+          0 0 8px rgba(255, 0, 0, 0.4);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+          0 0 8px rgba(255, 0, 0, 0.4);
+      }
+    }
+    & > .error {
+      position: relative;
+    }
+  }
+}
+
+.mfl-round-check {
+  display: none;
+}
+.mfl-round-check-label {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 4px solid #b2b2b2;
+  margin-top: 6px;
+  position: relative;
+  @include transition(0.5s ease);
+  cursor: pointer;
+}
+.mfl-round-check.active + .mfl-round-check-label,
+.mfl-round-check:checked + .mfl-round-check-label {
+  border-color: #fff;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.3);
+}
+.mfl-round-check.active + .mfl-round-check-label::before,
+.mfl-round-check:checked + .mfl-round-check-label::before {
+  opacity: 1;
+}
+.mfl-round-check-label::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: url("../../images/mfl-custom-check.svg") center center;
+  background-size: 100% 100%;
+  @include transform(translate(-50%, -50%));
+  opacity: 0;
+  @include transition(0.5s ease);
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.18);
+}
+.mfl-input-checkbox {
+  display: none;
+}
+
+.signup-checkbox .mfl-input-checkbox-label {
+  align-items: flex-start;
+}
+.signup-checkbox .mfl-input-checkbox + .mfl-input-checkbox-label::before {
+  min-width: 22px;
+  position: relative;
+
+  border-color: #d0d0d0;
+}
+.mfl-input-checkbox + .mfl-input-checkbox-label {
+  @include inline-flex();
+  @include align-items-center();
+  @include justify-content-center();
+  // cursor: pointer;
+  position: relative;
+  font-weight: 500;
+  .font-bold {
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+}
+.mfl-input-checkbox + .mfl-input-checkbox-label::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  border: 1px solid rgb(231, 231, 231);
+  background-color: $white;
+  display: block;
+  margin-right: 12px;
+  align-self: flex-start;
+}
+.mfl-input-checkbox + .mfl-input-checkbox-label::after {
+  content: "\e923";
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 9px;
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  opacity: 0;
+  @include transition(0.5s ease);
+  // transition-delay: 1.5s;
+  color: $dice-procolor-success;
+}
+
+//For parent blue tick mark
+.signup-checkbox .mfl-input-checkbox + .blue-tick::after {
+  color: $secondary-color;
+}
+
+.mfl-input-checkbox:checked + .mfl-input-checkbox-label::after {
+  opacity: 1;
+}
+
+// transition delay 0 second
+
+.mfl-input-checkbox-td-0 {
+  display: none;
+}
+.mfl-input-checkbox-td-0 + .mfl-input-checkbox-label {
+  @include inline-flex();
+  @include align-items-center();
+  @include justify-content-center();
+  // cursor: pointer;
+  position: relative;
+  font-weight: 500;
+  .font-bold {
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+}
+.mfl-input-checkbox-td-0 + .mfl-input-checkbox-label::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  border: 1px solid rgb(231, 231, 231);
+  background-color: $white;
+  display: block;
+  margin-right: 12px;
+}
+.mfl-input-checkbox-td-0 + .mfl-input-checkbox-label::after {
+  content: "\e923";
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 9px;
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  opacity: 0;
+  @include transition(0.5s ease);
+  // transition-delay: 1.5s;
+  color: $dice-procolor-success;
+}
+
+.mfl-input-checkbox-td-0:checked + .mfl-input-checkbox-label::after {
+  opacity: 1;
+}
+
+@include breakpoint-max-height($height-700p) {
+  .input-wrap .error {
+    position: relative;
+  }
+}
+// @include breakpoint-max($screen-1920p-max) {
+//   .input-design > .input-field {
+//     height: 210px;
+//     max-width: 400px;
+//   }
+// }
+// @include breakpoint-max($screen-1600p-max) {
+//   .input-design > .input-field {
+//     height: 190px;
+//     max-width: 385px;
+//   }
+// }
+@include breakpoint-max($screen-xll-max) {
+  .input-design > .input-field {
+    height: 185px;
+    max-width: 365px;
+  }
+
+  .mfl-input-checkbox + .mfl-input-checkbox-label::after {
+    top: 9px;
+  }
+  .mfl-input-checkbox-td-0 + .mfl-input-checkbox-label::after {
+    top: 9px;
+  }
+}
+@include breakpoint-max($screen-x-max) {
+  .input-design > .input-field {
+    height: 180px;
+    max-width: 350px;
+  }
+}
+@include breakpoint-max($screen-lg-max) {
+  .input-wrap {
+    .input-label {
+      min-width: 115px;
+    }
+    .input-field {
+      padding: 8px 8px 8px 190px;
+    }
+  }
+  .input-design > .input-field {
+    height: 170px;
+    max-width: 340px;
+  }
+}
+@include breakpoint-max($screen-md-max) {
+  .input-wrap {
+    .input-label {
+      font-size: 0;
+      min-width: 0 !important;
+      padding-right: 8px;
+    }
+    .input-field {
+      padding: 8px 8px 8px 65px !important;
+    }
+  }
+  .input-design > .input-field {
+    height: 160px;
+    max-width: 325px;
+  }
+}
+@include breakpoint-max($screen-sm-max) {
+  .input-design > .input-field {
+    height: 150px;
+    max-width: 308px;
+  }
+}

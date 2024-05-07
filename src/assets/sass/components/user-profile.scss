@@ -1,0 +1,25 @@
+.user-profile-wrapper {
+  .form-input {
+    .form-control {
+      height: 36px;
+      font-size: 12px;
+
+      &:focus {
+        border-color: $primaryColor;
+        box-shadow: unset;
+      }
+    }
+  }
+}
+
+.user-profile-remove-text {
+  max-width: 350px;
+  text-align: center;
+  border: 2px solid;
+  padding: 10px;
+  color: white;
+  background: $errorColor;
+  border-radius: 6px;
+  cursor: pointer;
+  @include font-size("16");
+}

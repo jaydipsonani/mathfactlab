@@ -1,0 +1,233 @@
+.students-report-layout {
+  position: absolute;
+
+  .students-report-popup {
+    font-family: "Lato", sans-serif;
+    .popup {
+      max-width: 70%;
+      /* height: calc(100vh - 158px); */
+      max-height: 950px;
+      min-height: 450px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      margin: 50px auto 50px;
+      position: relative;
+
+      .footer {
+        width: 100%;
+        height: 85px;
+        background: #ffffff;
+        box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
+        border-radius: 0px 0px 8px 8px;
+        position: absolute;
+        bottom: 0px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        .generate-btn {
+          letter-spacing: 0.04em;
+          text-align: center;
+          .ant-btn {
+            border-color: #2b95f9;
+            background-color: #2b95f9;
+          }
+        }
+      }
+
+      .layout-content-center {
+        display: flex;
+        align-items: center;
+      }
+
+      .students-report-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 70px;
+        width: 100%;
+        padding: 0px 20px;
+        .report-logo {
+          width: 172px;
+          height: 34px;
+        }
+        .close-text {
+          cursor: pointer;
+          font-weight: 600;
+          @include font-size("24");
+          line-height: 24px;
+          letter-spacing: 0.04em;
+          color: #2eca89;
+        }
+      }
+      .students-report-popup-header-text {
+        @include font-size("40");
+        letter-spacing: 0.04em;
+        color: #444444;
+        text-align: center;
+        // margin-bottom: 30px;
+        line-height: 32px;
+        width: 100%;
+
+        .beta-text {
+          @include font-size("16");
+          color: #2eca89;
+        }
+      }
+      .students-report-popup-content {
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 85px;
+        .students-report {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          overflow: auto;
+          .students-report-left {
+            width: 100%;
+            .ant-space-vertical {
+              width: 100%;
+            }
+            .step-1-2 {
+              margin-bottom: 30px;
+              .students-report-text {
+                font-weight: 400;
+                @include font-size("24");
+                line-height: 32px;
+                letter-spacing: 0.04em;
+                color: #000000;
+                margin: 0px 0px 0px 18px;
+              }
+              .radio-grp-container {
+                margin: 6px 0px 6px 40px;
+                display: flex;
+                flex-direction: row;
+                .ant-radio-group {
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-items: center;
+                  .ant-radio-wrapper {
+                    margin-right: 12px;
+                    // margin-bottom: 10px;
+                  }
+                  .disable-datePicker {
+                    pointer-events: none;
+                    opacity: 0.5;
+                    border: 1px solid #a3a2a1;
+                    border-radius: 8px;
+                    padding: 5px;
+                    background: #f5f5f5;
+                  }
+                  .datePicker {
+                    border: 1px solid #a3a2a1;
+                    border-radius: 8px;
+                    padding: 5px;
+                  }
+                }
+              }
+              .checkbox-selection {
+                display: flex;
+              }
+              .students-report-sub-text {
+                font-weight: 400;
+                @include font-size("16");
+                line-height: 32px;
+                letter-spacing: 0.04em;
+                color: #000000;
+                margin: 0px 0px 18px 5px;
+              }
+              .from-date-text {
+                font-weight: 400;
+                @include font-size("16");
+                line-height: 32px;
+                letter-spacing: 0.04em;
+                color: #000000;
+                margin: 0px 0px 0px 18px;
+              }
+              .to-date-text {
+                font-weight: 400;
+                @include font-size("16");
+                line-height: 32px;
+                letter-spacing: 0.04em;
+                color: #000000;
+                margin: 0px 0px 0px 18px;
+              }
+              @media only screen and (min-width: 1024px) {
+                margin-bottom: 10px;
+              }
+            }
+            .student-selection {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              padding: 24px;
+              width: 100%;
+
+              background: #f8f8f8;
+              border-radius: 8px;
+              .students-report-right-text {
+                font-weight: 400;
+                @include font-size("24");
+                line-height: 32px;
+                letter-spacing: 0.04em;
+                color: #000000;
+                margin-bottom: 20px;
+              }
+              .step-3-select {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 20px;
+                .form-control {
+                  width: 25%;
+                  margin: 0px 20px 0px 0px;
+                }
+                .select-all {
+                  display: block;
+                  @include font-size("20");
+                  margin: 0px 0px 0px 0px;
+                  padding-left: 15px;
+                }
+              }
+              .students-list {
+                direction: ltr;
+                overflow-y: auto;
+                width: 100%;
+                border: 1px solid #c7c7c7;
+                border-radius: 8px;
+                display: grid;
+                font-size: 1.8rem;
+                font-weight: 400;
+                padding-left: 15px;
+                background-color: #ffffff;
+                grid-template-columns: auto auto auto auto;
+                padding: 12px;
+                max-height: 270px;
+                @media only screen and (max-width: 1366px) {
+                  max-height: 210px;
+                }
+                @media only screen and (max-width: 1680px) {
+                  max-height: 234px;
+                }
+                @media only screen and (max-width: 1440px) {
+                  max-height: 128px;
+                }
+                @media only screen and (max-width: 1024px) {
+                  max-height: 210px;
+                }
+              }
+            }
+          }
+          .error-text {
+            margin-top: 10px;
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}

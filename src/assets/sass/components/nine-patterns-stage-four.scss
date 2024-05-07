@@ -1,0 +1,172 @@
+.nine-patterns-stage-four-main-outer-wrapper {
+  @mixin icon-font($font-size) {
+    @if $font-size == "65" {
+      font-size: 6.5rem;
+      @include breakpoint-max($screen-md-max) {
+        font-size: 5.5rem;
+      }
+      @include breakpoint-max($screen-sm-max) {
+        font-size: 4.5rem;
+      }
+      @include breakpoint-max($screen-xs-max) {
+        font-size: 3.8rem;
+      }
+      @include breakpoint-max(440px) {
+        font-size: 3.2rem;
+      }
+    }
+  }
+  .calculation-box {
+    width: calc(100% - 20px);
+    max-width: 520px;
+    margin: 0 auto;
+    @include icon-font("65");
+    line-height: normal;
+    font-weight: $bold;
+    overflow: auto;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s linear 300ms, opacity 1.5s;
+    .calculation-inner {
+      min-width: 340px;
+      min-height: 260px;
+      width: 100%;
+      // background-color: $white;
+      padding: 15px;
+      @include flex();
+      @include justify-content-center();
+      @include align-items-end();
+      .calculation-left {
+        @include inline-flex();
+      }
+    }
+    .calc-count {
+      min-width: 72px;
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      position: relative;
+      .arrow-hint {
+        position: absolute;
+        bottom: calc(100% + 10px);
+        width: 235px;
+        left: 50%;
+        @include transition(all 0.5s ease);
+        animation: arrow-animation-hint 1.5s ease-out 0.5ms;
+        overflow: hidden;
+        line-height: 40px;
+        opacity: 0.6;
+        .arrow-hint-inner {
+          width: 100%;
+          min-width: 235px;
+        }
+      }
+    }
+    .calculation-input {
+      .answer-input {
+        border-bottom: 4px solid;
+        min-width: 65px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 16px;
+
+        .digit {
+          opacity: 0;
+          visibility: hidden;
+          transition: visibility 0s linear 300ms, opacity 1.5s;
+          &.visible {
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0s linear 0s, opacity 1.5s;
+          }
+        }
+      }
+    }
+    .bottom-hint-text {
+      padding: 15px;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 32px;
+      font-weight: 400;
+      opacity: 0;
+      visibility: hidden;
+      transition: visibility 0s linear 300ms, opacity 1.5s;
+      .hint-digit {
+        min-width: 65px;
+        text-align: center;
+
+        &.left {
+          text-align: left;
+        }
+      }
+      &.visible {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear 0s, opacity 1.5s;
+      }
+    }
+
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s linear 0s, opacity 1.5s;
+    }
+  }
+  @include breakpoint-max($screen-xll-max) {
+    .calculation-box .calculation-inner {
+      min-height: 225px;
+    }
+  }
+  @include breakpoint-max($screen-md-max) {
+    .calculation-box .calc-count .arrow-hint {
+      width: 225px;
+    }
+    .calculation-box .calc-count .arrow-hint .arrow-hint-inner {
+      min-width: 225px;
+    }
+    .calculation-box .calculation-inner {
+      min-height: 230px;
+    }
+  }
+  @include breakpoint-max($screen-sm-max) {
+    .calculation-box .calc-count .arrow-hint {
+      width: 205px;
+    }
+    .calculation-box .calc-count .arrow-hint .arrow-hint-inner {
+      min-width: 205px;
+    }
+    .calculation-box .calc-count {
+      min-width: 65px;
+    }
+    .calculation-box .calculation-inner {
+      min-height: 200px;
+    }
+  }
+  @include breakpoint-max($screen-xs-max) {
+    .calculation-box .calc-count .arrow-hint {
+      width: 185px;
+    }
+    .calculation-box .calc-count .arrow-hint .arrow-hint-inner {
+      min-width: 185px;
+    }
+    .calculation-box .calc-count {
+      min-width: 58px;
+    }
+    .calculation-box .calculation-inner {
+      min-height: 180px;
+    }
+  }
+
+  @include breakpoint-max(440px) {
+    .calculation-box .calc-count .arrow-hint {
+      width: 165px;
+    }
+    .calculation-box .calc-count .arrow-hint .arrow-hint-inner {
+      min-width: 165px;
+    }
+    .calculation-box .calc-count {
+      min-width: 46px;
+    }
+  }
+}

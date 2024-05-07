@@ -1,0 +1,60 @@
+.social-login-buttons {
+  .social-lb-item {
+    margin-right: 14px;
+    @include flex();
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.btn-google {
+  color: #444444;
+  background-color: #ffffff;
+  cursor: pointer;
+  &:hover,
+  &:active {
+    background-color: $google;
+    color: $white !important;
+    [class^="icon-color-"],
+    [class*=" icon-color-"] {
+      background-position: -2px -23px;
+    }
+  }
+}
+.btn-class-link {
+  color: #444444;
+  background-color: #ffffff;
+  cursor: pointer;
+  &:hover,
+  &:active {
+    background-color: $class_link;
+    color: $white !important;
+    [class^="icon-color-"],
+    [class*=" icon-color-"] {
+      background-position: -2px -75px;
+    }
+  }
+}
+
+.btn-facebook {
+  &:hover,
+  &:active {
+    background-color: $facebook;
+    color: $white !important;
+    [class^="icon-color-"],
+    [class*=" icon-color-"] {
+      background-position: -25px -23px;
+    }
+  }
+}
+.btn-twitter {
+  &:hover,
+  &:active {
+    background-color: $twitter;
+    color: $white !important;
+    [class^="icon-color-"],
+    [class*=" icon-color-"] {
+      background-position: -48px -23px;
+    }
+  }
+}

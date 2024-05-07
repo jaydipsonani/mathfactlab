@@ -1,0 +1,630 @@
+.disable-screen {
+  opacity: 0.4;
+  pointer-events: none;
+}
+.activity-screen-wrap {
+  flex-direction: row;
+}
+.activity-screen-cols {
+  position: relative;
+  &.flex-1 {
+    flex: 1;
+  }
+  .lifter-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+    max-width: 180px;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+    margin: 0 auto 30px;
+    position: relative;
+    &::after {
+      content: "";
+      margin: 0 auto;
+      width: 27px;
+      height: 2px;
+      background-color: $black;
+      opacity: 0.2;
+      display: block;
+      margin-top: 20px;
+    }
+  }
+  &.level-lifter {
+    margin-top: 10px;
+    width: 340px;
+    margin-left: 60px;
+    padding: 55px 30px 80px;
+    border-radius: 50px;
+    background-color: $white;
+    border: 2px solid $frame-active-green;
+    .level-lifter-requirement-wrapper {
+      margin: 36px 0px;
+
+      .initial-lifter-title {
+        font-size: 17px;
+      }
+    }
+    .mfl-input-checkbox-label {
+      align-items: flex-start;
+    }
+    .mfl-input-checkbox + .mfl-input-checkbox-label {
+      &::before {
+        min-width: 22px;
+        position: relative;
+        top: 3px;
+        border-color: #d0d0d0;
+      }
+      &::after {
+        top: 10px;
+      }
+    }
+    .mfl-input-wrap {
+      margin-bottom: 15px;
+      font-size: 17px;
+    }
+    .mfl-input-checkbox:checked + .mfl-input-checkbox-label {
+      &::before {
+        background-color: $frame-active-green;
+        border-color: $frame-active-green;
+      }
+      &::after {
+        color: $white;
+      }
+    }
+  }
+}
+.frame-input-wrap {
+  @include flex-with-nowrap();
+  padding-left: 30px;
+  margin-top: 10px;
+  max-width: 220px;
+  font-size: 16px;
+  .input-control {
+    font-size: 16px;
+    margin-right: 10px;
+    text-align: center;
+    margin-left: 10px;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+  .input-control-text {
+    font-size: 16px;
+    margin-right: 10px;
+    text-align: center;
+    margin-left: 10px;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+.activity-screen {
+  .activity-inner-wrapper {
+    .activity-button-outer {
+      position: relative;
+      height: 100%;
+      &.disabled {
+        filter: grayscale(100%);
+        pointer-events: none;
+        opacity: 0.7;
+      }
+    }
+    .btn-frames {
+      padding: 5px 8px;
+      max-width: 35px;
+      min-width: 36px;
+      max-height: 35px;
+      background-color: $frame-light-blue;
+      border: none;
+      color: #fff;
+      border-radius: 4px;
+      @include flex-with-nowrap();
+      @include align-items-center();
+      cursor: pointer;
+      transition: 0.35s ease;
+      font-size: 32px;
+      font-weight: 300;
+      top: 15px;
+      z-index: 1;
+      left: -16px;
+      position: absolute;
+      &.fbtn-subs {
+        background-color: $frame-active-red;
+      }
+      .fbtn-icon {
+        min-width: 20px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        border-width: 6.5px;
+        z-index: 0;
+        bottom: -13px;
+        left: 3px;
+        border-color: #0e5874 #0e5874 transparent transparent;
+      }
+      &:hover,
+      &:active,
+      &.active {
+        max-width: 100%;
+        .fbtn-text {
+          opacity: 1;
+          padding-left: 5px;
+          max-width: 100%;
+        }
+      }
+      .fbtn-text {
+        @include font-size("14");
+        padding-left: 0px;
+        opacity: 0;
+        max-width: 0;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: middle;
+        transition: 0.35s ease;
+      }
+    }
+    .trainer-btn-frames {
+      // padding: 5px 8px;
+      max-width: 35px;
+      min-width: 36px;
+      height: 135px;
+      background-color: $frame-light-blue;
+      border: none;
+      color: #fff;
+      border-radius: 4px;
+      @include flex-with-nowrap();
+      @include align-items-center();
+      @include justify-content-center();
+      transition: 0.35s ease;
+      font-size: 32px;
+      font-weight: 300;
+      bottom: 40px;
+      z-index: 1;
+      left: -16px;
+      position: absolute;
+      &.fbtn-subs {
+        background-color: $frame-active-red;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        border-width: 6.5px;
+        z-index: 0;
+        bottom: -13px;
+        left: 3px;
+        border-color: #0e5874 #0e5874 transparent transparent;
+      }
+
+      .trainer-text {
+        @include font-size("14");
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        padding-left: 0px;
+        opacity: 1;
+        display: inline-block;
+        vertical-align: middle;
+        transition: 0.35s ease;
+      }
+    }
+    &.activity-boxed {
+      &.fm-color {
+        background-color: $boxed-background;
+      }
+      .fm-activity-title {
+        @include font-size("22");
+        color: $frame-blue;
+        padding-left: 20px;
+        font-weight: bold;
+      }
+      .activity-cols {
+        .activity-button {
+          @include font-size("18");
+          border-radius: 8px;
+          padding: 25px 18px 20px;
+          min-height: 275px;
+          &.isActive {
+            border: 2px solid $frame-active-green;
+            .progressed-number {
+              .pronum-inner {
+                &::before {
+                  @extend %activeprogress-inner-before;
+                }
+              }
+              .pronum {
+                background-color: $frame-active-green;
+              }
+              &.progressed-alt {
+                .pronum-inner {
+                  .pronum-inner-progress {
+                    @extend %activeprogress-inner-before;
+                  }
+                }
+                .pronum {
+                  background-color: transparent;
+                  color: $frame-active-green;
+                }
+              }
+            }
+            .fm-radio {
+              background-color: $frame-active-green;
+              &::after {
+                opacity: 1;
+              }
+            }
+          }
+          .fm-radio {
+            border: 1px solid $border;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            &::after {
+              content: "";
+              width: 10px;
+              height: 5px;
+              border: 2px solid;
+              border-color: transparent transparent $white $white;
+              position: absolute;
+              @include transform(translate(-50%, -50%) rotate(-40deg));
+              @include transition(0.5s ease);
+              top: 44%;
+              left: 52%;
+              opacity: 0;
+            }
+          }
+          &.fm-has-tabs {
+            padding-bottom: 50px;
+          }
+          .fm-button-tabs {
+            width: 100%;
+            @include flex();
+            position: absolute;
+            bottom: 0;
+            background-color: #eff3fd;
+            & > .fm-button {
+              flex: 1;
+              cursor: pointer;
+              padding: 6px 8px;
+              font-size: 16px;
+              color: $frame-active-green;
+              position: relative;
+              font-weight: bold;
+              &:not(.current):hover {
+                box-shadow: 0px 0px 1px 2px rgba(56, 132, 245, 0.2);
+                border-radius: 10px 10px 0px 0px;
+                z-index: 1;
+                &::before,
+                &::after {
+                  opacity: 0;
+                }
+              }
+              &.current {
+                background-color: $white;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                color: $frame-blue;
+                & ~ .fm-button {
+                  color: rgba(0, 0, 0, 0.55);
+                }
+                &.visited {
+                  background-color: $white;
+                  border-bottom-left-radius: 10px;
+                  border-bottom-right-radius: 10px;
+                  color: $frame-active-green;
+                }
+                &::before {
+                  content: "";
+                  position: absolute;
+                  background-color: transparent;
+                  top: -1px;
+                  left: -10px;
+                  height: 8px;
+                  width: 10px;
+                  border-top-right-radius: 8px;
+                  box-shadow: 5px 0px 0px 0px #fff;
+                }
+                &::after {
+                  content: "";
+                  position: absolute;
+                  background-color: transparent;
+                  top: 0px;
+                  right: -10px;
+                  height: 8px;
+                  width: 10px;
+                  border-top-left-radius: 8px;
+                  box-shadow: -5px 0px 0px 0px #fff;
+                }
+              }
+              &.next-to-visit {
+                border-radius: 4px;
+                // transform: scale(1.5);
+                animation: pulse-strategy 1.5s 5;
+                @keyframes pulse-strategy {
+                  0% {
+                    transform: scale(0.95);
+                    box-shadow: 0 0 0 0 $frame-blue;
+                  }
+                  70% {
+                    transform: scale(1);
+                    box-shadow: 0 0 0 10px rgba(196, 46, 46, 0);
+                  }
+                  100% {
+                    transform: scale(0.95);
+                    box-shadow: 0 0 0 0 rgba(196, 46, 46, 0);
+                  }
+                }
+              }
+              &.disabled {
+                filter: grayscale(100%);
+                pointer-events: none;
+                opacity: 0.7;
+              }
+            }
+          }
+          .dice-title {
+            font-size: 1.8rem;
+            letter-spacing: normal;
+            font-weight: bold;
+            margin: auto 0;
+            .box-strategy-icon {
+              border: 1px solid;
+              height: 16px;
+              width: 12px;
+            }
+          }
+          .dice-sub-title {
+            font-size: 1.6rem;
+            letter-spacing: normal;
+            font-weight: normal;
+            .box-strategy-icon {
+              border: 1px solid;
+              height: 16px;
+              width: 12px;
+            }
+          }
+          .progressed-number {
+            &.progressed-alt {
+              flex-direction: column;
+              &::before {
+                content: none;
+              }
+              .pronum-inner {
+                display: block;
+                width: 100%;
+                margin-top: 3px;
+                &::before {
+                  @extend %progress-before;
+                  background-color: $boxed-background;
+                }
+                .pronum-inner-progress {
+                  @extend %progress-inner-before;
+                }
+              }
+
+              .pronum {
+                background-color: transparent;
+                color: $frame-blue;
+              }
+            }
+            &::before {
+              @extend %progress-before;
+            }
+            width: 100%;
+            @include flex();
+            @include align-items-center();
+            position: relative;
+            margin-top: auto;
+            .pronum-inner {
+              display: inherit;
+              justify-content: flex-end;
+              position: relative;
+              transition: 0.8s ease;
+              &::before {
+                @extend %progress-inner-before;
+              }
+            }
+            .pronum-inner-active {
+              display: inherit;
+              justify-content: flex-end;
+              position: relative;
+              transition: 0.8s ease;
+              &::before {
+                @extend %progress-inner-before;
+                background-color: $frame-active-green;
+              }
+            }
+
+            .pronum {
+              @extend .font-14;
+              line-height: normal;
+              border-radius: 5px;
+              z-index: 1;
+              color: $white;
+              padding: 4px 6px;
+              font-weight: bold;
+              background-color: $frame-blue;
+
+              &.num-hidden {
+                visibility: hidden;
+              }
+              &.bg-green {
+                background-color: $frame-active-green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-test-screen {
+  // .container {
+  //   width: 100%;
+  //   max-width: 1280px;
+  // }
+  .alt-header {
+    .container {
+      width: 95%;
+      max-width: 2000px;
+    }
+  }
+}
+@include breakpoint-max("1750px") {
+  .activity-screen-cols.level-lifter {
+    width: 300px;
+    margin-left: 40px;
+  }
+}
+@include breakpoint-max($screen-1600p-min) {
+  .activity-screen-cols.level-lifter {
+    padding: 25px 20px 50px;
+  }
+  .level-lifter-requirement-wrapper {
+    margin: 36px 0px !important;
+  }
+
+  .activity-screen .activity-inner-wrapper .btn-frames {
+    top: 10px;
+  }
+  .activity-screen .activity-inner-wrapper .trainer-btn-frames {
+    height: 120px;
+    bottom: 40px;
+  }
+  .activity-screen .activity-inner-wrapper .trainer-btn-frames .trainer-text {
+    font-size: 1.2rem;
+  }
+
+  .activity-screen
+    .activity-inner-wrapper.activity-boxed
+    .activity-cols
+    .activity-button {
+    min-height: 235px;
+  }
+}
+
+@include breakpoint-max($screen-xll-max) {
+  .activity-screen-cols.level-lifter {
+    width: 290px;
+    margin-left: 20px;
+    // max-height: 500px;
+  }
+  .level-lifter-requirement-wrapper {
+    margin: 36px 0px !important;
+  }
+  .activity-screen
+    .activity-inner-wrapper.activity-boxed
+    .activity-cols
+    .activity-button {
+    min-height: 228px;
+  }
+  .activity-screen
+    .activity-inner-wrapper.activity-boxed
+    .activity-cols
+    .activity-button
+    .dice-title {
+    font-size: 1.6rem;
+  }
+  .activity-boxed .activity-inner .activity-cols .activity-button .dice-icon {
+    max-width: 85%;
+    margin-top: 15px;
+  }
+  .activity-inner-wrapper {
+    .container {
+      width: 100%;
+      max-width: 95%;
+    }
+  }
+}
+@include breakpoint-max($screen-x-max) {
+  .activity-screen-cols.level-lifter {
+    width: 250px;
+    margin-left: 10px;
+    padding: 20px 15px 50px;
+  }
+  .activity-inner .activity-cols {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .activity-boxed .activity-inner .activity-cols .activity-button .dice-icon {
+    margin-top: 8px;
+  }
+  .activity-screen
+    .activity-inner-wrapper.activity-boxed
+    .activity-cols
+    .activity-button {
+    min-height: 210px;
+  }
+  .activity-screen
+    .activity-inner-wrapper.activity-boxed
+    .activity-cols
+    .activity-button.fm-has-tabs {
+    padding-bottom: 45px;
+  }
+  .activity-screen .activity-inner-wrapper .btn-frames {
+    font-size: 2.5rem;
+    max-width: 25px;
+    min-width: 25px;
+    max-height: 25px;
+    padding: 4px 5px;
+    .fbtn-icon {
+      min-width: 15px;
+    }
+  }
+  .activity-screen .activity-inner-wrapper .trainer-btn-frames {
+    max-width: 26px;
+    min-width: 26px;
+  }
+
+  .activity-screen-cols.level-lifter {
+    // margin-left: 20px;
+    // width: 260px;
+    .mfl-input-wrap {
+      font-size: 1.4rem;
+    }
+  }
+  .activity-screen-cols .lifter-title {
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
+    margin: 0 auto 20px;
+    &::after {
+      margin-top: 12px;
+    }
+  }
+  .activity-screen
+    .activity-inner-wrapper.activity-boxed
+    .activity-cols
+    .activity-button
+    .progressed-number
+    .pronum {
+    font-size: 1.2rem;
+  }
+  .activity-screen
+    .activity-inner-wrapper.activity-boxed
+    .activity-cols
+    .activity-button
+    .dice-title {
+    font-size: 1.4rem;
+  }
+}
+@include breakpoint-max($screen-md-max) {
+  .activity-screen
+    .activity-inner-wrapper.activity-boxed
+    .activity-cols
+    .activity-button
+    .dice-title {
+    font-size: 1.25rem;
+  }
+}

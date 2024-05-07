@@ -1,0 +1,82 @@
+.tutorial-video-layout {
+  height: 100vh;
+  position: absolute;
+
+  .tutorial-popup {
+    font-family: "Lato", sans-serif;
+    .popup {
+      max-width: 66%;
+      /* height: calc(100vh - 158px); */
+      max-height: 950px;
+      min-height: 450px;
+
+      border-radius: 8px;
+      margin: auto;
+      position: relative;
+      .popup-header {
+        padding: 20px;
+        .close-text {
+          cursor: pointer;
+
+          font-weight: 600;
+          @include font-size("24");
+          line-height: 24px;
+          letter-spacing: 0.04em;
+          color: #2eca89;
+        }
+        .header-text {
+          font-weight: 600;
+          @include font-size("24");
+          line-height: 24px;
+          letter-spacing: 0.04em;
+
+          color: #444444;
+        }
+      }
+    }
+
+    .layout-content-center {
+      display: flex;
+      align-items: center;
+    }
+    .tutorial-video-popup {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      // background-color: #e5faff;
+      padding: 20px 25px 25px;
+      max-height: 100%;
+      flex: 1;
+      .tutorial-video-popup-content {
+        max-height: 100%;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .tutorial-video {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          .tutorial-video-iframe-wrapper {
+            position: relative;
+            width: 100%;
+            margin: 12px 0;
+            .iframe-loader-wrapper {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .tutorial-video-popup-iframe {
+              width: 100%;
+              height: calc(100vh - 330px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

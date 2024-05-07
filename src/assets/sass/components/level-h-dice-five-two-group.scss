@@ -1,0 +1,22 @@
+.dice-five-two-group-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -webkit-fill-available;
+
+  .left-column {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include dice-with-three-row-with-five-dice();
+  }
+
+  .dice-one-group {
+    @include dice-with-three-row();
+  }
+
+  //math-opration-img
+  @include math-op-img();
+}

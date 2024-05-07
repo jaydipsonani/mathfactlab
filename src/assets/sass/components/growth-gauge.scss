@@ -1,0 +1,107 @@
+.growth-gauge-layout {
+  // padding-top: 64px;
+  height: 100vh;
+  position: relative;
+  font-family: "Lato", sans-serif;
+
+  //for tow layout popup scroll down issue
+  &.growth-gauge-twoLayout-popup-layout {
+    position: absolute;
+  }
+  @include breakpoint-max($screen-lg-max) {
+    padding-top: 54px;
+  }
+  .right-main-layout {
+    float: left;
+    width: 100%;
+    padding-left: 270px;
+    height: 100%;
+    background-color: $bg-aside-link;
+    @include transition(0.8s ease-in-out);
+    @include flex();
+    .right-main-inner {
+      height: 100%;
+      width: 100%;
+      float: left;
+      padding: 36px;
+      .right-main-content {
+        height: 100%;
+        width: 100%;
+        float: left;
+
+        // #changes remove auto overflow
+        // overflow: auto;
+      }
+    }
+  }
+}
+.table-title {
+  @include font-size("40");
+}
+/**************** Media Query ***************/
+// @include breakpoint-max($screen-1920p-max) {
+//   .growth-gauge-layout .right-main-layout {
+//     padding-left: 300px;
+//     .right-main-inner {
+//       padding: 40px;
+//     }
+//   }
+// }
+// @include breakpoint-max($screen-1600p-max) {
+//   .growth-gauge-layout .right-main-layout {
+//     padding-left: 290px;
+//     .right-main-inner {
+//       padding: 32px;
+//     }
+//   }
+// }
+@include breakpoint-max($screen-xll-max) {
+  .growth-gauge-layout .right-main-layout {
+    padding-left: 230px;
+    .right-main-inner {
+      padding: 26px;
+    }
+  }
+}
+@include breakpoint-max($screen-x-max) {
+  .growth-gauge-layout .right-main-layout {
+    padding-left: 230px;
+    .right-main-inner {
+      padding: 20px;
+    }
+  }
+}
+@include breakpoint-max($screen-lg-max) {
+  .growth-gauge-layout .right-main-layout {
+    padding-left: 70px;
+    .right-main-inner {
+      padding: 18px;
+    }
+  }
+  .growth-gauge-layout.mobile-menu-open .right-main-layout {
+    padding-left: 230px;
+  }
+}
+@include breakpoint-max($screen-md-max) {
+  .growth-gauge-layout .right-main-layout {
+    .right-main-inner {
+      padding: 16px;
+    }
+  }
+  .growth-gauge-layout .right-main-layout {
+    padding-left: 58px !important;
+  }
+  // .growth-gauge-layout.mobile-menu-open .right-main-layout{
+  //     padding-left: 240px;
+  // }
+}
+@include breakpoint-max($screen-sm-max) {
+  .growth-gauge-layout .right-main-layout {
+    .right-main-inner {
+      padding: 15px;
+    }
+  }
+  // .growth-gauge-layout.mobile-menu-open .right-main-layout{
+  //     padding-left: 230px;
+  // }
+}

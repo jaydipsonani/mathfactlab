@@ -1,0 +1,129 @@
+.primary-popup.custom-popup {
+  .popup {
+    max-width: 1365px;
+    padding: 60px 7% 90px;
+    background-color: $secondary-color;
+    color: $white;
+    border-radius: 12px;
+    .popup-content {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .popupStaticText {
+      .popupinner-text {
+        line-height: 35px;
+        margin-bottom: 0;
+      }
+    }
+    .popup-checkbox {
+      position: absolute;
+      left: 48px;
+      right: 0;
+      bottom: 30px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .popup-grid-button {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -27px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 270px;
+      .btn {
+        width: 100%;
+      }
+    }
+    .popup-grid {
+      @include flex();
+      @include justify-content-center();
+      margin-left: -15px;
+      margin-right: -15px;
+      margin-top: 70px;
+      .popup-grid-cols {
+        width: 33.3333%;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 20px;
+        .popup-grid-image {
+          width: 100%;
+          max-width: 200px;
+          margin: 0 auto;
+        }
+        .popup-grid-content {
+          @include font-size("30");
+          line-height: 35px;
+          text-align: center;
+          max-width: 325px;
+          margin: 15px auto 0;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-max($screen-xll-max) {
+  .primary-popup.custom-popup .popup .popupStaticText .popupinner-text {
+    line-height: 30px;
+  }
+  .primary-popup.custom-popup .popup .popup-grid {
+    margin-top: 55px;
+  }
+  .primary-popup.custom-popup
+    .popup
+    .popup-grid
+    .popup-grid-cols
+    .popup-grid-content {
+    line-height: 32px;
+  }
+  .primary-popup.custom-popup .popup {
+    padding: 50px 5% 70px;
+  }
+  .primary-popup.custom-popup .popup .popup-grid-button {
+    max-width: 250px;
+  }
+}
+@include breakpoint-max($screen-x-max) {
+  .primary-popup.custom-popup .popup .popupStaticText .popupinner-text {
+    line-height: 26px;
+    font-size: 1.8rem;
+  }
+  .primary-popup.custom-popup .popup .popup-grid {
+    margin-top: 45px;
+  }
+  .primary-popup.custom-popup
+    .popup
+    .popup-grid
+    .popup-grid-cols
+    .popup-grid-content {
+    line-height: 29px;
+    font-size: 2.1rem;
+  }
+  .primary-popup.custom-popup .popup {
+    padding: 45px 5% 60px;
+  }
+  .primary-popup.custom-popup .popup .popup-grid-button {
+    max-width: 230px;
+  }
+}
+@include breakpoint-max($screen-lg-max) {
+  .primary-popup.custom-popup .popup .popupStaticText .popupinner-text {
+    line-height: 24px;
+    font-size: 1.6rem;
+  }
+  .primary-popup.custom-popup
+    .popup
+    .popup-grid
+    .popup-grid-cols
+    .popup-grid-content {
+    line-height: 26px;
+    font-size: 1.9rem;
+  }
+  .primary-popup.custom-popup .popup .popup-grid {
+    margin-top: 25px;
+  }
+  .primary-popup.custom-popup .popup {
+    padding: 35px 20px 40px;
+  }
+}

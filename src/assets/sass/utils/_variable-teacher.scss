@@ -1,0 +1,201 @@
+/* Theme Color */
+$primaryColor: #2dcc89;
+$primaryLightColor: #3fcc89cc;
+
+/* Status Color */
+$infoColor: #3699ff;
+$successColor: #2dcc89;
+$warningColor: #ffb13c;
+$errorColor: #ff5050;
+/* Text Color */
+$titleColor: #2d405a;
+$bodyColor: #56606d;
+$placeholderColor: #79828d;
+
+$boxed-background: #f0f5fe;
+$frame-blue: #3884f5;
+
+$frame-light-blue: #2b95f9;
+$frame-active-green: #0eba86;
+$frame-active-red: #e86f67;
+
+@font-face {
+  font-family: "Biennale";
+  font-style: normal;
+  font-weight: 100;
+  src:
+    url("../../fonts/Biennale-Thin.woff") format("woff"),
+    url("../../fonts/Biennale-Thin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Biennale";
+  font-style: italic;
+  font-weight: 100;
+  src:
+    url("../../fonts/Biennale-ThinIt.woff") format("woff"),
+    url("../../fonts/Biennale-ThinIt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Biennale";
+  font-style: normal;
+  font-weight: 200;
+  src:
+    url("../../fonts/Biennale-UltraLight.woff") format("woff"),
+    url("../../fonts/Biennale-UltraLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Biennale";
+  font-style: italic;
+  font-weight: 200;
+  src:
+    url("../../fonts/Biennale-UltraLightIt.woff") format("woff"),
+    url("../../fonts/Biennale-UltraLightIt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Biennale";
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url("../../fonts/Biennale-Light.woff") format("woff"),
+    url("../../fonts/Biennale-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Biennale";
+  font-style: italic;
+  font-weight: 300;
+  src:
+    url("../../fonts/Biennale-LightIt.woff") format("woff"),
+    url("../../fonts/Biennale-LightIt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Biennale";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("../../fonts/Biennale-Regular.woff") format("woff"),
+    url("../../fonts/Biennale-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Biennale";
+  font-style: italic;
+  font-weight: 400;
+  src:
+    url("../../fonts/Biennale-RegularIt.woff") format("woff"),
+    url("../../fonts/Biennale-RegularIt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Biennale";
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url("../../fonts/Biennale-Medium.woff") format("woff"),
+    url("../../fonts/Biennale-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Biennale";
+  font-style: italic;
+  font-weight: 500;
+  src:
+    url("../../fonts/Biennale-MediumIt.woff") format("woff"),
+    url("../../fonts/Biennale-MediumIt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Biennale";
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url("../../fonts/Biennale-SemiBold.woff") format("woff"),
+    url("../../fonts/Biennale-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Biennale";
+  font-style: italic;
+  font-weight: 600;
+  src:
+    url("../../fonts/Biennale-SemiBoldIt.woff") format("woff"),
+    url("../../fonts/Biennale-SemiBoldIt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Biennale";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("../../fonts/Biennale-Bold.woff") format("woff"),
+    url("../../fonts/Biennale-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Biennale";
+  font-style: italic;
+  font-weight: 700;
+  src:
+    url("../../fonts/Biennale-BoldIt.woff") format("woff"),
+    url("../../fonts/Biennale-BoldIt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Biennale";
+  font-style: normal;
+  font-weight: 800;
+  src:
+    url("../../fonts/Biennale-Black.woff") format("woff"),
+    url("../../fonts/Biennale-Black.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Biennale";
+  font-style: italic;
+  font-weight: 800;
+  src:
+    url("../../fonts/Biennale-BlackIt.woff") format("woff"),
+    url("../../fonts/Biennale-BlackIt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Biennale";
+  font-style: normal;
+  font-weight: 900;
+  src:
+    url("../../fonts/Biennale-Heavy.woff") format("woff"),
+    url("../../fonts/Biennale-Heavy.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Biennale";
+  font-style: italic;
+  font-weight: 900;
+  src:
+    url("../../fonts/Biennale-HeavyIt.woff") format("woff"),
+    url("../../fonts/Biennale-HeavyIt.woff2") format("woff2");
+}
+
+$secondary-fonts: "Biennale";
+
+%progress-before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  background-color: $boxed-background;
+  width: 100%;
+  z-index: 0;
+}
+%progress-inner-before {
+  content: "";
+  background-color: $frame-blue;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: 0;
+}
+%activeprogress-inner-before {
+  background-color: $frame-active-green;
+}

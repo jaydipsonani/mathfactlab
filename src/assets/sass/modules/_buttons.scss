@@ -1,0 +1,425 @@
+// @import '../utils/variable';
+// @import '../utils/mixin';
+@import "../utils/variable-teacher";
+.btn {
+  @include transition(all 0.35s ease);
+  border-radius: 10px;
+  min-width: 191px;
+  min-height: 43px;
+  padding: 10px 12px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  // box-shadow: 0px 3px 6.16px 0.84px $primary-button-shadow;
+  &.focus,
+  &:focus,
+  &:hover {
+    color: $white;
+  }
+  &.ridge {
+    padding: 23px 12px;
+    font-weight: bold;
+    @include font-size("24");
+  }
+  @include breakpoint-max($screen-1600p-max) {
+    min-width: 160px;
+    padding: 10px 12px;
+    &.ridge {
+      padding: 20px 12px;
+    }
+  }
+  @include breakpoint-max($screen-xll-max) {
+    min-width: 140px;
+    &.ridge {
+      padding: 17px 12px;
+    }
+  }
+  @include breakpoint-max($screen-x-max) {
+    min-width: 150px;
+    &.ridge {
+      padding: 15px 12px;
+    }
+  }
+  @include breakpoint-max($screen-lg-max) {
+    min-width: 140px;
+    font-size: 1.4rem;
+    padding: 8px 12px;
+    min-height: auto;
+  }
+  @include breakpoint-max($screen-sm-max) {
+    min-width: 130px;
+  }
+}
+.btn-primary {
+  color: $white;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  &:hover {
+    background-color: $primary-button-hover-color;
+    border-color: $primary-button-hover-color;
+    color: $white;
+  }
+  &:active {
+    @include box-shadow(0 0 0 0.2rem rgba(0, 58, 127, 0.38));
+  }
+}
+.btn-secondary {
+  color: $white;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+
+  // #changes for button size min width from 130 to 100
+  // min-width: 130px;
+  min-width: 100px;
+
+  // #changes remove color changes on focus  for hint issue
+  &:hover {
+    background-color: $secondary-button-hover-color;
+    border-color: $secondary-button-hover-color;
+    color: $white;
+  }
+  &:active {
+    @include box-shadow(0 0 0 0.2rem rgba(0, 58, 127, 0.38));
+  }
+}
+
+.btn-secondary-outline {
+  color: $secondary-color;
+  background-color: $white;
+  border-color: $secondary-color;
+
+  // #changes for button size min width from 130 to 100
+  // min-width: 130px;
+  min-width: 100px;
+
+  // #changes remove color changes on focus  for hint issue
+  &:hover {
+    background-color: $secondary-button-hover-color;
+    border-color: $secondary-button-hover-color;
+    color: $white;
+  }
+  &:active {
+    @include box-shadow(0 0 0 0.2rem rgba(0, 58, 127, 0.38));
+  }
+}
+.hint-button {
+  .btn {
+    position: relative;
+    padding-left: 28px;
+    .hinticon,
+    .hinticon-hover {
+      position: absolute;
+      height: 58px;
+      width: 58px;
+      left: -30px;
+      bottom: -2px;
+      border: 4px solid $light-aqua;
+      border-radius: 50%;
+      //background-color: #1B7C00;
+      @include transition(0.35s ease);
+    }
+    .hinticon-hover {
+      opacity: 0;
+    }
+    &:hover {
+      // .hinticon{
+      //   opacity: 0;
+      // }
+      .hinticon-hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+.level-lifter-button-wrapper {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 3px 5px 11.04px rgba(0, 0, 0, 0.3);
+  background-color: $white;
+  padding: 24px;
+}
+
+.btn-icon-activity {
+  //for bottom fixed
+  // position: fixed;
+  bottom: 24px;
+  box-shadow:
+    0px 41px 56px rgba(14, 186, 134, 0.14),
+    0px 26.5741px 32.7963px rgba(14, 186, 134, 0.106296),
+    0px 15.7926px 17.837px rgba(14, 186, 134, 0.085037),
+    0px 8.2px 9.1px rgba(14, 186, 134, 0.07),
+    0px 3.34074px 4.56296px rgba(14, 186, 134, 0.054963),
+    0px 0.759259px 2.2037px rgba(14, 186, 134, 0.0337037);
+  background-color: #2aa737;
+  color: $white;
+  min-width: unset;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  bottom: -35px;
+  min-height: 70px;
+  border-radius: 50px;
+  border: 6px solid #fff;
+  box-shadow: 3px -3px 18.04px #0000004d !important; // margin: 0 auto;
+  //changes for fixed button
+
+  @include flex();
+  @include justify-content-center();
+  @include align-items-center();
+  @include font-size("18");
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  @include transition(0.5s ease);
+  &[disabled] {
+    // filter: grayscale(1) brightness(120%);
+    opacity: 1;
+    background-color: #c0c0c0;
+    border: 6px solid #fff;
+    box-shadow: 3px -3px 18.04px #0000004d !important;
+    pointer-events: none;
+    [class^="icon-"],
+    [class*=" icon-"] {
+      background-color: #9c9c9c;
+    }
+  }
+  .btn-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  [class^="icon-"],
+  [class*=" icon-"],
+  .icon-img {
+    width: 62px;
+    height: 58px;
+    border-radius: 50%;
+    @include font-size("36");
+    background-color: rgba(255, 255, 255, 0.2);
+    vertical-align: middle;
+    padding: 10px;
+    @include inline-flex();
+    @include justify-content-center();
+    @include align-items-center();
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  &:active {
+    box-shadow: 3px 5px 22px rgba(0, 0, 0, 0.3);
+  }
+  &:hover,
+  &:focus {
+    background-color: $frame-blue;
+    box-shadow:
+      0px 43px 80px rgba(56, 132, 245, 0.25),
+      0px 27.8704px 46.8519px rgba(56, 132, 245, 0.189815),
+      0px 16.563px 25.4815px rgba(56, 132, 245, 0.151852),
+      0px 8.6px 13px rgba(56, 132, 245, 0.125),
+      0px 3.5037px 6.51852px rgba(56, 132, 245, 0.0981481),
+      0px 0.796296px 3.14815px rgba(56, 132, 245, 0.0601852);
+  }
+  &.disable {
+    background-color: #c0c0c0;
+    pointer-events: none;
+    [class^="icon-"],
+    [class*=" icon-"] {
+      background-color: #9c9c9c;
+    }
+  }
+  @include breakpoint-max($screen-1600p-max) {
+  }
+  @include breakpoint-max($screen-xll-max) {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      width: 60px;
+      height: 56px;
+    }
+  }
+  @include breakpoint-max($screen-x-max) {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      width: 58px;
+      height: 54px;
+    }
+  }
+  @include breakpoint-max($screen-md-max) {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      width: 56px;
+      height: 54px;
+    }
+  }
+  @include breakpoint-max($screen-sm-max) {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      width: 54px;
+      height: 52px;
+    }
+  }
+  @include breakpoint-max($screen-xs-max) {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      width: 52px;
+      height: 50px;
+    }
+  }
+}
+.btn-test {
+  background-color: $white;
+  color: $secondary-color !important;
+  padding: 23px 15px;
+  font-weight: bold;
+  font-size: 2.4rem;
+  @include transition(0.8s ease);
+  @include box-shadow($test-blue-shadow);
+  &:hover {
+    color: $white !important;
+    border-color: $white;
+    background-color: $secondary-color;
+  }
+  @include breakpoint-max($screen-1600p-max) {
+    padding: 20px 15px;
+    font-size: 2.2rem;
+  }
+  @include breakpoint-max($screen-xll-max) {
+    padding: 14px 12px; //#changes
+    font-size: 2rem;
+  }
+  @include breakpoint-max($screen-x-max) {
+    padding: 16px 15px;
+    font-size: 1.8rem;
+  }
+  @include breakpoint-max($screen-md-max) {
+    padding: 15px 12px;
+    font-size: 1.7rem;
+  }
+  @include breakpoint-max($screen-sm-max) {
+    padding: 13px 12px;
+    font-size: 1.6rem;
+  }
+  @include breakpoint-max($screen-xs-max) {
+    padding: 12px 12px;
+    font-size: 1.48rem;
+  }
+}
+.btn-test-level-up {
+  background-color: $mfl-rp-green;
+  color: $white !important;
+  border-color: $mfl-rp-green;
+
+  &.hidden {
+    visibility: hidden;
+  }
+}
+.btn-test-not-yet {
+  background-color: $mfl-rp-yellow;
+  color: $white !important;
+  border-color: $mfl-rp-yellow;
+  &.hidden {
+    visibility: hidden;
+  }
+}
+.btn-icon-trans {
+  background-color: transparent;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  @include inline-flex();
+  @include align-items-center();
+  @include justify-content-center();
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: inherit;
+    left: 0;
+    top: 0;
+    background-color: $bg-aside-link;
+    z-index: -1;
+    @include transform(scale(0));
+    @include transition(0.5s ease);
+  }
+  &:hover::after,
+  &:focus::after {
+    @include transform(scale(1));
+  }
+  &.edit {
+    color: $primaryColor;
+    &::after {
+      opacity: 0.7;
+      // border: 1px solid;
+      border-color: $primaryColor;
+    }
+  }
+  &.delete {
+    color: $color-danger;
+    &::after {
+      border-color: $color-danger;
+      opacity: 0.7;
+      // border: 1px solid;
+    }
+  }
+  &.secondary {
+    color: $color-info;
+    &::after {
+      opacity: 0.7;
+      // border: 1px solid;
+      border-color: $color-info;
+    }
+  }
+  &.info {
+    color: $user-profile;
+    &::after {
+      background-color: $user-profile;
+      opacity: 0.7;
+    }
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+}
+
+.btn-gray {
+  background-color: $white;
+  color: $primary-color;
+  border: 1px solid #d9d3d3;
+
+  // #changes for button size min width from 130 to 100
+  // min-width: 130px;
+  min-width: 100px;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $primary-color;
+  }
+}
+.btn-icon {
+  min-width: 46px;
+  width: 46px;
+  height: 46px;
+  border: 1px solid $login-input-border;
+  background-color: $login-input-bg;
+  border-radius: 10px;
+  position: relative;
+  &.with-text {
+    @include flex();
+    @include align-items-center();
+    @include justify-content-center();
+    width: 100%;
+    // [class^="icon-color-"],
+    // [class*=" icon-color-"] {
+    //   // left: 12px;
+    //   // @include transform(translate(0%, -50%));
+    // }
+    @include breakpoint-max($screen-md-max) {
+      padding-left: 45px;
+    }
+  }
+}
+.button-full {
+  width: 100%;
+}

@@ -1,0 +1,240 @@
+@keyframes dash {
+  to {
+    background-position: 0% 50%;
+  }
+}
+.student-welcome-grid {
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-top: 50px;
+  max-width: calc(100% - 40px);
+  .student-welcome-grid-cols {
+    width: 25%;
+    float: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+
+    .student-welcome-grid-text {
+      font-size: 2.6rem;
+      color: $white;
+      line-height: normal;
+
+      &.first {
+        opacity: 0;
+        animation-name: fadeInAnimation;
+        animation-delay: 2s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
+      &.second {
+        opacity: 0;
+        animation-name: fadeInAnimation;
+        animation-delay: 8s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
+      &.third {
+        opacity: 0;
+        animation-name: fadeInAnimation;
+        animation-delay: 14s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
+      &.fourth {
+        opacity: 0;
+        animation-name: fadeInAnimation;
+        animation-delay: 20s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
+    }
+    .student-welcome-grid-image {
+      max-width: calc(100% - 30px);
+      width: 100%;
+      position: relative;
+      margin: 0 auto 15px;
+
+      &.first {
+        opacity: 0;
+        animation-name: fadeInAnimation;
+        animation-delay: 2s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
+      &.second {
+        opacity: 0;
+        animation-name: fadeInAnimation;
+        animation-delay: 8s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
+      &.third {
+        opacity: 0;
+        animation-name: fadeInAnimation;
+        animation-delay: 14s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
+      &.fourth {
+        opacity: 0;
+        animation-name: fadeInAnimation;
+        animation-delay: 20s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+.animated-arrow {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  @include transform(translateY(-50%));
+  .borderAnim {
+    height: 30px;
+    width: 80px;
+
+    //remove background for remove line
+    // background: linear-gradient(90deg, #ffffff 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 17px 2px;
+    background-position: 50% 50%;
+    border-radius: 5px;
+    padding: 10px;
+    animation: dash 1s linear reverse infinite;
+    transition: 1s ease;
+  }
+  .arrow-right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    @include transform(translate(-50%, -50%));
+
+    &.first {
+      opacity: 0;
+      animation-name: fadeInAnimation;
+      animation-delay: 6s;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+    &.second {
+      opacity: 0;
+      animation-name: fadeInAnimation;
+      animation-delay: 12s;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+    &.third {
+      opacity: 0;
+      animation-name: fadeInAnimation;
+      animation-delay: 18s;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.start-button-fade-in {
+  opacity: 0;
+  animation-name: fadeInAnimation;
+  animation-delay: 25s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@include breakpoint-min($screen-1600p-max) {
+  .student-welcome-section {
+    .container {
+      width: 1550px;
+    }
+  }
+}
+@include breakpoint-min(1750px) {
+  .student-welcome-section {
+    .container {
+      width: 1680px;
+    }
+  }
+}
+@include breakpoint-min(1850px) {
+  .student-welcome-section {
+    .container {
+      width: 1750px;
+    }
+  }
+}
+@include breakpoint-min(1920px) {
+  .student-welcome-section {
+    .container {
+      width: 1830px;
+    }
+  }
+}
+@include breakpoint-max($screen-1600p-max) {
+  .student-welcome-grid .student-welcome-grid-cols .student-welcome-grid-text {
+    font-size: 2.3rem;
+  }
+}
+@include breakpoint-max($screen-xll-max) {
+  .student-welcome-section {
+    .container {
+      width: calc(100% - 140px);
+    }
+  }
+  .student-welcome-grid {
+    max-width: 100%;
+  }
+  .student-welcome-grid .student-welcome-grid-cols {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .animated-arrow .borderAnim {
+    width: 55px;
+  }
+  .student-welcome-grid .student-welcome-grid-cols .student-welcome-grid-text {
+    font-size: 1.8rem;
+  }
+  .animated-arrow .arrow-right {
+    width: 20px;
+    height: 20px;
+  }
+}
+@include breakpoint-max($screen-x-max) {
+  .student-welcome-grid .student-welcome-grid-cols {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .student-welcome-section .container {
+    width: calc(100% - 80px);
+  }
+}
+@include breakpoint-max($screen-lg-max) {
+}
+@include breakpoint-max($screen-md-max) {
+}
+@include breakpoint-max($screen-sm-max) {
+}

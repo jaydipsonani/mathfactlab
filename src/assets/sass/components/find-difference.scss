@@ -1,0 +1,802 @@
+.find-difference-wrapper {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+
+  .line-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    .marker-line {
+      width: 68vw;
+      border: 1px solid;
+      max-width: 1294px;
+      @media only screen and (max-width: 1680px) {
+        width: 72vw;
+      }
+      @include breakpoint-max($screen-xll-max) {
+        border: 1px solid;
+        background-color: black;
+        width: 72vw;
+      }
+
+      @include breakpoint-max($screen-xl-max) {
+        border: 1px solid;
+        background-color: black;
+        width: 77vw;
+      }
+      @include breakpoint-max($screen-x-max) {
+        border: 1px solid;
+        width: 84vw;
+        background-color: black;
+      }
+
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: -10px;
+        left: -5px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid black;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: -10px;
+        right: -5px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid black;
+      }
+    }
+
+    //For larger dot
+    .marker-wrapper-lg {
+      position: absolute;
+      width: 62vw;
+      display: flex;
+      justify-content: space-between;
+      max-width: 1180px;
+
+      @media only screen and (max-width: 1680px) {
+        width: 66vw;
+      }
+      @include breakpoint-max($screen-xll-max) {
+        width: 66vw;
+      }
+      @include breakpoint-max($screen-xl-max) {
+        width: 72vw;
+      }
+      @include breakpoint-max($screen-x-max) {
+        width: 78vw;
+      }
+      .down-label {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        top: 50px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        font-weight: 800;
+        font-size: 18pt;
+      }
+
+      .line-10th {
+        height: 28px;
+        width: 4px;
+        background: black;
+        align-self: center;
+        position: relative;
+        transition: all 1s;
+        @include breakpoint-max($screen-xll-max) {
+          height: 22px;
+        }
+        @include breakpoint-max($screen-xl-max) {
+          height: 22px;
+        }
+        @include breakpoint-max($screen-x-max) {
+          height: 18px;
+        }
+        .selected {
+          height: 20px;
+          width: 20px;
+          border-radius: 10px;
+          border: 4px solid #bd1c1c;
+          align-self: center;
+          position: relative;
+          background: #ddd;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          top: 0;
+          left: -8px;
+          bottom: 0;
+          right: 0;
+          @include breakpoint-max($screen-xll-max) {
+            height: 14px;
+            width: 14px;
+            left: -5px;
+            border: 3px solid #bd1c1c;
+          }
+          @include breakpoint-max($screen-xl-max) {
+            height: 14px;
+            width: 14px;
+            left: -5px;
+            border: 3px solid #bd1c1c;
+          }
+          @include breakpoint-max($screen-x-max) {
+            height: 12px;
+            width: 12px;
+            left: -4px;
+            border: 3px solid #bd1c1c;
+          }
+        }
+      }
+      .label-line-10th {
+        height: 4px;
+        width: 4px;
+        background: none;
+        align-self: center;
+        position: relative;
+        transition: all 1s;
+
+        .selected {
+          height: 20px;
+          width: 20px;
+          border-radius: 10px;
+          border: 4px solid #bd1c1c;
+          align-self: center;
+          position: relative;
+          background: #ddd;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          top: 0;
+          left: -8px;
+          bottom: 0;
+          right: 0;
+          @include breakpoint-max($screen-xll-max) {
+            height: 14px;
+            width: 14px;
+            left: -5px;
+            border: 3px solid #bd1c1c;
+          }
+          @include breakpoint-max($screen-xl-max) {
+            height: 14px;
+            width: 14px;
+            left: -5px;
+            border: 3px solid #bd1c1c;
+          }
+          @include breakpoint-max($screen-x-max) {
+            height: 12px;
+            width: 12px;
+            left: -4px;
+            border: 3px solid #bd1c1c;
+          }
+        }
+      }
+      .line-10th-hidden {
+        background: none;
+      }
+      .line-5th {
+        height: 24px;
+        width: 2px;
+        background: black;
+        align-self: center;
+        position: relative;
+        transition: all 1s;
+        @include breakpoint-max($screen-xll-max) {
+          height: 18px;
+        }
+        @include breakpoint-max($screen-xl-max) {
+          height: 18px;
+        }
+        @include breakpoint-max($screen-x-max) {
+          height: 16px;
+        }
+        .selected {
+          height: 20px;
+          width: 20px;
+          border-radius: 10px;
+          border: 4px solid #bd1c1c;
+          align-self: center;
+          position: relative;
+          background: #ddd;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          top: 0;
+          left: -9px;
+          bottom: 0;
+          right: 0;
+          @include breakpoint-max($screen-xll-max) {
+            height: 14px;
+            width: 14px;
+            left: -6px;
+            border: 3px solid #bd1c1c;
+          }
+          @include breakpoint-max($screen-xl-max) {
+            height: 14px;
+            width: 14px;
+            left: -6px;
+            border: 3px solid #bd1c1c;
+          }
+          @include breakpoint-max($screen-x-max) {
+            height: 12px;
+            width: 12px;
+            left: -5px;
+            border: 3px solid #bd1c1c;
+          }
+        }
+      }
+      .label-line-5th {
+        height: 4px;
+        width: 2px;
+        background: none;
+        align-self: center;
+        position: relative;
+        transition: all 1s;
+
+        .selected {
+          height: 20px;
+          width: 20px;
+          border-radius: 10px;
+          border: 4px solid #bd1c1c;
+          align-self: center;
+          position: relative;
+          background: #ddd;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          top: 0;
+          left: -9px;
+          bottom: 0;
+          right: 0;
+          @include breakpoint-max($screen-xll-max) {
+            height: 14px;
+            width: 14px;
+            left: -6px;
+            border: 3px solid #bd1c1c;
+          }
+          @include breakpoint-max($screen-xl-max) {
+            height: 14px;
+            width: 14px;
+            left: -6px;
+            border: 3px solid #bd1c1c;
+          }
+          @include breakpoint-max($screen-x-max) {
+            height: 12px;
+            width: 12px;
+            left: -5px;
+            border: 3px solid #bd1c1c;
+          }
+        }
+      }
+      .line-5th-hidden {
+        background: none;
+      }
+
+      .dot {
+        height: 10px;
+        width: 10px;
+        background: black;
+        border-radius: 10px;
+        align-self: center;
+        position: relative;
+        transition: all 1s;
+
+        @include breakpoint-max($screen-xll-max) {
+          height: 9px;
+          width: 9px;
+        }
+        @include breakpoint-max($screen-xll-max) {
+          height: 8px;
+          width: 8px;
+        }
+        @include breakpoint-max($screen-x-max) {
+          height: 6px;
+          width: 6px;
+        }
+        .selected {
+          height: 20px;
+          width: 20px;
+          border-radius: 10px;
+          border: 4px solid #bd1c1c;
+          align-self: center;
+          position: relative;
+          background: #ddd;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          top: 0;
+          left: -5px;
+          bottom: 0;
+          right: 0;
+          @include breakpoint-max($screen-xll-max) {
+            height: 14px;
+            width: 14px;
+            left: -3px;
+            border: 3px solid #bd1c1c;
+          }
+          @include breakpoint-max($screen-xl-max) {
+            height: 14px;
+            width: 14px;
+            left: -3px;
+            border: 3px solid #bd1c1c;
+          }
+          @include breakpoint-max($screen-x-max) {
+            height: 12px;
+            width: 12px;
+            left: -3px;
+            border: 3px solid #bd1c1c;
+          }
+        }
+        .dot-hidden {
+          background: none;
+        }
+      }
+      .label-dot {
+        height: 4px;
+        width: 10px;
+        background: none;
+        border-radius: 10px;
+        align-self: center;
+        position: relative;
+        transition: all 1s;
+
+        @include breakpoint-max($screen-xll-max) {
+          width: 9px;
+        }
+        @include breakpoint-max($screen-xll-max) {
+          width: 8px;
+        }
+        @include breakpoint-max($screen-x-max) {
+          width: 6px;
+        }
+        .selected {
+          height: 20px;
+          width: 20px;
+          border-radius: 10px;
+          border: 4px solid #bd1c1c;
+          align-self: center;
+          position: relative;
+          background: #ddd;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          top: 0;
+          left: -5px;
+          bottom: 0;
+          right: 0;
+          @include breakpoint-max($screen-xll-max) {
+            height: 14px;
+            width: 14px;
+            left: -3px;
+            border: 3px solid #bd1c1c;
+          }
+          @include breakpoint-max($screen-xl-max) {
+            height: 14px;
+            width: 14px;
+            left: -3px;
+            border: 3px solid #bd1c1c;
+          }
+          @include breakpoint-max($screen-x-max) {
+            height: 12px;
+            width: 12px;
+            left: -3px;
+            border: 3px solid #bd1c1c;
+          }
+        }
+        .dot-hidden {
+          background: none;
+        }
+      }
+      .half-circle {
+        width: 100%;
+        height: 56px;
+        bottom: 10px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        border: 4px solid #eb0000;
+        border-bottom: 0;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        position: absolute;
+        transition: visibility 0s linear 300ms, opacity 1.5s;
+        opacity: 0;
+        visibility: hidden;
+
+        @include breakpoint-max($screen-x-max) {
+          height: 42px;
+        }
+        &.visible {
+          visibility: visible;
+          opacity: 1;
+          transition: visibility 0s linear 0s, opacity 1.5s;
+        }
+        &.disable {
+          opacity: 0.2;
+        }
+        .static-text-minus-one {
+          position: absolute;
+          bottom: 54px;
+          width: 100%;
+          text-align: center;
+          opacity: 0.7;
+        }
+      }
+      .hint-half-circle-arch-arrow {
+        width: 100%;
+
+        bottom: 10px;
+        // border-top-left-radius: 100px;
+        // border-top-right-radius: 100px;
+        border-top-left-radius: 125px;
+        border-top-right-radius: 125px;
+
+        // border: 4px solid blue;
+
+        border-bottom: 0;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        position: absolute;
+
+        transition: visibility 0s linear 300ms, opacity 1.5s;
+        opacity: 0;
+        visibility: hidden;
+        img {
+          width: 100%;
+          height: 102px;
+
+          @include breakpoint-max($screen-xll-max) {
+            height: 72px;
+          }
+          @include breakpoint-max($screen-xl-max) {
+            height: 72px;
+          }
+          @include breakpoint-max($screen-x-max) {
+            height: 72px;
+          }
+        }
+
+        &.md {
+          img {
+            height: 56px;
+            @include breakpoint-max($screen-xll-max) {
+              height: 36px;
+            }
+            @include breakpoint-max($screen-xl-max) {
+              height: 36px;
+            }
+            @include breakpoint-max($screen-x-max) {
+              height: 36px;
+            }
+          }
+        }
+        &.sm {
+          img {
+            height: 24px;
+            @include breakpoint-max($screen-xll-max) {
+              height: 24px;
+            }
+            @include breakpoint-max($screen-xl-max) {
+              height: 24px;
+            }
+            @include breakpoint-max($screen-x-max) {
+              height: 24px;
+            }
+          }
+        }
+
+        &.visible {
+          visibility: visible;
+
+          opacity: 1;
+          transition: visibility 2s linear 500ms, opacity 4.5s;
+        }
+        .hint-arch-text {
+          position: absolute;
+          bottom: 106px;
+          width: 100%;
+          text-align: center;
+          font-size: 24px;
+          opacity: 0.7;
+          @include breakpoint-max($screen-xll-max) {
+            font-size: 20px;
+            bottom: 72px;
+          }
+          @include breakpoint-max($screen-xl-max) {
+            bottom: 72px;
+          }
+          @include breakpoint-max($screen-x-max) {
+            bottom: 72px;
+          }
+          &.md {
+            bottom: 56px;
+            @include breakpoint-max($screen-xll-max) {
+              bottom: 36px;
+            }
+            @include breakpoint-max($screen-xl-max) {
+              bottom: 36px;
+            }
+            @include breakpoint-max($screen-x-max) {
+              bottom: 36px;
+            }
+          }
+          &.sm {
+            font-size: 20px;
+            bottom: 24px;
+
+            @include breakpoint-max($screen-xll-max) {
+              bottom: 24px;
+            }
+            @include breakpoint-max($screen-xl-max) {
+              bottom: 24px;
+            }
+            @include breakpoint-max($screen-x-max) {
+              bottom: 24px;
+            }
+          }
+        }
+      }
+      .bracket-wrapper-outer {
+        width: 100%;
+        max-height: 102px;
+        min-height: 26px;
+        top: 50px;
+        position: absolute;
+        transition: visibility 0s linear 300ms, opacity 1.5s;
+        opacity: 0;
+        visibility: hidden;
+        @include breakpoint-max($screen-x-max) {
+          height: 42px;
+        }
+        &.visible {
+          visibility: visible;
+          opacity: 1;
+          transition: visibility 2s linear 500ms, opacity 4.5s;
+        }
+        .bracket-wrapper {
+          display: flex;
+        }
+        .braces {
+          position: relative;
+        }
+        .curly-braces-hint-text {
+          position: absolute;
+
+          width: 100%;
+          text-align: center;
+          font-size: 24px;
+          opacity: 0.7;
+        }
+      }
+      .point {
+        width: 0;
+        height: 0;
+        // border-top: 20px solid transparent;
+        // border-bottom: 20px solid transparent;
+        // border-left: 20px solid#eb0000;
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;
+        border-left: 22px solid #eb0000;
+        float: right;
+        right: -9px;
+        bottom: 8px;
+        transform: rotate(85deg);
+        position: absolute;
+
+        opacity: 0;
+        visibility: hidden;
+        &.visible {
+          visibility: visible;
+          opacity: 1;
+          transition: visibility 0s linear 0s, opacity 1.5s;
+        }
+      }
+      .five-start-point {
+        width: 0;
+        height: 0;
+        border-top: 16px solid transparent;
+        border-bottom: 16px solid transparent;
+        border-left: 22px solid blue;
+        left: -8px;
+        bottom: 2px;
+        //transform: rotate(85deg);
+        position: absolute;
+        transform: rotate(92deg);
+        opacity: 0;
+        visibility: hidden;
+        &.visible {
+          visibility: visible;
+          opacity: 1;
+          transition: visibility 2s linear 500ms, opacity 4.5s;
+        }
+      }
+      .five-end-point {
+        width: 0;
+        height: 0;
+        border-top: 16px solid transparent;
+        border-bottom: 16px solid transparent;
+        border-left: 22px solid blue;
+        float: right;
+        right: -8px;
+        bottom: 2px;
+        transform: rotate(85deg);
+        position: absolute;
+
+        opacity: 0;
+        visibility: hidden;
+        &.visible {
+          visibility: visible;
+          opacity: 1;
+          transition: visibility 2s linear 500ms, opacity 4.5s;
+        }
+      }
+      .hint-text-wrapper {
+        opacity: 0;
+        visibility: hidden;
+        &.visible {
+          visibility: visible;
+          opacity: 1;
+          transition: visibility 0s linear 0s, opacity 1.5s;
+        }
+        .five-circle-static-text-minus-one {
+          position: absolute;
+          bottom: 106px;
+          width: 100%;
+          text-align: center;
+          font-size: 24px;
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .half-curly-brace {
+      width: 50%;
+      position: absolute;
+      top: 42px;
+      left: 0;
+
+      .brace {
+        border-bottom: 3px solid;
+        margin: 0 10%;
+        width: 30%;
+        height: 20px;
+        float: left;
+      }
+
+      .brace:before,
+      .brace:after {
+        content: "";
+        width: 10%;
+        height: 50px;
+        position: absolute;
+        display: block;
+      }
+
+      #left:before {
+        border-bottom: 3px solid;
+        border-bottom-left-radius: 20px;
+        margin-left: -10%;
+        margin-top: -30px;
+      }
+
+      #left:after {
+        border-top: 3px solid;
+        border-top-right-radius: 20px;
+        margin-left: 30%;
+        margin-top: 17px; //#change
+      }
+
+      #right:before {
+        border-top: 3px solid;
+        border-top-left-radius: 20px;
+        margin-left: -10%;
+        margin-top: 17px; //#change
+      }
+
+      #right:after {
+        border-bottom: 3px solid;
+        border-bottom-right-radius: 20px;
+        margin-left: 30%;
+        margin-top: -30px;
+      }
+    }
+  }
+}
+
+.half-circle-arrow {
+  border: 7px solid transparent;
+  border-top-color: black;
+  border-left-color: black;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: relative;
+  transform: rotate(44deg);
+  margin: 30px auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 80%;
+    height: 0;
+    width: 0;
+    border-left: 30px solid black;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 80%;
+    height: 0;
+    width: 0;
+    border-left: 30px solid black;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+.visiblity-hidden {
+  visibility: hidden;
+}
+
+//for pulse animation css
+.selected-pulse {
+  transform: scale(1);
+  animation: pulse 1.5s infinite;
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(196, 46, 46, 0.7);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(196, 46, 46, 0);
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(196, 46, 46, 0);
+    }
+  }
+}

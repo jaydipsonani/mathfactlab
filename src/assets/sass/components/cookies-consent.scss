@@ -1,0 +1,35 @@
+.CookieConsent {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0px 48px !important;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.6;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.6;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}

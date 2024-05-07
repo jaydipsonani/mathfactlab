@@ -1,0 +1,63 @@
+@import "../../../assets/sass/utils/variable-teacher";
+
+.setting-dialog-wrapper {
+  .slider-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    .setting-subtitle {
+      font-size: 16px;
+      font-weight: 700;
+      margin-left: 8px;
+    }
+  }
+
+  .setting-dialog-card-wrapper {
+    margin-bottom: 32px;
+    align-items: center;
+
+    .setting-wrapper-body-child {
+      width: 580px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px;
+      position: relative;
+
+      .slider-after-railtrack {
+        position: absolute;
+        right: 80px;
+        top: 5px;
+        left: 56px;
+        background-color: $primaryColor;
+        height: 10px;
+        border-radius: 2px 8px 8px 2px;
+      }
+
+      .rc-slider-mark-text {
+        font-family: $secondary-fonts;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .rc-slider-step {
+        display: none;
+      }
+
+      &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+  }
+  .setting-footer-top-border {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .button-cols {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

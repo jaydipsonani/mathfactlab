@@ -1,0 +1,546 @@
+.activity-screen {
+  width: 100%;
+  height: 100vh;
+  @include flex();
+  background-color: $white;
+  .activity-inner-wrapper {
+    width: 100%;
+    background-color: $bg-aside;
+    // margin-bottom: 0px;
+    &.activity-boxed {
+      background-color: #c7f4ff;
+      // margin-bottom: 150px;
+    }
+  }
+}
+.activity-title {
+  @include font-size("60");
+  color: $spotlight-color;
+  font-weight: bold;
+  text-align: center;
+  line-height: normal;
+  margin-bottom: 45px;
+}
+.activity-subtitle {
+  text-align: center;
+  @include font-size("24");
+
+  //#changes
+  // for  same margin top and bottom
+  margin-bottom: 0px;
+  .or-tag {
+    background: $green-light;
+    border-radius: 50%;
+    color: $white;
+    font-size: 16px;
+    padding: 6px 4px;
+    margin: 0px 6px;
+    /* padding: 8px; */
+    font-weight: 500;
+    @include breakpoint-max($screen-xll-max) {
+      font-size: 14px;
+      margin: 0px 4px;
+    }
+  }
+}
+.with-subtitle {
+  .activity-title {
+    margin-bottom: 10px;
+    @include font-size("36");
+    font-weight: $bold;
+  }
+  .activity-subtitle {
+    // margin-bottom: 75px;
+    // @include breakpoint-max($screen-1600p-max) {
+    //   margin-bottom: 66px;
+    // }
+    // @include breakpoint-max($screen-xll-max) {
+    //   margin-bottom: 60px;
+    // }
+    // @include breakpoint-max($screen-x-max) {
+    //   margin-bottom: 52px;
+    // }
+    // @include breakpoint-max($screen-md-max) {
+    //   margin-bottom: 46px;
+    // }
+    // @include breakpoint-max($screen-sm-max) {
+    //   margin-bottom: 40px;
+    // }
+    // @include breakpoint-max($screen-xs-max) {
+    //   margin-bottom: 30px;
+    // }
+  }
+}
+.activity-screen-wrap {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 500px;
+  // #changes
+  max-height: calc(100vh - 132px);
+  // max-height: 800px;
+  @include flex-column();
+  @include align-items-center();
+
+  @include align-content-center();
+
+  @include justify-content-space-around();
+  // @include breakpoint-min($screen-1920p-max) {
+  //   height: calc(100vh - 132px) !important;
+  // }
+
+  position: relative;
+  .btn.sticked {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -34px;
+  }
+}
+.activity-inner {
+  @include flex();
+  width: 100%;
+
+  > * {
+    flex: 0 0 auto;
+  }
+  .activity-cols {
+    padding-left: 24px;
+    padding-right: 24px;
+
+    width: 15%;
+
+    margin-top: 36px;
+    position: relative;
+    // #changes margin change in medium size  because second row is not visible so margin decrease
+
+    @media only screen and (max-width: $screen-xll-max) {
+      margin-bottom: 6px;
+      margin-top: 8px;
+    }
+    .activity-button {
+      position: relative;
+      padding: 15px 12px;
+      border-radius: 20px;
+      text-align: center;
+      @include flex-column();
+      @include align-items-center();
+      @include justify-content-center();
+      background-color: $white;
+      margin-bottom: 45px;
+      // min-height: 148px;
+      @include font-size("30");
+      cursor: pointer;
+      border: 1px solid transparent;
+      @include transition(0.5s ease);
+      & > span {
+        @include transition(0.05s ease);
+      }
+      &.active,
+      &:hover {
+        background-color: $green;
+        border-color: white;
+        color: $white;
+        box-shadow: -2px 0px 14.4px 1.6px rgba(0, 0, 0, 0.3);
+      }
+      &.inactive {
+        pointer-events: none;
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .dice-title {
+        // #changes
+        // min-height: 58px;
+        @include font-size("24");
+        margin-bottom: 8px;
+        line-height: normal;
+        display: block;
+        .dice-number {
+          @include font-size("24");
+        }
+      }
+      .dice-number {
+        margin-top: 10px;
+      }
+
+      .dice-score-progress {
+        // position: absolute;
+        // bottom: 12px;
+      }
+      .margin-space {
+        // #changes
+        height: 60px;
+        width: 60px;
+        //   height: 16px;
+        // width: 16px;
+      }
+      .non-visiteg-flag {
+        border: 2px solid gray;
+        padding: 4px 12px;
+        border-radius: 8px;
+        margin-top: 24px;
+        position: absolute;
+        bottom: 28px;
+        font-size: 2rem;
+      }
+      .visiteg-flag {
+        position: absolute;
+        border: 2px solid $green-light;
+        padding: 4px 12px;
+        border-radius: 8px;
+        font-size: 2rem;
+        background: $green-light;
+        bottom: 28px;
+        color: white;
+      }
+    }
+    .dice-operation {
+      // position: absolute;
+      // left: 0;
+      // top: 0;
+      // width: 36px;
+      // height: 40px;
+      // background-color: #003a7f;
+      // padding: 8px;
+      // border-bottom-right-radius: 12px;
+      // display: flex;
+      box-sizing: border-box;
+      margin: 0;
+      color: #000000d9;
+      font-size: 14px;
+      font-variant: tabular-nums;
+      line-height: 1.5715;
+      list-style: none;
+      font-feature-settings: "tnum";
+      position: absolute;
+      top: -12px;
+
+      height: 22px;
+      padding: 0 8px;
+      color: #fff;
+      line-height: 22px;
+      white-space: nowrap;
+      background-color: $green-light;
+      border-radius: 2px;
+
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 69px;
+    }
+  }
+}
+
+.activity-boxed {
+  .activity-screen-wrap {
+    max-height: unset;
+  }
+  .activity-inner {
+    &.three-items {
+      width: 60%;
+    }
+    &.four-items {
+      width: 80%;
+    }
+
+    @include justify-content-center();
+    .activity-cols {
+      &.three-items {
+        width: 29%;
+      }
+      &.four-items {
+        width: 22%;
+      }
+
+      .activity-button {
+        height: 100%;
+        @include justify-content-start();
+        @include font-size("24");
+        padding: 30px 26px 20px;
+
+        // padding: 30px 26px 45px;
+        border: none;
+        letter-spacing: 1px;
+        overflow: hidden;
+        margin-bottom: 0;
+        // min-height: 270px;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          height: 12px;
+          width: 80px;
+          background-color: $green-light;
+          @include transition(0.5s ease);
+        }
+        .dice-score-progress {
+          margin-top: auto;
+          height: 42px;
+        }
+
+        .dice-icon {
+          @include inline-flex();
+          @include align-items-center();
+          @include justify-content-center();
+          width: 100%;
+          color: $green-light;
+
+          height: 50px;
+
+          img {
+            height: 100%;
+          }
+
+          margin-bottom: 24px;
+          [class^="icon-"],
+          [class*=" icon-"] {
+            //@include font-size('60');
+            font-size: 60px;
+            line-height: 60px;
+          }
+          .icon-numberline {
+            font-size: 15rem;
+            display: inline-block;
+            line-height: 60px !important;
+          }
+
+          // #changes only for testing
+          // border: 1px solid;
+          // &::before {
+          //   content: "";
+          //   position: absolute;
+          //   bottom: 0;
+          //   left: 0;
+          //   right: 0;
+          //   margin: 0 auto;
+          //   height: 12px;
+          //   width: 80px;
+          //   background-color: $green-light;
+          //   @include transition(0.5s ease);
+
+          //   // #changes width and height for testing
+          //   height: 300px;
+          //   width: 1px;
+          // }
+        }
+
+        // #changes only for testing add hover part after testing done
+        &:hover {
+          background-color: $white;
+          box-shadow: 0px 0px 17px 4px rgba(0, 58, 127, 0.15);
+          color: inherit;
+          &::before {
+            width: 100%;
+          }
+
+          //  transform: scale(1.03);
+        }
+        &.active {
+          background-color: $green-light;
+          color: $white;
+          box-shadow: none;
+          .dice-icon {
+            color: $white;
+          }
+          &::before {
+            background-color: $white;
+          }
+        }
+        &.inactive {
+          pointer-events: none;
+          color: #9e9e9e;
+          background: rgba(255, 255, 255, 0.7);
+          .dice-icon {
+            color: inherit;
+          }
+          &::before {
+            background-color: #9e9e9e;
+          }
+        }
+      }
+    }
+  }
+  .activity-screen-wrap {
+    padding-top: 75px;
+    padding-bottom: 130px;
+    // height: auto;
+  }
+}
+
+.activity-checkgroup-wrapper {
+  @include inline-flex();
+  @include justify-content-center();
+  @include align-items-center();
+  width: 100%;
+  text-align: center;
+  .activity-checkgroup {
+    width: 100%;
+    max-width: 680px;
+    border: 1px solid #00a800;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 20px;
+    .activity-checkgroup-title {
+      background-color: #c7f4ff;
+      @include font-size("24");
+      font-weight: 400;
+      display: table;
+      margin: -38px auto 10px;
+      padding: 5px 10px;
+    }
+  }
+}
+/***************** Media Query *************************/
+@include breakpoint-max($screen-1920p-max) {
+  .activity-inner {
+    &.three-items {
+      width: 70% !important;
+    }
+    &.four-items {
+      width: 80% !important;
+    }
+  }
+  .activity-inner .activity-cols {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@include breakpoint-max($screen-1600p-max) {
+  .activity-inner {
+    &.three-items {
+      width: 70% !important;
+    }
+    &.four-items {
+      width: 70% !important;
+    }
+  }
+  .activity-inner .activity-cols {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .activity-boxed .activity-inner .activity-cols {
+    width: 14%;
+  }
+  .activity-boxed .activity-inner .activity-cols .activity-button::before {
+    height: 10px;
+  }
+  .activity-boxed .activity-screen-wrap {
+    padding-top: 70px;
+    padding-bottom: 120px;
+  }
+}
+@include breakpoint-max($screen-xll-max) {
+  .activity-checkgroup-wrapper {
+    .activity-checkgroup {
+      max-width: 520px;
+    }
+  }
+
+  .activity-inner {
+    &.four-items {
+      width: 80% !important;
+    }
+    .activity-cols {
+      &.four-items {
+        width: 25% !important;
+      }
+    }
+
+    .dice-title {
+      @include font-size("18");
+    }
+  }
+  .activity-inner .activity-cols {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .activity-screen-wrap .btn.sticked {
+    bottom: -28px;
+  }
+  .activity-boxed .activity-inner .activity-cols .activity-button::before {
+    height: 8px;
+  }
+  .dice-icon [class^="icon-"],
+  .dice-icon [class*=" icon-"] {
+    font-size: 42px;
+  }
+  .dice-icon .icon-numberline {
+    font-size: 140px;
+  }
+  .dice-icon {
+    height: 42px !important;
+    margin-bottom: 6px !important;
+  }
+  .activity-boxed .activity-inner .activity-cols .activity-button {
+    padding: 12px 8px 12px;
+    // min-height: 240px;
+  }
+
+  .activity-boxed .activity-screen-wrap {
+    // #changes for show second row of strategy is not visible to decrease padding top
+    // padding-top: 65px;
+    padding-top: 30px;
+    padding-bottom: 110px;
+  }
+}
+@include breakpoint-max($screen-x-max) {
+  .activity-boxed .activity-inner .activity-cols {
+    width: 18%;
+  }
+  .activity-boxed .activity-screen-wrap {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+}
+@include breakpoint-max($screen-lg-max) {
+  .activity-inner .activity-cols {
+    width: 50%;
+  }
+  .activity-screen .activity-inner-wrapper {
+    margin-bottom: 150px;
+  }
+  .activity-screen-wrap {
+    height: auto;
+    max-height: unset;
+  }
+  .activity-boxed .activity-inner .activity-cols {
+    width: 33.3333%;
+  }
+  .dice-icon [class^="icon-"],
+  .dice-icon [class*=" icon-"] {
+    font-size: 45px;
+  }
+  .dice-icon .icon-numberline {
+    font-size: 125px;
+  }
+  .activity-boxed .activity-screen-wrap {
+    padding-top: 50px;
+    padding-bottom: 90px;
+  }
+}
+@include breakpoint-max($screen-md-max) {
+}
+@include breakpoint-max($screen-sm-max) {
+  .activity-inner .activity-cols {
+    width: 100%;
+  }
+  .activity-inner .activity-cols .activity-button {
+    min-height: 120px;
+    margin-bottom: 25px;
+  }
+  .activity-boxed .activity-inner .activity-cols {
+    width: 50%;
+  }
+  .activity-boxed .activity-screen-wrap {
+    padding-top: 45px;
+    padding-bottom: 80px;
+  }
+}
+@include breakpoint-max($screen-xs-max) {
+  .activity-boxed .activity-inner .activity-cols {
+    width: 100%;
+    max-width: 200px;
+  }
+}
